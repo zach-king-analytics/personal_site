@@ -2,7 +2,7 @@
 
 /* Brand color (header chips, links, etc.) */
 :root {
-  --md-primary-fg-color: #3aa7a3; /* your teal */
+  --md-primary-fg-color: #2c8c89; /* deeper teal for authority */
 }
 
 /* Optional: header bar tint (applies everywhere) */

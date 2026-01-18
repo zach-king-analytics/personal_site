@@ -12,12 +12,12 @@ html.is-home .md-content {
 
 html.is-home .md-typeset h1 {
   font-size: 4rem;
-  font-weight: 200;
+  font-weight: 400;
   letter-spacing: -0.02em;
   margin-bottom: 0.5rem;
-  color: #eaeaea;
+  color: #ffffff;
   opacity: 0;
-  animation: homeFadeIn 1s ease-out forwards;
+  animation: homeFadeIn 0.8s ease-out forwards;
 }
 
 html.is-home .md-typeset strong {
@@ -25,27 +25,27 @@ html.is-home .md-typeset strong {
   font-weight: 600;
   display: block;
   margin-bottom: 1.5rem;
-  color: #eaeaea;
+  color: #ffffff;
   opacity: 0;
-  animation: homeFadeIn 1s ease-out forwards;
-  animation-delay: 0.2s;
+  animation: homeFadeIn 0.8s ease-out forwards;
+  animation-delay: 0.15s;
 }
 
 html.is-home .homepage-subhead {
   font-size: 1.2rem;
   font-weight: 300;
-  color: #bbb;
+  color: #d0d0d0;
   max-width: 60ch;
   margin: 0 auto;
   opacity: 0;
-  animation: homeFadeIn 1s ease-out forwards;
-  animation-delay: 0.4s;
+  animation: homeFadeIn 0.8s ease-out forwards;
+  animation-delay: 0.3s;
 }
 
 /* Background & hero image, homepage only */
 html.is-home body {
-  background: radial-gradient(ellipse at center, #1a1a1a 0%, #111 100%);
-  color: #eaeaea;
+  background: radial-gradient(ellipse at center, #1a1a1a 0%, #0d0d0d 100%);
+  color: #ffffff;
 }
 
 html.is-home body::before {
@@ -58,10 +58,10 @@ html.is-home body::before {
   transform: translate(-50%, -50%);
   /* Use RELATIVE path from the CSS file location */
   background: url("../assets/images/hero_background.png") center/cover no-repeat;
-  opacity: 0.5;              /* tweak to taste */
+  opacity: 0.25;              /* reduced for cleaner authority */
   z-index: -1;
   pointer-events: none;
-  filter: grayscale(0.7) contrast(1.1);
+  filter: grayscale(0.9) contrast(1.2);
 }
 
 /* Simple fade-in animation */
