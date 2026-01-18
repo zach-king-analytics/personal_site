@@ -1,13 +1,70 @@
-/* Global, non-home tweaks ONLY. Keep this minimal so non-home pages stay standard. */
+/* Global, non-home tweaks for professional data site */
 
 /* Brand color (header chips, links, etc.) */
 :root {
   --md-primary-fg-color: #2c8c89; /* deeper teal for authority */
+  --md-accent-fg-color: #2c8c89;
 }
 
-/* Optional: header bar tint (applies everywhere) */
+/* Global typography improvements */
+.md-typeset {
+  font-size: 1.05rem;
+  line-height: 1.72;
+}
+
+.md-typeset h1 {
+  font-weight: 700;
+  font-size: 2.75rem;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.25rem;
+  border-bottom: 3px solid var(--md-primary-fg-color);
+  padding-bottom: 0.5rem;
+}
+
+.md-typeset h2 {
+  font-weight: 600;
+  font-size: 1.85rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  letter-spacing: -0.01em;
+}
+
+.md-typeset h3 {
+  font-weight: 600;
+  font-size: 1.35rem;
+  margin-top: 1.75rem;
+  color: var(--md-default-fg-color);
+}
+
+/* Technical content gets monospace treatment */
+.md-typeset code {
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-size: 0.9em;
+  padding: 0.15em 0.4em;
+  background: color-mix(in srgb, var(--md-primary-fg-color) 8%, var(--md-code-bg-color));
+  border-radius: 4px;
+}
+
+.md-typeset pre code {
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+/* Stronger emphasis */
+.md-typeset strong {
+  font-weight: 600;
+  color: var(--md-primary-fg-color);
+}
+
+/* Header bar with stronger presence */
 .md-header {
-  background-color: #1e2a38 !important;
+  background-color: #0d1117 !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.md-header__title {
+  font-weight: 600;
+  letter-spacing: 0.02em;
 }
 
 /* Do NOT put hero or background overrides here. */
@@ -369,23 +426,57 @@ body.sf6-has-report .sf6-matchup-grid {
 .work-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1rem;
-  margin-top: 0.75rem;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
 }
 
 .work-card {
-  border: 1px solid var(--md-default-fg-color--lightest);
-  border-radius: 0.75rem;
-  padding: 1rem;
+  border: 1px solid color-mix(in srgb, var(--md-primary-fg-color) 25%, transparent);
+  border-radius: 1rem;
+  padding: 1.75rem;
+  background: color-mix(in srgb, var(--md-primary-fg-color) 3%, var(--md-default-bg-color));
+  transition: all 0.2s ease;
+}
+
+.work-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(44, 140, 137, 0.15);
+  border-color: var(--md-primary-fg-color);
+}
+
+.work-card h2 {
+  margin-top: 0;
+  color: var(--md-primary-fg-color);
 }
 
 
 .sf6-cta-row,
 .sf6-links-row {
   display: flex;
-  gap: 0.6rem;
+  gap: 0.75rem;
   flex-wrap: wrap;
-  margin: 0.6rem 0 1rem;
+  margin: 1rem 0 1.5rem;
+}
+
+/* Enhance primary buttons */
+.md-button--primary {
+  font-weight: 600;
+  background-color: var(--md-primary-fg-color);
+  border: none;
+  padding: 0.6rem 1.5rem;
+  transition: all 0.2s ease;
+}
+
+.md-button--primary:hover {
+  background-color: color-mix(in srgb, var(--md-primary-fg-color) 85%, white);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(44, 140, 137, 0.3);
+}
+
+.md-button {
+  font-weight: 500;
+  border-radius: 6px;
+  transition: all 0.2s ease;
 }
 
 /* ============================
@@ -432,15 +523,8 @@ body.sf6-has-report .sf6-matchup-grid {
 
 /* 4) Micro-motion (felt, not seen) */
 a,
-button,
-.md-button,
-.work-card {
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-
-.work-card:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 10px 28px rgba(0,0,0,0.18);
+button {
+  transition: all 0.15s ease;
 }
 
 #sf6-activity-chart .js-plotly-plot {
