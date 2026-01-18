@@ -90,6 +90,50 @@ html.is-home body::before {
   to   { opacity: 1; transform: translateY(0); }
 }
 
+/* Impact metrics section */
+.impact-metrics {
+  max-width: 1000px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.metric-card {
+  background: color-mix(in srgb, #2c8c89 8%, transparent);
+  border: 1px solid color-mix(in srgb, #2c8c89 25%, transparent);
+  border-radius: 12px;
+  padding: 1.75rem 1.5rem;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.metric-card:hover {
+  transform: translateY(-3px);
+  border-color: #2c8c89;
+  box-shadow: 0 8px 20px rgba(44, 140, 137, 0.12);
+}
+
+.metric-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c8c89;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.metric-label {
+  font-size: 0.9rem;
+  color: #d0d0d0;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
 /* Links on the homepage */
 html.is-home .md-typeset a { 
   color: #2c8c89; 
@@ -100,5 +144,35 @@ html.is-home .md-typeset a {
 }
 html.is-home .md-typeset a:hover { 
   border-bottom-color: #2c8c89;
+}
+
+.cta-link {
+  display: inline-block;
+  padding: 0.75rem 1.75rem;
+  background-color: #2c8c89;
+  color: #fff !important;
+  text-decoration: none !important;
+  border-radius: 8px;
+  font-weight: 600;
+  margin: 0.5rem;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.cta-link:hover {
+  background-color: color-mix(in srgb, #2c8c89 85%, white);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(44, 140, 137, 0.3);
+  border-bottom: none;
+}
+
+.cta-link--secondary {
+  background-color: transparent;
+  border: 2px solid #2c8c89;
+  color: #2c8c89 !important;
+}
+
+.cta-link--secondary:hover {
+  background-color: color-mix(in srgb, #2c8c89 12%, transparent);
 }
 
