@@ -20,8 +20,6 @@ hide:
   </p>
 </section>
 
----
-
 <section class="impact-metrics">
   <div class="metrics-grid">
     <div class="metric-card">
@@ -42,5 +40,3 @@ hide:
     </div>
   </div>
 </section>
-
----
