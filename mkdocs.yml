@@ -1,0 +1,69 @@
+site_name: Zach King
+
+repo_url: https://github.com/zach-king-analytics/personal_site
+repo_name: personal_site
+edit_uri: edit/main/docs/
+site_url: https://zach-king-analytics.netlify.app
+  
+plugins:
+  - search
+
+nav:
+  - Home: index.md
+
+  - Work:
+      - Overview: work/index.md
+      - Street Fighter 6 Matchup Lab:
+          - Overview: work/sf6/index.md
+          - Matchup Report: work/sf6/matchup-report.md
+          - Architecture: work/sf6/architecture.md
+          - Data Contract: work/sf6/data-contract.md
+          - Build & Deploy: work/sf6/build-deploy.md
+
+  - Lab:
+      - Overview: lab/index.md
+      - Notes: lab/notes/index.md
+      - Experiments: lab/experiments/index.md
+
+  - About: about.md
+  - Credentials: resume.md
+  - Inquiries: contact.md
+
+
+theme:
+  name: material
+  palette:
+    scheme: slate
+    primary: custom
+    toggle:
+      icon: material/weather-night
+      name: Switch to dark mode
+  custom_dir: docs/overrides
+  features:
+    # - navigation.instant
+    - navigation.top
+    - navigation.tabs
+    - navigation.indexes
+
+
+extra_css:
+  - stylesheets/extra.css
+  - stylesheets/homepage.css
+
+
+extra_javascript:
+  - javascripts/homepage.js
+  - javascripts/contact.js
+  - https://cdn.plot.ly/plotly-2.32.0.min.js
+  - javascripts/sf6-report.js
+
+
+markdown_extensions:
+  - meta
+  - attr_list
+  - md_in_html
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format

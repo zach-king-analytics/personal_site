@@ -1,0 +1,76 @@
+
+
+
+/* ---------- HOMEPAGE-ONLY styles (scoped via .is-home) ---------- */
+
+/* Layout/typography for the hero */
+html.is-home .md-content {
+  max-width: none;
+  text-align: center;
+  padding-top: 15vh;
+}
+
+html.is-home .md-typeset h1 {
+  font-size: 4rem;
+  font-weight: 200;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+  color: #eaeaea;
+  opacity: 0;
+  animation: homeFadeIn 1s ease-out forwards;
+}
+
+html.is-home .md-typeset strong {
+  font-size: 1.5rem;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 1.5rem;
+  color: #eaeaea;
+  opacity: 0;
+  animation: homeFadeIn 1s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+html.is-home .homepage-subhead {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #bbb;
+  max-width: 60ch;
+  margin: 0 auto;
+  opacity: 0;
+  animation: homeFadeIn 1s ease-out forwards;
+  animation-delay: 0.4s;
+}
+
+/* Background & hero image, homepage only */
+html.is-home body {
+  background: radial-gradient(ellipse at center, #1a1a1a 0%, #111 100%);
+  color: #eaeaea;
+}
+
+html.is-home body::before {
+  content: "";
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 100vh;
+  transform: translate(-50%, -50%);
+  /* Use RELATIVE path from the CSS file location */
+  background: url("../assets/images/hero_background.png") center/cover no-repeat;
+  opacity: 0.5;              /* tweak to taste */
+  z-index: -1;
+  pointer-events: none;
+  filter: grayscale(0.7) contrast(1.1);
+}
+
+/* Simple fade-in animation */
+@keyframes homeFadeIn {
+  from { opacity: 0; transform: translateY(0.5rem); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Links on the homepage */
+html.is-home .md-typeset a { color: #66bfff; text-decoration: none; }
+html.is-home .md-typeset a:hover { text-decoration: underline; }
+

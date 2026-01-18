@@ -1,0 +1,448 @@
+/* Global, non-home tweaks ONLY. Keep this minimal so non-home pages stay standard. */
+
+/* Brand color (header chips, links, etc.) */
+:root {
+  --md-primary-fg-color: #3aa7a3; /* your teal */
+}
+
+/* Optional: header bar tint (applies everywhere) */
+.md-header {
+  background-color: #1e2a38 !important;
+}
+
+/* Do NOT put hero or background overrides here. */
+
+/* Resume downloads row */
+.download-row {
+  display: flex;
+  justify-content: center;   /* center the group */
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin: 0.5rem 0 1.25rem;
+}
+.download-row .md-button { margin: 0; }  /* remove default per-button margins */
+
+form label{display:block;margin:.75rem 0 .25rem;font-weight:500}
+form input,form textarea{width:100%;max-width:42rem}
+.hp{position:absolute;left:-10000px}
+.contact-intro{margin:.5rem 0 1rem;color:var(--md-default-fg-color--light)}
+#form-status{margin-top:.75rem}
+
+/* widen contact form */
+#contact-form {
+  max-width: 50rem;     /* expand horizontal space */
+  margin-top: 1rem;
+}
+
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  max-width: none;       /* remove inherited limit */
+  font-size: 1rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  background-color: var(--md-default-bg-color--light);
+}
+
+#contact-form button {
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+
+/* Resume hero */
+.resume-hero {
+  text-align: center;
+  margin-top: .5rem;
+}
+.resume-hero h1 {
+  margin-bottom: .25rem;
+  letter-spacing: .2px;
+}
+.resume-hero .sub {
+  margin: 0 0 .75rem;
+  color: var(--md-default-fg-color--light);
+}
+
+/* KPI chips */
+.kpi-row {
+  display: flex;
+  justify-content: center;
+  gap: .5rem;
+  flex-wrap: wrap;
+  margin-bottom: .75rem;
+}
+.kpi {
+  padding: .25rem .6rem;
+  border-radius: 999px;
+  font-size: .85rem;
+  border: 1px solid var(--md-primary-fg-color);
+  background: color-mix(in srgb, var(--md-primary-fg-color) 12%, transparent);
+}
+
+/* Download buttons */
+.download-row { display:flex; justify-content:center; gap:.5rem; flex-wrap:wrap; margin:.5rem 0 1rem; }
+.download-row .md-button { margin:0; }
+
+/* Timeline */
+.timeline {
+  position: relative;
+  margin: .25rem 0 0;
+  padding-left: 1rem;
+  border-left: 2px solid var(--md-default-fg-color--lightest);
+}
+.role { margin: 0 0 1.25rem 0; }
+.role__head { display:flex; align-items:baseline; gap:.5rem; }
+.role__loc { color: var(--md-default-fg-color--light); font-size: .9rem; }
+.role__title { display:flex; justify-content:space-between; align-items:baseline; margin-top:.25rem; }
+.role__dates { color: var(--md-default-fg-color--light); font-size:.9rem; }
+.role ul { margin: .35rem 0 .6rem 1rem; }
+
+/* Two-column responsive grid */
+.grid-two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .75rem 1.25rem;
+}
+@media (max-width: 900px) {
+  .grid-two { grid-template-columns: 1fr; }
+}
+
+/* Print polish */
+@media print {
+  .md-header, .md-tabs, nav, .download-row { display: none !important; }
+  .resume-hero { text-align:left; }
+  .timeline { border-left: 1px solid #999; }
+}
+
+/* ---------------- SF6 Lab styles ---------------- */
+
+.sf6-input-row {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.sf6-input-row input {
+  flex: 1;
+  max-width: 260px;
+}
+
+.sf6-chart-wrapper {
+  position: relative;
+  height: 450px;   /* gives Plotly room to draw */
+  margin-top: 1rem;
+}
+
+/* Fix search icon vertical alignment */
+.md-search__icon {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Status text */
+
+.sf6-status {
+  margin-top: 0.25rem;
+  font-size: 0.9rem;
+}
+
+.sf6-status--hint      { color: #9CA3AF; }
+.sf6-status--loading   { color: #FCD34D; }
+.sf6-status--ok        { color: #6EE7B7; }
+.sf6-status--error     { color: #FCA5A5; }
+
+.sf6-secondary-button {
+  padding: 0.35rem 0.8rem;
+  border-radius: 9999px;
+  border: 1px solid #4B5563;
+  background: transparent;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+.sf6-secondary-button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+/* Banner Styles */
+
+.sf6-char-banner {
+  margin-top: 0.75rem;
+  margin-bottom: 0.25rem;
+  padding: 0.5rem 0.9rem;
+  border-radius: 9999px;
+  background: #050816;
+  border: 1px solid #374151;
+  font-size: 0.85rem;
+  color: #E5E7EB;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  align-items: center;
+}
+
+.sf6-char-banner-prefix {
+  margin-right: 0.35rem;
+}
+
+.sf6-char-pill {
+  padding: 0.15rem 0.55rem;
+  border-radius: 9999px;
+  border: 1px solid #4B5563;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+/* Snapshot styling */
+
+.sf6-snapshot-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.sf6-snapshot-card {
+  background: #050816;
+  border-radius: 0.75rem;
+  border: 1px solid #374151;
+  padding: 1.25rem 1.5rem;
+}
+
+.sf6-snapshot-card h4 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #9CA3AF;
+}
+
+.sf6-snapshot-card dl {
+  margin: 0;
+}
+
+.sf6-snapshot-card dt {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #6B7280;
+  margin-bottom: 0.1rem;
+}
+
+.sf6-snapshot-card dd {
+  margin: 0 0 0.6rem 0;
+  font-size: 0.95rem;
+  color: #F9FAFB;
+}
+
+.sf6-muted {
+  color: #9CA3AF;
+  font-size: 0.95rem;
+}
+
+/* Auto-hide snapshot + insight + matchup overview until a report is loaded */
+
+body:not(.sf6-has-report) #sf6-character-banner,
+body:not(.sf6-has-report) #sf6-player-snapshot,
+body:not(.sf6-has-report) #sf6-fix-one-matchup-text,
+body:not(.sf6-has-report) .sf6-matchup-table-wrapper,
+body:not(.sf6-has-report) .sf6-matchup-grid {
+  display: none;
+}
+
+body.sf6-has-report #sf6-character-banner {
+  display: flex;
+}
+
+body.sf6-has-report #sf6-player-snapshot,
+body.sf6-has-report #sf6-fix-one-matchup-text,
+body.sf6-has-report .sf6-matchup-table-wrapper {
+  display: block;
+}
+
+body.sf6-has-report .sf6-matchup-grid {
+  display: grid;
+}
+
+
+/* Matchup table styling (legacy scrollable table – kept in case you reuse it) */
+
+.sf6-matchup-table-wrapper {
+  margin-top: 0.75rem;
+  max-height: 260px;
+  overflow-y: auto;
+  border-radius: 0.75rem;
+  border: 1px solid #374151;
+  background: #050816;
+}
+
+#sf6-matchup-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+#sf6-matchup-table thead {
+  position: sticky;
+  top: 0;
+  background: #050816;
+}
+
+#sf6-matchup-table th,
+#sf6-matchup-table td {
+  padding: 0.4rem 0.75rem;
+  text-align: left;
+}
+
+#sf6-matchup-table th {
+  font-weight: 600;
+  color: #D1D5DB;
+}
+
+#sf6-matchup-table tbody tr:nth-child(even) {
+  background: rgba(148, 163, 184, 0.03);
+}
+
+#sf6-matchup-table tbody tr:hover {
+  background: rgba(148, 163, 184, 0.08);
+}
+
+/* Matchup overview cards (top/bottom 5) */
+
+.sf6-matchup-grid {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.sf6-matchup-card {
+  background: #050816;
+  border-radius: 0.75rem;
+  border: 1px solid #374151;
+  padding: 1.25rem 1.5rem;
+}
+
+.sf6-matchup-card h4 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #9CA3AF;
+}
+
+.sf6-matchup-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.sf6-matchup-table thead th {
+  text-align: left;
+  padding: 0.35rem 0.35rem 0.35rem 0;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #9CA3AF;
+  border-bottom: 1px solid #1F2933;
+}
+
+.sf6-matchup-table tbody td {
+  padding: 0.35rem 0.35rem 0.35rem 0;
+  border-bottom: 1px solid #111827;
+  color: #F9FAFB;
+}
+
+.sf6-matchup-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.sf6-matchup-table tbody td:nth-child(2),
+.sf6-matchup-table tbody td:nth-child(3),
+.sf6-matchup-table tbody td:nth-child(4) {
+  white-space: nowrap;
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 0.75rem;
+}
+
+.work-card {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+
+
+.sf6-cta-row,
+.sf6-links-row {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin: 0.6rem 0 1rem;
+}
+
+/* ============================
+   STUDIO MINIMAL KIT
+   Subtle. Intentional. Calm.
+   ============================ */
+
+/* 1) Improve reading rhythm (no squish) */
+.md-typeset p,
+.md-typeset li {
+  line-height: 1.72;
+}
+
+/* 2) Section headers get a quiet signature */
+.md-typeset h2,
+.md-typeset h3 {
+  position: relative;
+  padding-left: 0.75rem;
+}
+
+.md-typeset h2::before,
+.md-typeset h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.15em;
+  bottom: 0.15em;
+  width: 2px;
+  background: color-mix(
+    in srgb,
+    var(--md-primary-fg-color) 55%,
+    transparent
+  );
+  border-radius: 2px;
+}
+
+/* 3) Calm content surfaces (panels, not cards) */
+.md-typeset blockquote,
+.md-typeset .admonition,
+.md-typeset table:not([class]) {
+  border-radius: 12px;
+  border: 1px solid var(--md-default-fg-color--lightest);
+}
+
+/* 4) Micro-motion (felt, not seen) */
+a,
+button,
+.md-button,
+.work-card {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.work-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.18);
+}
+
+#sf6-activity-chart .js-plotly-plot {
+  border-radius: 12px;
+}

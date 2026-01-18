@@ -1,0 +1,3611 @@
+{
+  "player_cfn": "mistah d. mojo",
+  "generated_at": "2026-01-17T02:03:58.793077+00:00",
+  "baseline_n": 5,
+  "summary": {
+    "overall": {
+      "matches_analyzed": 1110,
+      "dataset_start": "2025-11-15",
+      "dataset_end": "2026-01-16",
+      "mode_breakdown": [
+        {
+          "mode": "custom",
+          "matches": 471,
+          "share_pct": 42.4
+        },
+        {
+          "mode": "rank",
+          "matches": 394,
+          "share_pct": 35.5
+        },
+        {
+          "mode": "hub",
+          "matches": 193,
+          "share_pct": 17.4
+        },
+        {
+          "mode": "casual",
+          "matches": 52,
+          "share_pct": 4.7
+        }
+      ],
+      "character_breakdown": [
+        {
+          "character": "Terry",
+          "games": 1110,
+          "share_pct": 100.0
+        }
+      ]
+    },
+    "ranked": {
+      "main_character": "Terry",
+      "matches_analyzed": 230,
+      "dataset_start": "2025-11-30",
+      "dataset_end": "2026-01-11",
+      "overall_winrate": 0.3522,
+      "overall_winrate_pct": 35.2,
+      "avg_mr": 1256.8347826086956,
+      "avg_opponent_mr": 1313.6260869565217,
+      "most_played_matchup": {
+        "opponent": "Sagat",
+        "games": 28,
+        "winrate_pct": 42.9
+      },
+      "best_matchup": {
+        "opponent": "Sagat",
+        "games": 28,
+        "winrate_pct": 42.9
+      },
+      "worst_matchup": {
+        "opponent": "Terry",
+        "games": 11,
+        "winrate_pct": 18.2
+      },
+      "min_games_for_stable": 10,
+      "matchup_table": [
+        {
+          "opponent": "A.K.I.",
+          "games": 10,
+          "wins": 4,
+          "winrate_pct": 40.0,
+          "avg_opponent_mr": 1364.6
+        },
+        {
+          "opponent": "Akuma",
+          "games": 20,
+          "wins": 7,
+          "winrate_pct": 35.0,
+          "avg_opponent_mr": 1241.8
+        },
+        {
+          "opponent": "C. Viper",
+          "games": 6,
+          "wins": 2,
+          "winrate_pct": 33.3,
+          "avg_opponent_mr": 1365.5
+        },
+        {
+          "opponent": "Cammy",
+          "games": 16,
+          "wins": 5,
+          "winrate_pct": 31.2,
+          "avg_opponent_mr": 1305.6
+        },
+        {
+          "opponent": "Chun-Li",
+          "games": 6,
+          "wins": 3,
+          "winrate_pct": 50.0,
+          "avg_opponent_mr": 1198.7
+        },
+        {
+          "opponent": "Dee Jay",
+          "games": 2,
+          "wins": 0,
+          "winrate_pct": 0.0,
+          "avg_opponent_mr": 1520.5
+        },
+        {
+          "opponent": "Dhalsim",
+          "games": 4,
+          "wins": 0,
+          "winrate_pct": 0.0,
+          "avg_opponent_mr": 1283.2
+        },
+        {
+          "opponent": "Ed",
+          "games": 9,
+          "wins": 4,
+          "winrate_pct": 44.4,
+          "avg_opponent_mr": 1441.1
+        },
+        {
+          "opponent": "Elena",
+          "games": 10,
+          "wins": 4,
+          "winrate_pct": 40.0,
+          "avg_opponent_mr": 1264.7
+        },
+        {
+          "opponent": "Guile",
+          "games": 5,
+          "wins": 0,
+          "winrate_pct": 0.0,
+          "avg_opponent_mr": 1323.0
+        },
+        {
+          "opponent": "Jamie",
+          "games": 9,
+          "wins": 1,
+          "winrate_pct": 11.1,
+          "avg_opponent_mr": 1348.6
+        },
+        {
+          "opponent": "Jp",
+          "games": 6,
+          "wins": 3,
+          "winrate_pct": 50.0,
+          "avg_opponent_mr": 1188.5
+        },
+        {
+          "opponent": "Juri",
+          "games": 22,
+          "wins": 8,
+          "winrate_pct": 36.4,
+          "avg_opponent_mr": 1286.8
+        },
+        {
+          "opponent": "Ken",
+          "games": 9,
+          "wins": 4,
+          "winrate_pct": 44.4,
+          "avg_opponent_mr": 1376.0
+        },
+        {
+          "opponent": "Lily",
+          "games": 1,
+          "wins": 0,
+          "winrate_pct": 0.0,
+          "avg_opponent_mr": 1264.0
+        },
+        {
+          "opponent": "Luke",
+          "games": 6,
+          "wins": 2,
+          "winrate_pct": 33.3,
+          "avg_opponent_mr": 1332.0
+        },
+        {
+          "opponent": "M. Bison",
+          "games": 1,
+          "wins": 1,
+          "winrate_pct": 100.0,
+          "avg_opponent_mr": 1326.0
+        },
+        {
+          "opponent": "Mai",
+          "games": 4,
+          "wins": 2,
+          "winrate_pct": 50.0,
+          "avg_opponent_mr": 1256.0
+        },
+        {
+          "opponent": "Manon",
+          "games": 6,
+          "wins": 3,
+          "winrate_pct": 50.0,
+          "avg_opponent_mr": 1367.2
+        },
+        {
+          "opponent": "Marisa",
+          "games": 3,
+          "wins": 1,
+          "winrate_pct": 33.3,
+          "avg_opponent_mr": 1267.3
+        },
+        {
+          "opponent": "Ryu",
+          "games": 17,
+          "wins": 5,
+          "winrate_pct": 29.4,
+          "avg_opponent_mr": 1340.5
+        },
+        {
+          "opponent": "Sagat",
+          "games": 28,
+          "wins": 12,
+          "winrate_pct": 42.9,
+          "avg_opponent_mr": 1338.7
+        },
+        {
+          "opponent": "Terry",
+          "games": 11,
+          "wins": 2,
+          "winrate_pct": 18.2,
+          "avg_opponent_mr": 1326.9
+        },
+        {
+          "opponent": "Zangief",
+          "games": 19,
+          "wins": 8,
+          "winrate_pct": 42.1,
+          "avg_opponent_mr": 1291.2
+        }
+      ],
+      "fix_one_matchup": {
+        "opponent": "Jamie",
+        "games": 9,
+        "current_winrate_pct": 11.1,
+        "simulated_winrate_pct": 50.0,
+        "overall_winrate_pct": 35.2,
+        "new_overall_winrate_pct": 36.7,
+        "lift_pct_points": 1.5
+      },
+      "character_breakdown": [
+        {
+          "character": "Terry",
+          "games": 230,
+          "share_pct": 100.0
+        }
+      ],
+      "session_stats": {
+        "sessions_raw": [
+          {
+            "size": 17,
+            "bucket": "16+",
+            "winrate": 0.4118,
+            "mr_delta": -13.0,
+            "start_ts": "2025-11-30T01:31:00+00:00"
+          },
+          {
+            "size": 20,
+            "bucket": "16+",
+            "winrate": 0.1,
+            "mr_delta": -110.0,
+            "start_ts": "2025-12-01T01:51:00+00:00"
+          },
+          {
+            "size": 21,
+            "bucket": "16+",
+            "winrate": 0.381,
+            "mr_delta": -19.0,
+            "start_ts": "2025-12-03T02:39:00+00:00"
+          },
+          {
+            "size": 6,
+            "bucket": "6-10",
+            "winrate": 0.3333,
+            "mr_delta": -20.0,
+            "start_ts": "2025-12-06T08:37:00+00:00"
+          },
+          {
+            "size": 14,
+            "bucket": "11-15",
+            "winrate": 0.3571,
+            "mr_delta": -22.0,
+            "start_ts": "2025-12-13T06:23:00+00:00"
+          },
+          {
+            "size": 4,
+            "bucket": "1-5",
+            "winrate": 0.25,
+            "mr_delta": 1.0,
+            "start_ts": "2025-12-14T01:39:00+00:00"
+          },
+          {
+            "size": 20,
+            "bucket": "16+",
+            "winrate": 0.35,
+            "mr_delta": -40.0,
+            "start_ts": "2025-12-19T03:00:00+00:00"
+          },
+          {
+            "size": 38,
+            "bucket": "16+",
+            "winrate": 0.3947,
+            "mr_delta": -40.0,
+            "start_ts": "2025-12-21T00:15:00+00:00"
+          },
+          {
+            "size": 24,
+            "bucket": "16+",
+            "winrate": 0.2083,
+            "mr_delta": -48.0,
+            "start_ts": "2025-12-21T04:18:00+00:00"
+          },
+          {
+            "size": 16,
+            "bucket": "16+",
+            "winrate": 0.5,
+            "mr_delta": 11.0,
+            "start_ts": "2025-12-21T23:24:00+00:00"
+          },
+          {
+            "size": 5,
+            "bucket": "1-5",
+            "winrate": 0.4,
+            "mr_delta": -5.0,
+            "start_ts": "2025-12-22T02:36:00+00:00"
+          },
+          {
+            "size": 14,
+            "bucket": "11-15",
+            "winrate": 0.2857,
+            "mr_delta": -7.0,
+            "start_ts": "2026-01-01T20:46:00+00:00"
+          },
+          {
+            "size": 10,
+            "bucket": "6-10",
+            "winrate": 0.5,
+            "mr_delta": 8.0,
+            "start_ts": "2026-01-03T04:19:00+00:00"
+          },
+          {
+            "size": 10,
+            "bucket": "6-10",
+            "winrate": 0.5,
+            "mr_delta": -4.0,
+            "start_ts": "2026-01-09T04:06:00+00:00"
+          },
+          {
+            "size": 11,
+            "bucket": "11-15",
+            "winrate": 0.4545,
+            "mr_delta": -1.0,
+            "start_ts": "2026-01-11T07:30:00+00:00"
+          }
+        ],
+        "by_length": [
+          {
+            "range": "1-5",
+            "avg_winrate": 0.325,
+            "avg_mr_delta": -2.0,
+            "count": 2
+          },
+          {
+            "range": "6-10",
+            "avg_winrate": 0.4444,
+            "avg_mr_delta": -5.3,
+            "count": 3
+          },
+          {
+            "range": "11-15",
+            "avg_winrate": 0.3658,
+            "avg_mr_delta": -10.0,
+            "count": 3
+          },
+          {
+            "range": "16+",
+            "avg_winrate": 0.3351,
+            "avg_mr_delta": -37.0,
+            "count": 7
+          }
+        ],
+        "weekly_by_length": [
+          {
+            "week_start": "2025-11-24",
+            "bucket": "16+",
+            "count": 2,
+            "avg_winrate": 0.2433,
+            "avg_mr_delta": -61.5
+          },
+          {
+            "week_start": "2025-12-01",
+            "bucket": "16+",
+            "count": 1,
+            "avg_winrate": 0.381,
+            "avg_mr_delta": -19.0
+          },
+          {
+            "week_start": "2025-12-01",
+            "bucket": "6-10",
+            "count": 1,
+            "avg_winrate": 0.3333,
+            "avg_mr_delta": -20.0
+          },
+          {
+            "week_start": "2025-12-08",
+            "bucket": "1-5",
+            "count": 1,
+            "avg_winrate": 0.25,
+            "avg_mr_delta": 1.0
+          },
+          {
+            "week_start": "2025-12-08",
+            "bucket": "11-15",
+            "count": 1,
+            "avg_winrate": 0.3571,
+            "avg_mr_delta": -22.0
+          },
+          {
+            "week_start": "2025-12-15",
+            "bucket": "1-5",
+            "count": 1,
+            "avg_winrate": 0.4,
+            "avg_mr_delta": -5.0
+          },
+          {
+            "week_start": "2025-12-15",
+            "bucket": "16+",
+            "count": 4,
+            "avg_winrate": 0.3571,
+            "avg_mr_delta": -29.25
+          },
+          {
+            "week_start": "2025-12-29",
+            "bucket": "11-15",
+            "count": 1,
+            "avg_winrate": 0.2857,
+            "avg_mr_delta": -7.0
+          },
+          {
+            "week_start": "2025-12-29",
+            "bucket": "6-10",
+            "count": 1,
+            "avg_winrate": 0.5,
+            "avg_mr_delta": 8.0
+          },
+          {
+            "week_start": "2026-01-05",
+            "bucket": "11-15",
+            "count": 1,
+            "avg_winrate": 0.4545,
+            "avg_mr_delta": -1.0
+          },
+          {
+            "week_start": "2026-01-05",
+            "bucket": "6-10",
+            "count": 1,
+            "avg_winrate": 0.5,
+            "avg_mr_delta": -4.0
+          }
+        ],
+        "warmup": {
+          "1": 0.3333,
+          "2": 0.2,
+          "3-5": 0.25
+        },
+        "cooldown": {
+          "last3": 0.4889
+        },
+        "time_of_day": [
+          {
+            "day": "Friday",
+            "hour_bucket": 22,
+            "winrate": 0.5,
+            "games": 10
+          },
+          {
+            "day": "Saturday",
+            "hour_bucket": 0,
+            "winrate": 0.3571,
+            "games": 14
+          },
+          {
+            "day": "Saturday",
+            "hour_bucket": 2,
+            "winrate": 0.3333,
+            "games": 6
+          },
+          {
+            "day": "Saturday",
+            "hour_bucket": 18,
+            "winrate": 0.2857,
+            "games": 21
+          },
+          {
+            "day": "Saturday",
+            "hour_bucket": 20,
+            "winrate": 0.4474,
+            "games": 38
+          },
+          {
+            "day": "Saturday",
+            "hour_bucket": 22,
+            "winrate": 0.125,
+            "games": 16
+          },
+          {
+            "day": "Sunday",
+            "hour_bucket": 0,
+            "winrate": 0.375,
+            "games": 8
+          },
+          {
+            "day": "Sunday",
+            "hour_bucket": 2,
+            "winrate": 0.4545,
+            "games": 11
+          },
+          {
+            "day": "Sunday",
+            "hour_bucket": 18,
+            "winrate": 0.5,
+            "games": 16
+          },
+          {
+            "day": "Sunday",
+            "hour_bucket": 20,
+            "winrate": 0.16,
+            "games": 25
+          },
+          {
+            "day": "Thursday",
+            "hour_bucket": 14,
+            "winrate": 0.0,
+            "games": 6
+          },
+          {
+            "day": "Thursday",
+            "hour_bucket": 16,
+            "winrate": 0.5,
+            "games": 8
+          },
+          {
+            "day": "Thursday",
+            "hour_bucket": 22,
+            "winrate": 0.4,
+            "games": 30
+          },
+          {
+            "day": "Tuesday",
+            "hour_bucket": 20,
+            "winrate": 0.3333,
+            "games": 9
+          },
+          {
+            "day": "Tuesday",
+            "hour_bucket": 22,
+            "winrate": 0.4167,
+            "games": 12
+          }
+        ],
+        "momentum": [
+          {
+            "size": 17,
+            "max_win_streak": 2,
+            "max_loss_streak": 4,
+            "mr_delta": -13.0
+          },
+          {
+            "size": 20,
+            "max_win_streak": 1,
+            "max_loss_streak": 9,
+            "mr_delta": -110.0
+          },
+          {
+            "size": 21,
+            "max_win_streak": 3,
+            "max_loss_streak": 7,
+            "mr_delta": -19.0
+          },
+          {
+            "size": 6,
+            "max_win_streak": 2,
+            "max_loss_streak": 4,
+            "mr_delta": -20.0
+          },
+          {
+            "size": 14,
+            "max_win_streak": 2,
+            "max_loss_streak": 4,
+            "mr_delta": -22.0
+          },
+          {
+            "size": 4,
+            "max_win_streak": 1,
+            "max_loss_streak": 2,
+            "mr_delta": 1.0
+          },
+          {
+            "size": 20,
+            "max_win_streak": 3,
+            "max_loss_streak": 6,
+            "mr_delta": -40.0
+          },
+          {
+            "size": 38,
+            "max_win_streak": 4,
+            "max_loss_streak": 7,
+            "mr_delta": -40.0
+          },
+          {
+            "size": 24,
+            "max_win_streak": 1,
+            "max_loss_streak": 8,
+            "mr_delta": -48.0
+          },
+          {
+            "size": 16,
+            "max_win_streak": 4,
+            "max_loss_streak": 3,
+            "mr_delta": 11.0
+          },
+          {
+            "size": 5,
+            "max_win_streak": 2,
+            "max_loss_streak": 3,
+            "mr_delta": -5.0
+          },
+          {
+            "size": 14,
+            "max_win_streak": 1,
+            "max_loss_streak": 6,
+            "mr_delta": -7.0
+          },
+          {
+            "size": 10,
+            "max_win_streak": 2,
+            "max_loss_streak": 2,
+            "mr_delta": 8.0
+          },
+          {
+            "size": 10,
+            "max_win_streak": 2,
+            "max_loss_streak": 3,
+            "mr_delta": -4.0
+          },
+          {
+            "size": 11,
+            "max_win_streak": 2,
+            "max_loss_streak": 3,
+            "mr_delta": -1.0
+          }
+        ]
+      },
+      "activity_by_day": [
+        {
+          "date": "2025-11-29",
+          "matches": 17,
+          "wins": 7,
+          "winrate": 0.4118
+        },
+        {
+          "date": "2025-11-30",
+          "matches": 20,
+          "wins": 2,
+          "winrate": 0.1
+        },
+        {
+          "date": "2025-12-02",
+          "matches": 21,
+          "wins": 8,
+          "winrate": 0.381
+        },
+        {
+          "date": "2025-12-06",
+          "matches": 6,
+          "wins": 2,
+          "winrate": 0.3333
+        },
+        {
+          "date": "2025-12-13",
+          "matches": 18,
+          "wins": 6,
+          "winrate": 0.3333
+        },
+        {
+          "date": "2025-12-18",
+          "matches": 20,
+          "wins": 7,
+          "winrate": 0.35
+        },
+        {
+          "date": "2025-12-20",
+          "matches": 54,
+          "wins": 17,
+          "winrate": 0.3148
+        },
+        {
+          "date": "2025-12-21",
+          "matches": 29,
+          "wins": 13,
+          "winrate": 0.4483
+        },
+        {
+          "date": "2026-01-01",
+          "matches": 14,
+          "wins": 4,
+          "winrate": 0.2857
+        },
+        {
+          "date": "2026-01-02",
+          "matches": 10,
+          "wins": 5,
+          "winrate": 0.5
+        },
+        {
+          "date": "2026-01-08",
+          "matches": 10,
+          "wins": 5,
+          "winrate": 0.5
+        },
+        {
+          "date": "2026-01-11",
+          "matches": 11,
+          "wins": 5,
+          "winrate": 0.4545
+        }
+      ],
+      "activity_by_week": [
+        {
+          "week_start": "2025-11-23",
+          "week_end": "2025-11-29",
+          "matches": 17,
+          "wins": 7,
+          "winrate": 0.4118,
+          "days": [
+            {
+              "date": "2025-11-23",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2025-11-24",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2025-11-25",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2025-11-26",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2025-11-27",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2025-11-28",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2025-11-29",
+              "matches": 17,
+              "wins": 7,
+              "winrate": 0.4118
+            }
+          ]
+        },
+        {
+          "week_start": "2025-11-30",
+          "week_end": "2025-12-06",
+          "matches": 47,
+          "wins": 12,
+          "winrate": 0.2553,
+          "days": [
+            {
+              "date": "2025-11-30",
+              "matches": 20,
+              "wins": 2,
+              "winrate": 0.1
+            },
+            {
+              "date": "2025-12-01",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2025-12-02",
+              "matches": 21,
+              "wins": 8,
+              "winrate": 0.381
+            },
+            {
+              "date": "2025-12-03",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2025-12-04",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2025-12-05",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2025-12-06",
+              "matches": 6,
+              "wins": 2,
+              "winrate": 0.3333
+            }
+          ]
+        },
+        {
+          "week_start": "2025-12-07",
+          "week_end": "2025-12-13",
+          "matches": 18,
+          "wins": 6,
+          "winrate": 0.3333,
+          "days": [
+            {
+              "date": "2025-12-07",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2025-12-08",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2025-12-09",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2025-12-10",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2025-12-11",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2025-12-12",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2025-12-13",
+              "matches": 18,
+              "wins": 6,
+              "winrate": 0.3333
+            }
+          ]
+        },
+        {
+          "week_start": "2025-12-14",
+          "week_end": "2025-12-20",
+          "matches": 74,
+          "wins": 24,
+          "winrate": 0.3243,
+          "days": [
+            {
+              "date": "2025-12-14",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2025-12-15",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2025-12-16",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2025-12-17",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2025-12-18",
+              "matches": 20,
+              "wins": 7,
+              "winrate": 0.35
+            },
+            {
+              "date": "2025-12-19",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2025-12-20",
+              "matches": 54,
+              "wins": 17,
+              "winrate": 0.3148
+            }
+          ]
+        },
+        {
+          "week_start": "2025-12-21",
+          "week_end": "2025-12-27",
+          "matches": 29,
+          "wins": 13,
+          "winrate": 0.4483,
+          "days": [
+            {
+              "date": "2025-12-21",
+              "matches": 29,
+              "wins": 13,
+              "winrate": 0.4483
+            },
+            {
+              "date": "2025-12-22",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2025-12-23",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2025-12-24",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2025-12-25",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2025-12-26",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2025-12-27",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            }
+          ]
+        },
+        {
+          "week_start": "2025-12-28",
+          "week_end": "2026-01-03",
+          "matches": 24,
+          "wins": 9,
+          "winrate": 0.375,
+          "days": [
+            {
+              "date": "2025-12-28",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2025-12-29",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2025-12-30",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2025-12-31",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2026-01-01",
+              "matches": 14,
+              "wins": 4,
+              "winrate": 0.2857
+            },
+            {
+              "date": "2026-01-02",
+              "matches": 10,
+              "wins": 5,
+              "winrate": 0.5
+            },
+            {
+              "date": "2026-01-03",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            }
+          ]
+        },
+        {
+          "week_start": "2026-01-04",
+          "week_end": "2026-01-10",
+          "matches": 10,
+          "wins": 5,
+          "winrate": 0.5,
+          "days": [
+            {
+              "date": "2026-01-04",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2026-01-05",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2026-01-06",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2026-01-07",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2026-01-08",
+              "matches": 10,
+              "wins": 5,
+              "winrate": 0.5
+            },
+            {
+              "date": "2026-01-09",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2026-01-10",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            }
+          ]
+        },
+        {
+          "week_start": "2026-01-11",
+          "week_end": "2026-01-17",
+          "matches": 11,
+          "wins": 5,
+          "winrate": 0.4545,
+          "days": [
+            {
+              "date": "2026-01-11",
+              "matches": 11,
+              "wins": 5,
+              "winrate": 0.4545
+            },
+            {
+              "date": "2026-01-12",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2026-01-13",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2026-01-14",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2026-01-15",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2026-01-16",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2026-01-17",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            }
+          ]
+        }
+      ]
+    },
+    "activity_by_week_modes": {
+      "all": [
+        {
+          "week_start": "2025-11-09",
+          "week_end": "2025-11-15",
+          "matches": 53,
+          "wins": 29,
+          "winrate": 0.5472,
+          "days": [
+            {
+              "date": "2025-11-09",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2025-11-10",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2025-11-11",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2025-11-12",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2025-11-13",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2025-11-14",
+              "matches": 15,
+              "wins": 9,
+              "winrate": 0.6
+            },
+            {
+              "date": "2025-11-15",
+              "matches": 38,
+              "wins": 20,
+              "winrate": 0.5263
+            }
+          ]
+        },
+        {
+          "week_start": "2025-11-16",
+          "week_end": "2025-11-22",
+          "matches": 166,
+          "wins": 83,
+          "winrate": 0.5,
+          "days": [
+            {
+              "date": "2025-11-16",
+              "matches": 66,
+              "wins": 38,
+              "winrate": 0.5758
+            },
+            {
+              "date": "2025-11-17",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2025-11-18",
+              "matches": 27,
+              "wins": 15,
+              "winrate": 0.5556
+            },
+            {
+              "date": "2025-11-19",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2025-11-20",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2025-11-21",
+              "matches": 29,
+              "wins": 15,
+              "winrate": 0.5172
+            },
+            {
+              "date": "2025-11-22",
+              "matches": 44,
+              "wins": 15,
+              "winrate": 0.3409
+            }
+          ]
+        },
+        {
+          "week_start": "2025-11-23",
+          "week_end": "2025-11-29",
+          "matches": 176,
+          "wins": 53,
+          "winrate": 0.3011,
+          "days": [
+            {
+              "date": "2025-11-23",
+              "matches": 70,
+              "wins": 22,
+              "winrate": 0.3143
+            },
+            {
+              "date": "2025-11-24",
+              "matches": 8,
+              "wins": 1,
+              "winrate": 0.125
+            },
+            {
+              "date": "2025-11-25",
+              "matches": 37,
+              "wins": 14,
+              "winrate": 0.3784
+            },
+            {
+              "date": "2025-11-26",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2025-11-27",
+              "matches": 6,
+              "wins": 0,
+              "winrate": 0.0
+            },
+            {
+              "date": "2025-11-28",
+              "matches": 18,
+              "wins": 0,
+              "winrate": 0.0
+            },
+            {
+              "date": "2025-11-29",
+              "matches": 37,
+              "wins": 16,
+              "winrate": 0.4324
+            }
+          ]
+        },
+        {
+          "week_start": "2025-11-30",
+          "week_end": "2025-12-06",
+          "matches": 172,
+          "wins": 20,
+          "winrate": 0.1163,
+          "days": [
+            {
+              "date": "2025-11-30",
+              "matches": 29,
+              "wins": 2,
+              "winrate": 0.069
+            },
+            {
+              "date": "2025-12-01",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2025-12-02",
+              "matches": 36,
+              "wins": 8,
+              "winrate": 0.2222
+            },
+            {
+              "date": "2025-12-03",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2025-12-04",
+              "matches": 66,
+              "wins": 4,
+              "winrate": 0.0606
+            },
+            {
+              "date": "2025-12-05",
+              "matches": 29,
+              "wins": 4,
+              "winrate": 0.1379
+            },
+            {
+              "date": "2025-12-06",
+              "matches": 12,
+              "wins": 2,
+              "winrate": 0.1667
+            }
+          ]
+        },
+        {
+          "week_start": "2025-12-07",
+          "week_end": "2025-12-13",
+          "matches": 154,
+          "wins": 54,
+          "winrate": 0.3506,
+          "days": [
+            {
+              "date": "2025-12-07",
+              "matches": 73,
+              "wins": 27,
+              "winrate": 0.3699
+            },
+            {
+              "date": "2025-12-08",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2025-12-09",
+              "matches": 7,
+              "wins": 7,
+              "winrate": 1.0
+            },
+            {
+              "date": "2025-12-10",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2025-12-11",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2025-12-12",
+              "matches": 16,
+              "wins": 2,
+              "winrate": 0.125
+            },
+            {
+              "date": "2025-12-13",
+              "matches": 58,
+              "wins": 18,
+              "winrate": 0.3103
+            }
+          ]
+        },
+        {
+          "week_start": "2025-12-14",
+          "week_end": "2025-12-20",
+          "matches": 161,
+          "wins": 46,
+          "winrate": 0.2857,
+          "days": [
+            {
+              "date": "2025-12-14",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2025-12-15",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2025-12-16",
+              "matches": 24,
+              "wins": 3,
+              "winrate": 0.125
+            },
+            {
+              "date": "2025-12-17",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2025-12-18",
+              "matches": 35,
+              "wins": 12,
+              "winrate": 0.3429
+            },
+            {
+              "date": "2025-12-19",
+              "matches": 12,
+              "wins": 2,
+              "winrate": 0.1667
+            },
+            {
+              "date": "2025-12-20",
+              "matches": 90,
+              "wins": 29,
+              "winrate": 0.3222
+            }
+          ]
+        },
+        {
+          "week_start": "2025-12-21",
+          "week_end": "2025-12-27",
+          "matches": 62,
+          "wins": 37,
+          "winrate": 0.5968,
+          "days": [
+            {
+              "date": "2025-12-21",
+              "matches": 35,
+              "wins": 18,
+              "winrate": 0.5143
+            },
+            {
+              "date": "2025-12-22",
+              "matches": 15,
+              "wins": 7,
+              "winrate": 0.4667
+            },
+            {
+              "date": "2025-12-23",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2025-12-24",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2025-12-25",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2025-12-26",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2025-12-27",
+              "matches": 12,
+              "wins": 12,
+              "winrate": 1.0
+            }
+          ]
+        },
+        {
+          "week_start": "2025-12-28",
+          "week_end": "2026-01-03",
+          "matches": 68,
+          "wins": 23,
+          "winrate": 0.3382,
+          "days": [
+            {
+              "date": "2025-12-28",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2025-12-29",
+              "matches": 28,
+              "wins": 3,
+              "winrate": 0.1071
+            },
+            {
+              "date": "2025-12-30",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2025-12-31",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2026-01-01",
+              "matches": 22,
+              "wins": 8,
+              "winrate": 0.3636
+            },
+            {
+              "date": "2026-01-02",
+              "matches": 18,
+              "wins": 12,
+              "winrate": 0.6667
+            },
+            {
+              "date": "2026-01-03",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            }
+          ]
+        },
+        {
+          "week_start": "2026-01-04",
+          "week_end": "2026-01-10",
+          "matches": 35,
+          "wins": 12,
+          "winrate": 0.3429,
+          "days": [
+            {
+              "date": "2026-01-04",
+              "matches": 17,
+              "wins": 3,
+              "winrate": 0.1765
+            },
+            {
+              "date": "2026-01-05",
+              "matches": 4,
+              "wins": 1,
+              "winrate": 0.25
+            },
+            {
+              "date": "2026-01-06",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2026-01-07",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2026-01-08",
+              "matches": 14,
+              "wins": 8,
+              "winrate": 0.5714
+            },
+            {
+              "date": "2026-01-09",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2026-01-10",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            }
+          ]
+        },
+        {
+          "week_start": "2026-01-11",
+          "week_end": "2026-01-17",
+          "matches": 63,
+          "wins": 18,
+          "winrate": 0.2857,
+          "days": [
+            {
+              "date": "2026-01-11",
+              "matches": 24,
+              "wins": 10,
+              "winrate": 0.4167
+            },
+            {
+              "date": "2026-01-12",
+              "matches": 10,
+              "wins": 1,
+              "winrate": 0.1
+            },
+            {
+              "date": "2026-01-13",
+              "matches": 11,
+              "wins": 4,
+              "winrate": 0.3636
+            },
+            {
+              "date": "2026-01-14",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2026-01-15",
+              "matches": 18,
+              "wins": 3,
+              "winrate": 0.1667
+            },
+            {
+              "date": "2026-01-16",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2026-01-17",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            }
+          ]
+        }
+      ],
+      "modes": {
+        "casual": [
+          {
+            "week_start": "2025-12-07",
+            "week_end": "2025-12-13",
+            "matches": 11,
+            "wins": 9,
+            "winrate": 0.8182,
+            "days": [
+              {
+                "date": "2025-12-07",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-12-08",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-12-09",
+                "matches": 7,
+                "wins": 7,
+                "winrate": 1.0
+              },
+              {
+                "date": "2025-12-10",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-12-11",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-12-12",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-12-13",
+                "matches": 4,
+                "wins": 2,
+                "winrate": 0.5
+              }
+            ]
+          },
+          {
+            "week_start": "2025-12-14",
+            "week_end": "2025-12-20",
+            "matches": 3,
+            "wins": 1,
+            "winrate": 0.3333,
+            "days": [
+              {
+                "date": "2025-12-14",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-12-15",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-12-16",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-12-17",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-12-18",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-12-19",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-12-20",
+                "matches": 3,
+                "wins": 1,
+                "winrate": 0.3333
+              }
+            ]
+          },
+          {
+            "week_start": "2025-12-21",
+            "week_end": "2025-12-27",
+            "matches": 18,
+            "wins": 17,
+            "winrate": 0.9444,
+            "days": [
+              {
+                "date": "2025-12-21",
+                "matches": 6,
+                "wins": 5,
+                "winrate": 0.8333
+              },
+              {
+                "date": "2025-12-22",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-12-23",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-12-24",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-12-25",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-12-26",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-12-27",
+                "matches": 12,
+                "wins": 12,
+                "winrate": 1.0
+              }
+            ]
+          },
+          {
+            "week_start": "2025-12-28",
+            "week_end": "2026-01-03",
+            "matches": 16,
+            "wins": 11,
+            "winrate": 0.6875,
+            "days": [
+              {
+                "date": "2025-12-28",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-12-29",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-12-30",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-12-31",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2026-01-01",
+                "matches": 8,
+                "wins": 4,
+                "winrate": 0.5
+              },
+              {
+                "date": "2026-01-02",
+                "matches": 8,
+                "wins": 7,
+                "winrate": 0.875
+              },
+              {
+                "date": "2026-01-03",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              }
+            ]
+          },
+          {
+            "week_start": "2026-01-04",
+            "week_end": "2026-01-10",
+            "matches": 4,
+            "wins": 3,
+            "winrate": 0.75,
+            "days": [
+              {
+                "date": "2026-01-04",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2026-01-05",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2026-01-06",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2026-01-07",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2026-01-08",
+                "matches": 4,
+                "wins": 3,
+                "winrate": 0.75
+              },
+              {
+                "date": "2026-01-09",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2026-01-10",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              }
+            ]
+          }
+        ],
+        "custom": [
+          {
+            "week_start": "2025-11-09",
+            "week_end": "2025-11-15",
+            "matches": 15,
+            "wins": 9,
+            "winrate": 0.6,
+            "days": [
+              {
+                "date": "2025-11-09",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-11-10",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-11-11",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-11-12",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-11-13",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-11-14",
+                "matches": 15,
+                "wins": 9,
+                "winrate": 0.6
+              },
+              {
+                "date": "2025-11-15",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              }
+            ]
+          },
+          {
+            "week_start": "2025-11-16",
+            "week_end": "2025-11-22",
+            "matches": 57,
+            "wins": 21,
+            "winrate": 0.3684,
+            "days": [
+              {
+                "date": "2025-11-16",
+                "matches": 22,
+                "wins": 9,
+                "winrate": 0.4091
+              },
+              {
+                "date": "2025-11-17",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-11-18",
+                "matches": 8,
+                "wins": 5,
+                "winrate": 0.625
+              },
+              {
+                "date": "2025-11-19",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-11-20",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-11-21",
+                "matches": 7,
+                "wins": 1,
+                "winrate": 0.1429
+              },
+              {
+                "date": "2025-11-22",
+                "matches": 20,
+                "wins": 6,
+                "winrate": 0.3
+              }
+            ]
+          },
+          {
+            "week_start": "2025-11-23",
+            "week_end": "2025-11-29",
+            "matches": 138,
+            "wins": 32,
+            "winrate": 0.2319,
+            "days": [
+              {
+                "date": "2025-11-23",
+                "matches": 49,
+                "wins": 8,
+                "winrate": 0.1633
+              },
+              {
+                "date": "2025-11-24",
+                "matches": 8,
+                "wins": 1,
+                "winrate": 0.125
+              },
+              {
+                "date": "2025-11-25",
+                "matches": 37,
+                "wins": 14,
+                "winrate": 0.3784
+              },
+              {
+                "date": "2025-11-26",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-11-27",
+                "matches": 6,
+                "wins": 0,
+                "winrate": 0.0
+              },
+              {
+                "date": "2025-11-28",
+                "matches": 18,
+                "wins": 0,
+                "winrate": 0.0
+              },
+              {
+                "date": "2025-11-29",
+                "matches": 20,
+                "wins": 9,
+                "winrate": 0.45
+              }
+            ]
+          },
+          {
+            "week_start": "2025-11-30",
+            "week_end": "2025-12-06",
+            "matches": 125,
+            "wins": 8,
+            "winrate": 0.064,
+            "days": [
+              {
+                "date": "2025-11-30",
+                "matches": 9,
+                "wins": 0,
+                "winrate": 0.0
+              },
+              {
+                "date": "2025-12-01",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-12-02",
+                "matches": 15,
+                "wins": 0,
+                "winrate": 0.0
+              },
+              {
+                "date": "2025-12-03",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-12-04",
+                "matches": 66,
+                "wins": 4,
+                "winrate": 0.0606
+              },
+              {
+                "date": "2025-12-05",
+                "matches": 29,
+                "wins": 4,
+                "winrate": 0.1379
+              },
+              {
+                "date": "2025-12-06",
+                "matches": 6,
+                "wins": 0,
+                "winrate": 0.0
+              }
+            ]
+          },
+          {
+            "week_start": "2025-12-07",
+            "week_end": "2025-12-13",
+            "matches": 26,
+            "wins": 8,
+            "winrate": 0.3077,
+            "days": [
+              {
+                "date": "2025-12-07",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-12-08",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-12-09",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-12-10",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-12-11",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-12-12",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-12-13",
+                "matches": 26,
+                "wins": 8,
+                "winrate": 0.3077
+              }
+            ]
+          },
+          {
+            "week_start": "2025-12-14",
+            "week_end": "2025-12-20",
+            "matches": 46,
+            "wins": 7,
+            "winrate": 0.1522,
+            "days": [
+              {
+                "date": "2025-12-14",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-12-15",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-12-16",
+                "matches": 24,
+                "wins": 3,
+                "winrate": 0.125
+              },
+              {
+                "date": "2025-12-17",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-12-18",
+                "matches": 10,
+                "wins": 4,
+                "winrate": 0.4
+              },
+              {
+                "date": "2025-12-19",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-12-20",
+                "matches": 12,
+                "wins": 0,
+                "winrate": 0.0
+              }
+            ]
+          },
+          {
+            "week_start": "2025-12-21",
+            "week_end": "2025-12-27",
+            "matches": 15,
+            "wins": 7,
+            "winrate": 0.4667,
+            "days": [
+              {
+                "date": "2025-12-21",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-12-22",
+                "matches": 15,
+                "wins": 7,
+                "winrate": 0.4667
+              },
+              {
+                "date": "2025-12-23",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-12-24",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-12-25",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-12-26",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-12-27",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              }
+            ]
+          },
+          {
+            "week_start": "2026-01-04",
+            "week_end": "2026-01-10",
+            "matches": 9,
+            "wins": 4,
+            "winrate": 0.4444,
+            "days": [
+              {
+                "date": "2026-01-04",
+                "matches": 5,
+                "wins": 3,
+                "winrate": 0.6
+              },
+              {
+                "date": "2026-01-05",
+                "matches": 4,
+                "wins": 1,
+                "winrate": 0.25
+              },
+              {
+                "date": "2026-01-06",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2026-01-07",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2026-01-08",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2026-01-09",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2026-01-10",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              }
+            ]
+          },
+          {
+            "week_start": "2026-01-11",
+            "week_end": "2026-01-17",
+            "matches": 40,
+            "wins": 8,
+            "winrate": 0.2,
+            "days": [
+              {
+                "date": "2026-01-11",
+                "matches": 1,
+                "wins": 0,
+                "winrate": 0.0
+              },
+              {
+                "date": "2026-01-12",
+                "matches": 10,
+                "wins": 1,
+                "winrate": 0.1
+              },
+              {
+                "date": "2026-01-13",
+                "matches": 11,
+                "wins": 4,
+                "winrate": 0.3636
+              },
+              {
+                "date": "2026-01-14",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2026-01-15",
+                "matches": 18,
+                "wins": 3,
+                "winrate": 0.1667
+              },
+              {
+                "date": "2026-01-16",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2026-01-17",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              }
+            ]
+          }
+        ],
+        "hub": [
+          {
+            "week_start": "2025-11-16",
+            "week_end": "2025-11-22",
+            "matches": 4,
+            "wins": 2,
+            "winrate": 0.5,
+            "days": [
+              {
+                "date": "2025-11-16",
+                "matches": 1,
+                "wins": 0,
+                "winrate": 0.0
+              },
+              {
+                "date": "2025-11-17",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-11-18",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-11-19",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-11-20",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-11-21",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-11-22",
+                "matches": 3,
+                "wins": 2,
+                "winrate": 0.6667
+              }
+            ]
+          },
+          {
+            "week_start": "2025-12-07",
+            "week_end": "2025-12-13",
+            "matches": 99,
+            "wins": 31,
+            "winrate": 0.3131,
+            "days": [
+              {
+                "date": "2025-12-07",
+                "matches": 73,
+                "wins": 27,
+                "winrate": 0.3699
+              },
+              {
+                "date": "2025-12-08",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-12-09",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-12-10",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-12-11",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-12-12",
+                "matches": 16,
+                "wins": 2,
+                "winrate": 0.125
+              },
+              {
+                "date": "2025-12-13",
+                "matches": 10,
+                "wins": 2,
+                "winrate": 0.2
+              }
+            ]
+          },
+          {
+            "week_start": "2025-12-14",
+            "week_end": "2025-12-20",
+            "matches": 38,
+            "wins": 14,
+            "winrate": 0.3684,
+            "days": [
+              {
+                "date": "2025-12-14",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-12-15",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-12-16",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-12-17",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-12-18",
+                "matches": 5,
+                "wins": 1,
+                "winrate": 0.2
+              },
+              {
+                "date": "2025-12-19",
+                "matches": 12,
+                "wins": 2,
+                "winrate": 0.1667
+              },
+              {
+                "date": "2025-12-20",
+                "matches": 21,
+                "wins": 11,
+                "winrate": 0.5238
+              }
+            ]
+          },
+          {
+            "week_start": "2025-12-28",
+            "week_end": "2026-01-03",
+            "matches": 28,
+            "wins": 3,
+            "winrate": 0.1071,
+            "days": [
+              {
+                "date": "2025-12-28",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-12-29",
+                "matches": 28,
+                "wins": 3,
+                "winrate": 0.1071
+              },
+              {
+                "date": "2025-12-30",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-12-31",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2026-01-01",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2026-01-02",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2026-01-03",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              }
+            ]
+          },
+          {
+            "week_start": "2026-01-04",
+            "week_end": "2026-01-10",
+            "matches": 12,
+            "wins": 0,
+            "winrate": 0.0,
+            "days": [
+              {
+                "date": "2026-01-04",
+                "matches": 12,
+                "wins": 0,
+                "winrate": 0.0
+              },
+              {
+                "date": "2026-01-05",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2026-01-06",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2026-01-07",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2026-01-08",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2026-01-09",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2026-01-10",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              }
+            ]
+          },
+          {
+            "week_start": "2026-01-11",
+            "week_end": "2026-01-17",
+            "matches": 12,
+            "wins": 5,
+            "winrate": 0.4167,
+            "days": [
+              {
+                "date": "2026-01-11",
+                "matches": 12,
+                "wins": 5,
+                "winrate": 0.4167
+              },
+              {
+                "date": "2026-01-12",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2026-01-13",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2026-01-14",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2026-01-15",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2026-01-16",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2026-01-17",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              }
+            ]
+          }
+        ],
+        "rank": [
+          {
+            "week_start": "2025-11-09",
+            "week_end": "2025-11-15",
+            "matches": 38,
+            "wins": 20,
+            "winrate": 0.5263,
+            "days": [
+              {
+                "date": "2025-11-09",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-11-10",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-11-11",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-11-12",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-11-13",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-11-14",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-11-15",
+                "matches": 38,
+                "wins": 20,
+                "winrate": 0.5263
+              }
+            ]
+          },
+          {
+            "week_start": "2025-11-16",
+            "week_end": "2025-11-22",
+            "matches": 105,
+            "wins": 60,
+            "winrate": 0.5714,
+            "days": [
+              {
+                "date": "2025-11-16",
+                "matches": 43,
+                "wins": 29,
+                "winrate": 0.6744
+              },
+              {
+                "date": "2025-11-17",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-11-18",
+                "matches": 19,
+                "wins": 10,
+                "winrate": 0.5263
+              },
+              {
+                "date": "2025-11-19",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-11-20",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-11-21",
+                "matches": 22,
+                "wins": 14,
+                "winrate": 0.6364
+              },
+              {
+                "date": "2025-11-22",
+                "matches": 21,
+                "wins": 7,
+                "winrate": 0.3333
+              }
+            ]
+          },
+          {
+            "week_start": "2025-11-23",
+            "week_end": "2025-11-29",
+            "matches": 38,
+            "wins": 21,
+            "winrate": 0.5526,
+            "days": [
+              {
+                "date": "2025-11-23",
+                "matches": 21,
+                "wins": 14,
+                "winrate": 0.6667
+              },
+              {
+                "date": "2025-11-24",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-11-25",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-11-26",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-11-27",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-11-28",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-11-29",
+                "matches": 17,
+                "wins": 7,
+                "winrate": 0.4118
+              }
+            ]
+          },
+          {
+            "week_start": "2025-11-30",
+            "week_end": "2025-12-06",
+            "matches": 47,
+            "wins": 12,
+            "winrate": 0.2553,
+            "days": [
+              {
+                "date": "2025-11-30",
+                "matches": 20,
+                "wins": 2,
+                "winrate": 0.1
+              },
+              {
+                "date": "2025-12-01",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-12-02",
+                "matches": 21,
+                "wins": 8,
+                "winrate": 0.381
+              },
+              {
+                "date": "2025-12-03",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-12-04",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-12-05",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-12-06",
+                "matches": 6,
+                "wins": 2,
+                "winrate": 0.3333
+              }
+            ]
+          },
+          {
+            "week_start": "2025-12-07",
+            "week_end": "2025-12-13",
+            "matches": 18,
+            "wins": 6,
+            "winrate": 0.3333,
+            "days": [
+              {
+                "date": "2025-12-07",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-12-08",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-12-09",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-12-10",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-12-11",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-12-12",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-12-13",
+                "matches": 18,
+                "wins": 6,
+                "winrate": 0.3333
+              }
+            ]
+          },
+          {
+            "week_start": "2025-12-14",
+            "week_end": "2025-12-20",
+            "matches": 74,
+            "wins": 24,
+            "winrate": 0.3243,
+            "days": [
+              {
+                "date": "2025-12-14",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-12-15",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-12-16",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-12-17",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-12-18",
+                "matches": 20,
+                "wins": 7,
+                "winrate": 0.35
+              },
+              {
+                "date": "2025-12-19",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-12-20",
+                "matches": 54,
+                "wins": 17,
+                "winrate": 0.3148
+              }
+            ]
+          },
+          {
+            "week_start": "2025-12-21",
+            "week_end": "2025-12-27",
+            "matches": 29,
+            "wins": 13,
+            "winrate": 0.4483,
+            "days": [
+              {
+                "date": "2025-12-21",
+                "matches": 29,
+                "wins": 13,
+                "winrate": 0.4483
+              },
+              {
+                "date": "2025-12-22",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-12-23",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-12-24",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-12-25",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-12-26",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-12-27",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              }
+            ]
+          },
+          {
+            "week_start": "2025-12-28",
+            "week_end": "2026-01-03",
+            "matches": 24,
+            "wins": 9,
+            "winrate": 0.375,
+            "days": [
+              {
+                "date": "2025-12-28",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-12-29",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-12-30",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2025-12-31",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2026-01-01",
+                "matches": 14,
+                "wins": 4,
+                "winrate": 0.2857
+              },
+              {
+                "date": "2026-01-02",
+                "matches": 10,
+                "wins": 5,
+                "winrate": 0.5
+              },
+              {
+                "date": "2026-01-03",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              }
+            ]
+          },
+          {
+            "week_start": "2026-01-04",
+            "week_end": "2026-01-10",
+            "matches": 10,
+            "wins": 5,
+            "winrate": 0.5,
+            "days": [
+              {
+                "date": "2026-01-04",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2026-01-05",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2026-01-06",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2026-01-07",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2026-01-08",
+                "matches": 10,
+                "wins": 5,
+                "winrate": 0.5
+              },
+              {
+                "date": "2026-01-09",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2026-01-10",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              }
+            ]
+          },
+          {
+            "week_start": "2026-01-11",
+            "week_end": "2026-01-17",
+            "matches": 11,
+            "wins": 5,
+            "winrate": 0.4545,
+            "days": [
+              {
+                "date": "2026-01-11",
+                "matches": 11,
+                "wins": 5,
+                "winrate": 0.4545
+              },
+              {
+                "date": "2026-01-12",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2026-01-13",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2026-01-14",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2026-01-15",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2026-01-16",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2026-01-17",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "matchups": [
+    {
+      "opponent": "A.K.I.",
+      "games": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "cum_winrate": [
+        0.6,
+        0.5,
+        0.4286,
+        0.375,
+        0.4444,
+        0.4
+      ]
+    },
+    {
+      "opponent": "Akuma",
+      "games": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "cum_winrate": [
+        0.4,
+        0.3333,
+        0.4286,
+        0.5,
+        0.4444,
+        0.5,
+        0.4545,
+        0.4167,
+        0.3846,
+        0.4286,
+        0.4667,
+        0.4375,
+        0.4118,
+        0.3889,
+        0.3684,
+        0.35
+      ]
+    },
+    {
+      "opponent": "C. Viper",
+      "games": [
+        5,
+        6
+      ],
+      "cum_winrate": [
+        0.4,
+        0.3333
+      ]
+    },
+    {
+      "opponent": "Cammy",
+      "games": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "cum_winrate": [
+        0.2,
+        0.1667,
+        0.2857,
+        0.25,
+        0.2222,
+        0.2,
+        0.1818,
+        0.25,
+        0.2308,
+        0.2857,
+        0.2667,
+        0.3125
+      ]
+    },
+    {
+      "opponent": "Chun-Li",
+      "games": [
+        5,
+        6
+      ],
+      "cum_winrate": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "opponent": "Ed",
+      "games": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "cum_winrate": [
+        0.4,
+        0.3333,
+        0.2857,
+        0.375,
+        0.4444
+      ]
+    },
+    {
+      "opponent": "Elena",
+      "games": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "cum_winrate": [
+        0.6,
+        0.5,
+        0.4286,
+        0.375,
+        0.4444,
+        0.4
+      ]
+    },
+    {
+      "opponent": "Guile",
+      "games": [
+        5
+      ],
+      "cum_winrate": [
+        0.0
+      ]
+    },
+    {
+      "opponent": "Jamie",
+      "games": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "cum_winrate": [
+        0.2,
+        0.1667,
+        0.1429,
+        0.125,
+        0.1111
+      ]
+    },
+    {
+      "opponent": "Jp",
+      "games": [
+        5,
+        6
+      ],
+      "cum_winrate": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "opponent": "Juri",
+      "games": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "cum_winrate": [
+        0.2,
+        0.1667,
+        0.1429,
+        0.25,
+        0.2222,
+        0.2,
+        0.1818,
+        0.1667,
+        0.1538,
+        0.2143,
+        0.2,
+        0.25,
+        0.2941,
+        0.2778,
+        0.3158,
+        0.3,
+        0.3333,
+        0.3636
+      ]
+    },
+    {
+      "opponent": "Ken",
+      "games": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "cum_winrate": [
+        0.4,
+        0.5,
+        0.4286,
+        0.5,
+        0.4444
+      ]
+    },
+    {
+      "opponent": "Luke",
+      "games": [
+        5,
+        6
+      ],
+      "cum_winrate": [
+        0.2,
+        0.3333
+      ]
+    },
+    {
+      "opponent": "Manon",
+      "games": [
+        5,
+        6
+      ],
+      "cum_winrate": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "opponent": "Ryu",
+      "games": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "cum_winrate": [
+        0.4,
+        0.3333,
+        0.2857,
+        0.25,
+        0.2222,
+        0.3,
+        0.2727,
+        0.25,
+        0.3077,
+        0.2857,
+        0.3333,
+        0.3125,
+        0.2941
+      ]
+    },
+    {
+      "opponent": "Sagat",
+      "games": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28
+      ],
+      "cum_winrate": [
+        0.4,
+        0.3333,
+        0.2857,
+        0.375,
+        0.3333,
+        0.4,
+        0.4545,
+        0.4167,
+        0.4615,
+        0.4286,
+        0.4,
+        0.375,
+        0.4118,
+        0.3889,
+        0.3684,
+        0.4,
+        0.381,
+        0.4091,
+        0.3913,
+        0.4167,
+        0.44,
+        0.4615,
+        0.4444,
+        0.4286
+      ]
+    },
+    {
+      "opponent": "Terry",
+      "games": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "cum_winrate": [
+        0.2,
+        0.1667,
+        0.1429,
+        0.125,
+        0.2222,
+        0.2,
+        0.1818
+      ]
+    },
+    {
+      "opponent": "Zangief",
+      "games": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "cum_winrate": [
+        0.4,
+        0.3333,
+        0.2857,
+        0.375,
+        0.3333,
+        0.3,
+        0.2727,
+        0.25,
+        0.3077,
+        0.2857,
+        0.3333,
+        0.375,
+        0.4118,
+        0.3889,
+        0.4211
+      ]
+    }
+  ]
+}
