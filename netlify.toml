@@ -2,5 +2,17 @@
 command = "python -m pip install -r requirements.txt && mkdocs build"
 publish = "site"
 
+# Redirect legacy Lab URLs to Insights
+[[redirects]]
+	from = "/lab/*"
+	to = "/insights/:splat"
+	status = 301
+	force = true
+
 [build.environment]
 PYTHON_VERSION = "3.11"
+
+[[headers]]
+  for = "/work/personal-finance/*"
+  [headers.values]
+    Basic-Auth = "pf:changeme"

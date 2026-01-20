@@ -7,6 +7,11 @@ site_url: https://zach-king-analytics.netlify.app
   
 plugins:
   - search
+  - redirects:
+      redirect_maps:
+        lab/index.md: insights/index.md
+        lab/notes/index.md: insights/notes/index.md
+        lab/experiments/index.md: insights/experiments/index.md
 
 nav:
   - Home: index.md
@@ -17,15 +22,17 @@ nav:
           - Overview: work/sf6/index.md
           - Matchup Report: work/sf6/matchup-report.md
           - Architecture: work/sf6/architecture.md
-          - Data Contract: work/sf6/data-contract.md
           - Build & Deploy: work/sf6/build-deploy.md
+      - Personal Finance:
+          - Overview: work/personal-finance/index.md
+      - Recipe Studio:
+          - Overview: work/recipes/index.md
 
-  - Lab:
-      - Overview: lab/index.md
-      - Notes: lab/notes/index.md
-      - Experiments: lab/experiments/index.md
+  - Insights:
+      - Overview: insights/index.md
+      - Notes: insights/notes/index.md
+      - Experiments: insights/experiments/index.md
 
-  - About: about.md
   - Credentials: resume.md
   - Inquiries: contact.md
 
@@ -38,7 +45,6 @@ theme:
     toggle:
       icon: material/weather-night
       name: Switch to dark mode
-  custom_dir: docs/overrides
   features:
     # - navigation.instant
     - navigation.top
@@ -65,6 +71,8 @@ markdown_extensions:
   - meta
   - attr_list
   - md_in_html
+  - admonition
+  - pymdownx.details
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid

@@ -1,14 +1,54 @@
-<div class="insight-card">
-  <div class="insight-kicker">Insight</div>
-  <div class="insight-title">Small teams win when decision latency drops.</div>
-  <p class="insight-body">
-    The highest ROI work wasn’t more dashboards — it was defining a single “source of truth” metric and
-    wiring it into planning and retros. That cut debate time and increased shipping cadence.
-  </p>
+---
+hide:
+  - navigation
+---
 
-  <div class="insight-metrics">
-    <div class="insight-metric"><div class="k">Impact</div><div class="v">↑ 18% activation</div></div>
-    <div class="insight-metric"><div class="k">Time</div><div class="v">6 weeks</div></div>
-    <div class="insight-metric"><div class="k">Scope</div><div class="v">2 funnels</div></div>
-  </div>
-</div>
+# Architecture
+
+A static-first, Python-driven pipeline for competitive analysis.
+
+---
+
+## The Idea
+
+Rather than compute reports on-demand, we generate them offline and ship JSON. This keeps the site **fast**, **cacheable**, and **predictable** — no backend required.
+
+---
+
+## Data Flow
+
+```mermaid
+graph LR
+  A["🎮 Buckler<br/>Headless Browser"]
+  B["🗄️ PostgreSQL<br/>Match History"]
+  C["⚙️ Python<br/>Report Generator"]
+  D["📦 Static JSON<br/>Reports"]
+  E["🎨 Browser<br/>Plotly Charts"]
+  
+  A -->|Scrape CFN| B
+  B -->|SQL queries| C
+  C -->|Offline transforms| D
+  D -->|On load| E
+  
+  classDef stage fill:#2c8c89,stroke:#1a5653,stroke-width:2px,color:#fff
+  class A,B,C,D,E stage
+```
+
+---
+
+## Key Decisions
+
+| What | Why |
+|------|-----|
+| **Offline reports (not live API)** | Pre-computed JSON is fast, cache-friendly, and immune to backend outages. |
+| **Ranked MR filtering** | Analysis is scoped to meaningful ranked matches. No noise from casual or invalid data. |
+| **Plotly charts** | Interactive, responsive, and renders beautifully without extra dependencies. |
+| **Python + SQL** | Full control over calculations. All math is auditable in source code. |
+
+---
+
+## What's Next?
+
+- **Opponent tagging**: Auto-categorize matchups by regional player / skill tier
+- **Trend detection**: Highlight improving and declining characters
+- **Export as PDF**: Share reports offline

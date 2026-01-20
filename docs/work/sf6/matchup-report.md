@@ -6,22 +6,14 @@ hide:
 
 # Street Fighter 6 Matchup Lab
 
-This project turns **ranked Street Fighter 6 match history** into **actionable training and matchup insights**.
-
-Rather than static win-rate snapshots, the focus is on **trend + context**:
-how matchups stabilize with sample size, where performance consistently breaks down, and what to prioritize next in practice.
-
-Built as a static analytics app (PostgreSQL → Python → JSON → Plotly), this page is designed to be:
-- useful to competitive players
-- legible to non-FGC readers
-- portfolio-grade in analytical judgment
+Enter your CFN below to generate a personalized report. You'll see trend lines, matchup breakdowns, and a coaching-style insight on where to focus next.
 
 ---
 
 ## Generate a report
 
 <div class="sf6-input-row">
-  <input id="sf6-cfn-input" type="text" placeholder="Enter CFN (case-insensitive)">
+  <input id="sf6-cfn-input" type="text" placeholder="e.g., karatesnacks">
   <button id="sf6-cfn-submit">Generate report</button>
   <button id="sf6-copy-link">Copy shareable link</button>
 </div>
@@ -33,14 +25,16 @@ Built as a static analytics app (PostgreSQL → Python → JSON → Plotly), thi
     <!-- Filled by JS once a report loads -->
   </div>
 </section>
+
 ---
 
-<div class="sf6-card">
-  <div class="sf6-card-title">Character mix</div>
-  <div id="sf6-character-mix-chart"></div>
-  <div id="sf6-character-mix-text" class="sf6-muted"></div>
-</div>
+<div id="sf6-report-sections" class="sf6-hidden" markdown="1">
 
+<div class="sf6-card">
+  <div class="sf6-card-title">Mode distribution</div>
+  <div id="sf6-mode-distribution-chart"></div>
+  <div id="sf6-mode-distribution-text" class="sf6-muted"></div>
+</div>
 
 ---
 
@@ -170,6 +164,6 @@ Top and bottom matchups by win rate, filtered to matchups with enough games to b
 
 </div>
 
----
+</div>
 
 

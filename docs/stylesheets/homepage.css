@@ -1,184 +1,280 @@
 
+/* ============================================
+   HOMEPAGE STYLES - Clean & Simple
+   ============================================ */
 
-
-/* ---------- HOMEPAGE-ONLY styles (scoped via .is-home) ---------- */
-
-/* Layout/typography for the hero */
+/* Layout cleanup */
 html.is-home .md-content {
   max-width: 100%;
-  text-align: center;
   padding: 0;
+  background: transparent;
 }
 
-.home-hero {
-  padding-top: 12vh;
-  padding-bottom: 4vh;
+html.is-home .md-content__inner {
+  margin: 0;
+  max-width: none;
+  background: transparent;
 }
 
-html.is-home .md-typeset h1 {
-  font-size: 5.5rem;
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  margin-bottom: 0.75rem;
-  color: #ffffff;
-  text-shadow: 0 2px 20px rgba(44, 140, 137, 0.3);
-  opacity: 0;
-  animation: homeFadeIn 0.6s ease-out forwards;
+html.is-home .md-main {
+  background: transparent;
 }
 
-html.is-home .md-typeset strong {
-  font-size: 1.85rem;
-  font-weight: 600;
-  display: block;
-  margin-bottom: 2rem;
-  color: #2c8c89;
-  opacity: 0;
-  animation: homeFadeIn 0.6s ease-out forwards;
-  animation-delay: 0.1s;
+html.is-home .md-container {
+  background: transparent;
 }
 
-html.is-home .homepage-subhead {
-  font-size: 1.35rem;
-  font-weight: 400;
-  color: #e0e0e0;
-  max-width: 55ch;
-  margin: 0 auto 3rem;
-  line-height: 1.6;
-  opacity: 0;
-  animation: homeFadeIn 0.6s ease-out forwards;
-  animation-delay: 0.2s;
+html.is-home main {
+  background: transparent;
 }
 
-/* Background & hero image, homepage only */
+html.is-home article {
+  background: transparent;
+}
+
+html.is-home .md-header {
+  background: transparent;
+  border-bottom: none;
+}
+
+html.is-home .md-tabs {
+  background: transparent;
+  border-bottom: 1px solid rgba(44, 140, 137, 0.3);
+}
+
+/* Dark background for homepage only */
 html.is-home body {
   background: #0a0a0a;
   color: #ffffff;
   position: relative;
 }
 
-/* Grid pattern overlay */
+/* Subtle grid pattern overlay */
 html.is-home body::after {
   content: "";
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   background-image: 
-    linear-gradient(rgba(44, 140, 137, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(44, 140, 137, 0.03) 1px, transparent 1px);
+    linear-gradient(rgba(44, 140, 137, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(44, 140, 137, 0.02) 1px, transparent 1px);
   background-size: 50px 50px;
   z-index: -2;
   pointer-events: none;
 }
 
+/* Background image */
 html.is-home body::before {
   content: "";
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 100vw;
-  height: 100vh;
-  transform: translate(-50%, -50%);
-  /* Use RELATIVE path from the CSS file location */
-  background: url("../assets/images/hero_background.png") center/cover no-repeat;
-  opacity: 0.08;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  background-image: url("../assets/images/hero_background.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  opacity: 0.30;
   z-index: -3;
   pointer-events: none;
-  filter: grayscale(1) contrast(1.3) brightness(0.5);
+  filter: grayscale(0.5) contrast(1.05) brightness(0.8);
 }
 
-/* Simple fade-in animation */
-@keyframes homeFadeIn {
-  from { opacity: 0; transform: translateY(0.5rem); }
-  to   { opacity: 1; transform: translateY(0); }
-}
+/* ============================================
+   HERO SECTION
+   ============================================ */
 
-/* Impact metrics section */
-.impact-metrics {
-  max-width: 1100px;
-  margin: 2rem auto;
-  padding: 3rem 2rem;
+.home-hero {
   text-align: center;
+  padding: 6vh 2rem 12vh;
+  max-width: 900px;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
 }
 
-.metrics-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
-}
-
-.metric-card {
-  background: color-mix(in srgb, #2c8c89 8%, transparent);
-  border: 1px solid color-mix(in srgb, #2c8c89 25%, transparent);
-  border-radius: 12px;
-  padding: 2rem 1.75rem;
-  text-align: center;
-  transition: all 0.2s ease;
-}
-
-.metric-card h3 {
-  font-size: 2.75rem;
-  font-weight: 700;
-  color: #2c8c89;
-  margin: 0 0 0.5rem 0;
-  letter-spacing: -0.02em;
-}
-
-.metric-card p {
-  font-size: 0.95rem;
-  color: #d0d0d0;
-  line-height: 1.6;
-  font-weight: 400;
-  margin: 0;
-}
-
-.metric-card:hover {
-  transform: translateY(-3px);
-  border-color: #2c8c89;
-  box-shadow: 0 8px 20px rgba(44, 140, 137, 0.12);
-}
-
-/* Links on the homepage */
-html.is-home .md-typeset a { 
-  color: #2c8c89; 
-  text-decoration: none;
+.home-hero h1 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
   font-weight: 600;
-  border-bottom: 2px solid transparent;
-  transition: border-color 0.2s;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.75rem 0;
+  color: #ffffff;
+  text-shadow: none;
 }
-html.is-home .md-typeset a:hover { 
-  border-bottom-color: #2c8c89;
+
+.home-hero strong {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-weight: 500;
+  display: block;
+  margin-bottom: 1.5rem;
+  color: #2c8c89;
+}
+
+.homepage-subhead {
+  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+  font-weight: 400;
+  color: #c0c0c0;
+  max-width: 60ch;
+  margin: 0 auto 2.5rem;
+  line-height: 1.6;
+}
+
+.homepage-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 2rem 0;
 }
 
 .cta-link {
   display: inline-block;
-  padding: 0.75rem 1.75rem;
-  background-color: #2c8c89;
-  color: #fff !important;
+  padding: 0.85rem 2rem;
+  background: #2c8c89;
+  color: #ffffff !important;
   text-decoration: none !important;
-  border-radius: 8px;
+  border-radius: 6px;
   font-weight: 600;
-  margin: 0.5rem;
+  font-size: 1rem;
   transition: all 0.2s ease;
-  border: none;
+  border: 2px solid #2c8c89;
 }
 
 .cta-link:hover {
-  background-color: color-mix(in srgb, #2c8c89 85%, white);
+  background: #3da09c;
+  border-color: #3da09c;
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(44, 140, 137, 0.3);
-  border-bottom: none;
+  box-shadow: 0 4px 12px rgba(44, 140, 137, 0.3);
 }
 
 .cta-link--secondary {
-  background-color: transparent;
-  border: 2px solid #2c8c89;
+  background: transparent;
   color: #2c8c89 !important;
+  border: 2px solid #2c8c89;
 }
 
 .cta-link--secondary:hover {
-  background-color: color-mix(in srgb, #2c8c89 12%, transparent);
+  background: rgba(44, 140, 137, 0.1);
+  color: #3da09c !important;
+  border-color: #3da09c;
 }
 
+/* Scroll indicator */
+.scroll-indicator {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.65rem;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  animation: bounce 2.5s infinite;
+  z-index: 10;
+}
+
+.scroll-indicator svg {
+  width: 24px;
+  height: 24px;
+  stroke: #888;
+  stroke-width: 1.5;
+  fill: none;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); opacity: 0.6; }
+  50% { transform: translateX(-50%) translateY(10px); opacity: 1; }
+}
+
+/* ============================================
+   IMPACT SECTION
+   ============================================ */
+
+.impact-section {
+  background: rgba(20, 20, 20, 0.9);
+  padding: 4rem 2rem;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.impact-section h2 {
+  text-align: center;
+  font-size: clamp(1.5rem, 3vw, 1.8rem);
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 2.5rem 0;
+  text-transform: none;
+  letter-spacing: 0.01em;
+  border-bottom: none;
+}
+
+/* Metrics Grid */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Metric Cards */
+.metric-card {
+  background: rgba(44, 140, 137, 0.08);
+  border: 1px solid rgba(44, 140, 137, 0.25);
+  border-radius: 12px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.metric-card:hover {
+  background: rgba(44, 140, 137, 0.15);
+  border-color: rgba(44, 140, 137, 0.5);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(44, 140, 137, 0.2);
+}
+
+.metric-card h3 {
+  font-size: 2.25rem;
+  font-weight: 600;
+  color: #2c8c89;
+  margin: 0 0 0.5rem 0;
+  line-height: 1;
+  border-bottom: none;
+}
+
+.metric-card p {
+  font-size: 0.9rem;
+  color: #b0b0b0;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .metrics-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .impact-section {
+    padding: 3rem 1.5rem;
+  }
+  
+  .home-hero {
+    padding: 6vh 1.5rem 4vh;
+  }
+}

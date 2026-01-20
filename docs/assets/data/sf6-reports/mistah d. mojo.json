@@ -1,38 +1,38 @@
 {
   "player_cfn": "mistah d. mojo",
-  "generated_at": "2026-01-17T02:03:58.793077+00:00",
+  "generated_at": "2026-01-19T18:31:46.674545+00:00",
   "baseline_n": 5,
   "summary": {
     "overall": {
-      "matches_analyzed": 1110,
+      "matches_analyzed": 1142,
       "dataset_start": "2025-11-15",
-      "dataset_end": "2026-01-16",
+      "dataset_end": "2026-01-19",
       "mode_breakdown": [
         {
           "mode": "custom",
-          "matches": 471,
-          "share_pct": 42.4
+          "matches": 503,
+          "share_pct": 44.0
         },
         {
           "mode": "rank",
           "matches": 394,
-          "share_pct": 35.5
+          "share_pct": 34.5
         },
         {
           "mode": "hub",
           "matches": 193,
-          "share_pct": 17.4
+          "share_pct": 16.9
         },
         {
           "mode": "casual",
           "matches": 52,
-          "share_pct": 4.7
+          "share_pct": 4.6
         }
       ],
       "character_breakdown": [
         {
           "character": "Terry",
-          "games": 1110,
+          "games": 1142,
           "share_pct": 100.0
         }
       ]
@@ -1650,6 +1650,57 @@
               "winrate": null
             }
           ]
+        },
+        {
+          "week_start": "2026-01-18",
+          "week_end": "2026-01-24",
+          "matches": 32,
+          "wins": 3,
+          "winrate": 0.0938,
+          "days": [
+            {
+              "date": "2026-01-18",
+              "matches": 30,
+              "wins": 3,
+              "winrate": 0.1
+            },
+            {
+              "date": "2026-01-19",
+              "matches": 2,
+              "wins": 0,
+              "winrate": 0.0
+            },
+            {
+              "date": "2026-01-20",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2026-01-21",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2026-01-22",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2026-01-23",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2026-01-24",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            }
+          ]
         }
       ],
       "modes": {
@@ -2364,6 +2415,57 @@
               },
               {
                 "date": "2026-01-17",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              }
+            ]
+          },
+          {
+            "week_start": "2026-01-18",
+            "week_end": "2026-01-24",
+            "matches": 32,
+            "wins": 3,
+            "winrate": 0.0938,
+            "days": [
+              {
+                "date": "2026-01-18",
+                "matches": 30,
+                "wins": 3,
+                "winrate": 0.1
+              },
+              {
+                "date": "2026-01-19",
+                "matches": 2,
+                "wins": 0,
+                "winrate": 0.0
+              },
+              {
+                "date": "2026-01-20",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2026-01-21",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2026-01-22",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2026-01-23",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2026-01-24",
                 "matches": 0,
                 "wins": 0,
                 "winrate": null

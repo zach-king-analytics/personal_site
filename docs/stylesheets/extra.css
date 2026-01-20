@@ -8,31 +8,31 @@
 
 /* Global typography improvements */
 .md-typeset {
-  font-size: 1.05rem;
-  line-height: 1.72;
+  font-size: 0.95rem;
+  line-height: 1.7;
 }
 
 .md-typeset h1 {
-  font-weight: 700;
-  font-size: 2.75rem;
-  letter-spacing: -0.02em;
-  margin-bottom: 1.25rem;
-  border-bottom: 3px solid var(--md-primary-fg-color);
+  font-weight: 600;
+  font-size: 2rem;
+  letter-spacing: -0.01em;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--md-primary-fg-color);
   padding-bottom: 0.5rem;
 }
 
 .md-typeset h2 {
   font-weight: 600;
-  font-size: 1.85rem;
-  margin-top: 2.5rem;
-  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 0.875rem;
   letter-spacing: -0.01em;
 }
 
 .md-typeset h3 {
   font-weight: 600;
-  font-size: 1.35rem;
-  margin-top: 1.75rem;
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
   color: var(--md-default-fg-color);
 }
 
@@ -107,7 +107,6 @@ form input,form textarea{width:100%;max-width:42rem}
   font-weight: 600;
 }
 
-
 /* Resume hero */
 .resume-hero {
   text-align: center;
@@ -177,14 +176,52 @@ form input,form textarea{width:100%;max-width:42rem}
 
 .sf6-input-row {
   display: flex;
-  gap: 0.75rem;
+  gap: 1rem;
   align-items: center;
-  margin-bottom: 0.5rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  margin-top: 1rem;
 }
 
 .sf6-input-row input {
-  flex: 1;
-  max-width: 260px;
+  flex: 0 1 300px;
+  padding: 0.65rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #374151;
+  border-radius: 6px;
+  background: #050816;
+  color: #e0e0e0;
+  transition: all 0.2s ease;
+}
+
+.sf6-input-row input:focus {
+  outline: none;
+  border-color: #2c8c89;
+  box-shadow: 0 0 8px rgba(44, 140, 137, 0.2);
+}
+
+.sf6-input-row button {
+  padding: 0.6rem 1.5rem;
+  background: #2c8c89;
+  color: #ffffff;
+  border: 2px solid #2c8c89;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.sf6-input-row button:hover {
+  background: #3da09c;
+  border-color: #3da09c;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(44, 140, 137, 0.3);
+}
+
+.sf6-input-row button:active {
+  transform: translateY(0);
 }
 
 .sf6-chart-wrapper {
@@ -227,22 +264,40 @@ form input,form textarea{width:100%;max-width:42rem}
 /* Banner Styles */
 
 .sf6-char-banner {
-  margin-top: 0.75rem;
-  margin-bottom: 0.25rem;
-  padding: 0.5rem 0.9rem;
-  border-radius: 9999px;
-  background: #050816;
-  border: 1px solid #374151;
-  font-size: 0.85rem;
+  margin-top: 2rem;
+  margin-bottom: 2.5rem;
+  padding: 0 2rem;
+  border-radius: 0;
+  background: transparent;
+  border: none;
   color: #E5E7EB;
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.35rem;
-  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.sf6-char-banner .admonition {
+  margin-left: 0;
+  margin-right: 0;
+  max-width: 100%;
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.sf6-char-banner .admonition-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.sf6-char-banner p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin: 1rem 0;
 }
 
 .sf6-char-banner-prefix {
-  margin-right: 0.35rem;
+  margin-right: 0;
 }
 
 .sf6-char-pill {
@@ -529,4 +584,36 @@ button {
 
 #sf6-activity-chart .js-plotly-plot {
   border-radius: 12px;
+}
+
+#sf6-mode-distribution-chart .js-plotly-plot {
+  width: 100% !important;
+}
+
+/* SF6 Report: Hide sections until report is loaded */
+.sf6-hidden {
+  display: none;
+}
+
+.sf6-hidden.sf6-visible {
+  display: block;
+}
+
+/* SF6 Report: Side-by-side chart grid */
+.sf6-charts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.sf6-charts-grid > * {
+  min-width: 0; /* Prevent grid overflow */
+}
+
+/* Stack on smaller screens */
+@media (max-width: 1000px) {
+  .sf6-charts-grid {
+    grid-template-columns: 1fr;
+  }
 }

@@ -1,6 +1,10 @@
 # Street Fighter 6 Matchup Lab
 
-A static-site matchup report tool built from real ranked match data — designed to be shareable for friends (CFN links) and solid as a data + product case study.
+Outside of my family and my work I try to get some video games in a few times per week after the kids are asleep. Once or twice a month I'll even go to the arcade and play in person.
+
+My latest obsession has been fighting games, and in this case **Street Fighter VI**. I've built a headless webscraper to obtain match history for all my local Street Fighter colleagues and they can come here to get an update on some stats.
+
+I've outlined the architecture and explained it more within, but it comes down to wanting to highlight how data can be valuable in your pursuit to improve at almost anything. Fighting games are extremely competitive, and anything you can work in to build that edge is worth it.
 
 <div class="sf6-cta-row" markdown>
 [Open the Matchup Report →](matchup-report.md){ .md-button .md-button--primary }
@@ -16,20 +20,17 @@ A static-site matchup report tool built from real ranked match data — designed
 - Get a coaching-style takeaway: **“If you fixed one matchup…”**
 - Explore Plotly charts (cumulative matchup curves, baseline at 50%)
 
-> Tip: You can share a report by copying the page link after loading a CFN (the URL includes `?cfn=`).
+> **CFN** = Capcom Fighter Network ID. Tip: After generating a report, you can share it by copying the page URL—it includes `?cfn=` so your friend gets the same results.
 
 ---
 
 ## Why it’s built this way
 
-### Static, deterministic, deploy-friendly
-Reports are generated offline and shipped as JSON. The site stays fast, cacheable, and predictable for builds and deploys.
+**Static, deterministic, lightning-fast** – Reports ship as JSON. No compute on load, always consistent, easy to deploy and cache.
 
-### Python-first analytics
-All calculations happen in Python. The browser’s job is rendering: fetch JSON → update UI → draw Plotly charts.
+**Python handles the heavy lifting** – All calculations auditable in code. The browser's job is simple: fetch → render → visualize.
 
-### Ranked MR only (not LP)
-Analysis is intentionally scoped to ranked matches with valid MR. Out-of-scope values are filtered (e.g., MR > 2500).
+**Always fresh** – Reports regenerate periodically from the latest match history; check the timestamp in your report.
 
 ---
 
@@ -37,7 +38,7 @@ Analysis is intentionally scoped to ranked matches with valid MR. Out-of-scope v
 
 ```mermaid
 flowchart LR
-  A[(PostgreSQL<br/>sf.v_match_player_norm)] --> B[Python report generator<br/>tools/generate_sf6_reports.py]
+  A[(PostgreSQL<br/>Normalized match data)] --> B[Python report generator<br/>tools/generate_sf6_reports.py]
   B --> C[Static JSON reports<br/>docs/assets/data/sf6-reports/<cfn>.json]
   C --> D[MkDocs Material site]
   D --> E[Browser renderer<br/>sf6-report.js + Plotly]

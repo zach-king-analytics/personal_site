@@ -51,6 +51,16 @@
     const cls = "sf6-has-report";
     if (hasReport) document.body.classList.add(cls);
     else document.body.classList.remove(cls);
+
+    // Show/hide report sections based on whether report is loaded
+    const reportSections = document.getElementById("sf6-report-sections");
+    if (reportSections) {
+      if (hasReport) {
+        reportSections.classList.add("sf6-visible");
+      } else {
+        reportSections.classList.remove("sf6-visible");
+      }
+    }
   }
 
   function maybeAutoLoadFromQuery(inputEl, loaderFn) {
@@ -59,6 +69,11 @@
       const paramCfn = params.get("cfn");
       if (paramCfn) {
         inputEl.value = paramCfn;
+        // Show sections immediately on page load if CFN in URL
+        const reportSections = document.getElementById("sf6-report-sections");
+        if (reportSections) {
+          reportSections.classList.add("sf6-visible");
+        }
         loaderFn(true);
       }
     } catch (err) {
@@ -425,72 +440,252 @@
     }
 
     // ------------------------------------------------------------
-    // Character banner
-    //   UPDATED: makes the claim honest + ties to your all-modes activity viz
-    //   - rankedSummary is MR-filtered ranked scope
-    //   - activityLabel tells the user the activity chart uses all modes
-    // ------------------------------------------------------------
-    function renderCharacterBanner(rankedSummary, activityLabel) {
+    // Character banner - admonition-style callout
+    function renderCharacterBanner(rankedSummary, overallSummary, activityLabel) {
       if (!charBannerContent) return;
 
-      const summary = rankedSummary || {};
-      const breakdown = (summary && summary.character_breakdown) || [];
-
-      // Default copy (keeps UI from going blank)
-      const rankedMatches = Number.isFinite(summary.matches_analyzed) ? summary.matches_analyzed : null;
-      const rankedScopeSuffix = "Ranked (MR era)";
-      const activitySuffix = activityLabel ? ` · Activity: ${activityLabel}` : "";
+      const ranked = rankedSummary || {};
+      const overall = overallSummary || {};
+      const overallData = overall.overall || overall;
 
       charBannerContent.innerHTML = "";
-
-      if (!Array.isArray(breakdown) || breakdown.length === 0) {
-        // If we have ranked match count but no breakdown, still show a scoped line
-        if (rankedMatches != null) {
-          charBannerContent.classList.remove("sf6-muted");
-          const line = document.createElement("span");
-          line.className = "sf6-char-banner-prefix";
-          line.textContent = `${rankedScopeSuffix}: ${rankedMatches} matches.${activitySuffix}`;
-          charBannerContent.appendChild(line);
-          return;
-        }
-
-        charBannerContent.classList.add("sf6-muted");
-        return;
-      }
-
       charBannerContent.classList.remove("sf6-muted");
 
-      // If exactly 1 character: keep it as a clean sentence
-      if (breakdown.length === 1) {
-        const c = breakdown[0] || {};
-        const games = Number.isFinite(c.games) ? c.games : rankedMatches;
-        const charName = c.character || "your main";
+      // Collect mode breakdown data
+      const modeBreakdown = (overallData && overallData.mode_breakdown) || [];
+      let rankedCount = 0;
+      let nonRankedCount = 0;
+      
+      if (Array.isArray(modeBreakdown)) {
+        modeBreakdown.forEach((m) => {
+          const mode = (m.mode || "").toLowerCase();
+          const matches = m.matches || 0;
+          if (mode === "rank") {
+            rankedCount = matches;
+          } else {
+            nonRankedCount += matches;
+          }
+        });
+      }
 
-        const line = document.createElement("span");
-        line.className = "sf6-char-banner-prefix";
-        line.textContent = `${rankedScopeSuffix}: ${charName} · ${games != null ? games : "—"} matches.${activitySuffix}`;
-        charBannerContent.appendChild(line);
+      const totalMatches = rankedCount + nonRankedCount;
+      const dateStart = ranked.dataset_start || "—";
+      const dateEnd = ranked.dataset_end || "—";
+
+      // Helper function for comma formatting
+      const formatNumber = (n) => {
+        if (typeof n === 'number') return n.toLocaleString('en-US');
+        return n;
+      };
+
+      // Create admonition-style container
+      const admon = document.createElement("div");
+      admon.className = "admonition note";
+      admon.style.marginBottom = "1.5rem";
+
+      // Title
+      const title = document.createElement("p");
+      title.className = "admonition-title";
+      title.textContent = "Dataset Overview";
+      admon.appendChild(title);
+
+      // Combined summary text with strategic bolding
+      const summaryText = document.createElement("p");
+      summaryText.style.marginBottom = "1.5rem";
+      summaryText.style.marginTop = "0";
+      summaryText.style.fontSize = "1rem";
+      summaryText.style.lineHeight = "1.6";
+      
+      const activityText = activityLabel ? ` Activity charts include <strong>${activityLabel}</strong>.` : "";
+      summaryText.innerHTML = `Dataset covers <strong>${dateStart} to ${dateEnd}</strong>.${activityText}`;
+      admon.appendChild(summaryText);
+
+      // Stats row - 3 column layout with Total on left
+      const statsRow = document.createElement("div");
+      statsRow.style.display = "flex";
+      statsRow.style.justifyContent = "center";
+      statsRow.style.alignItems = "center";
+      statsRow.style.gap = "3rem";
+      statsRow.style.marginBottom = "0";
+      statsRow.style.marginTop = "0.5rem";
+
+      // Total stat
+      const totalDiv = document.createElement("div");
+      totalDiv.style.textAlign = "center";
+      totalDiv.innerHTML = `
+        <div style="font-size: 0.9rem; color: #9ca3af; margin-bottom: 0.5rem; font-weight: 500;">Total Matches</div>
+        <div style="font-size: 2rem; font-weight: 700; color: #e0e0e0;">${formatNumber(totalMatches)}</div>
+      `;
+      statsRow.appendChild(totalDiv);
+
+      // Divider 1
+      const divider1 = document.createElement("div");
+      divider1.style.width = "1px";
+      divider1.style.height = "60px";
+      divider1.style.background = "linear-gradient(to bottom, transparent, #4B5563 20%, #4B5563 80%, transparent)";
+      statsRow.appendChild(divider1);
+
+      // Ranked stat
+      const rankDiv = document.createElement("div");
+      rankDiv.style.textAlign = "center";
+      rankDiv.innerHTML = `
+        <div style="font-size: 0.9rem; color: #9ca3af; margin-bottom: 0.5rem; font-weight: 500;">Ranked (MR)</div>
+        <div style="font-size: 2rem; font-weight: 700; color: #2c8c89;">${formatNumber(rankedCount)}</div>
+      `;
+      statsRow.appendChild(rankDiv);
+
+      // Divider 2
+      const divider2 = document.createElement("div");
+      divider2.style.width = "1px";
+      divider2.style.height = "60px";
+      divider2.style.background = "linear-gradient(to bottom, transparent, #4B5563 20%, #4B5563 80%, transparent)";
+      statsRow.appendChild(divider2);
+
+      // Non-Ranked stat
+      const nonRankDiv = document.createElement("div");
+      nonRankDiv.style.textAlign = "center";
+      nonRankDiv.innerHTML = `
+        <div style="font-size: 0.9rem; color: #9ca3af; margin-bottom: 0.5rem; font-weight: 500;">Non-Ranked</div>
+        <div style="font-size: 2rem; font-weight: 700; color: #888;">${formatNumber(nonRankedCount)}</div>
+      `;
+      statsRow.appendChild(nonRankDiv);
+
+      admon.appendChild(statsRow);
+
+      charBannerContent.appendChild(admon);
+
+      // Create character breakdown callout
+      const charAdmon = document.createElement("div");
+      charAdmon.className = "admonition warning";
+      charAdmon.style.marginTop = "1.5rem";
+
+      const charTitle = document.createElement("p");
+      charTitle.className = "admonition-title";
+      charTitle.textContent = "Characters & Matchup Scope";
+      charAdmon.appendChild(charTitle);
+
+      // Get character breakdown
+      const charBreakdown = (ranked && ranked.character_breakdown) || [];
+      let charList = "";
+      if (Array.isArray(charBreakdown) && charBreakdown.length > 0) {
+        charList = charBreakdown
+          .map(c => {
+            const name = c.character || "—";
+            const games = Number.isFinite(c.games) ? c.games : "—";
+            const pct = typeof c.share_pct === "number" ? c.share_pct.toFixed(1) : "—";
+            return `${name} (${games} matches, ${pct}%)`;
+          })
+          .join(", ");
+      } else {
+        charList = "Character data not available";
+      }
+
+      const charDescription = document.createElement("p");
+      charDescription.style.marginBottom = "0.75rem";
+      charDescription.style.marginTop = "0";
+      charDescription.innerHTML = `<strong>Characters played:</strong> ${charList}`;
+      charAdmon.appendChild(charDescription);
+
+      const scopeNote = document.createElement("p");
+      scopeNote.style.marginBottom = "0";
+      scopeNote.style.fontSize = "0.95rem";
+      scopeNote.innerHTML = `<strong>Note:</strong> Matchup statistics below aggregate performance across all characters played. Individual character performance may vary significantly.`;
+      charAdmon.appendChild(scopeNote);
+
+      charBannerContent.appendChild(charAdmon);
+    }
+
+    // ------------------------------------------------------------
+    // Mode Distribution Chart
+    // ------------------------------------------------------------
+    function renderModeDistribution(summary) {
+      const chartDiv = document.getElementById("sf6-mode-distribution-chart");
+      const textDiv = document.getElementById("sf6-mode-distribution-text");
+      
+      if (!chartDiv || !textDiv) return;
+
+      const modeBreakdown = (summary && summary.mode_breakdown) || [];
+      
+      if (!Array.isArray(modeBreakdown) || modeBreakdown.length === 0) {
+        safePurge(chartDiv);
+        textDiv.classList.add("sf6-muted");
+        textDiv.textContent = "Load a report to see mode distribution.";
         return;
       }
 
-      // Multiple characters: short headline + pills
-      const totalBit = rankedMatches != null ? ` (${rankedMatches} matches)` : "";
-      const prefix = document.createElement("span");
-      prefix.className = "sf6-char-banner-prefix";
-      prefix.textContent = `${rankedScopeSuffix}: characters played${totalBit}.${activitySuffix}`;
-      charBannerContent.appendChild(prefix);
-
-      breakdown.forEach((c) => {
-        const pill = document.createElement("span");
-        pill.className = "sf6-char-pill";
-
-        const games = Number.isFinite(c.games) ? c.games : "—";
-        const share = typeof c.share_pct === "number" ? ` · ${c.share_pct.toFixed(1)}%` : "";
-        const name = c.character || "—";
-
-        pill.textContent = `${name} · ${games}${share}`;
-        charBannerContent.appendChild(pill);
+      // Sort by matches descending
+      const sorted = modeBreakdown.slice().sort((a, b) => (b.matches || 0) - (a.matches || 0));
+      
+      // Create traces for horizontal stacked bar
+      const traces = sorted.map((m) => {
+        const mode = (m.mode || "unknown").toUpperCase();
+        let color = "#888";
+        if ((m.mode || "").toLowerCase() === "rank") color = "#2c8c89";
+        if ((m.mode || "").toLowerCase() === "hub") color = "#5a9bd4";
+        
+        return {
+          name: mode,
+          x: [m.matches || 0],
+          y: [""],
+          type: "bar",
+          orientation: "h",
+          marker: { color },
+          text: `${mode}<br>${m.matches} (${m.share_pct}%)`,
+          textposition: "inside",
+          textfont: { color: "#fff", size: 12 },
+          hovertemplate: `${mode}: %{x} matches (%{customdata}%)<extra></extra>`,
+          customdata: [m.share_pct],
+          showlegend: true,
+        };
       });
+
+      const layout = {
+        barmode: "stack",
+        margin: { l: 0, r: 20, t: 20, b: 20 },
+        paper_bgcolor: "rgba(0,0,0,0)",
+        plot_bgcolor: "rgba(0,0,0,0)",
+        font: { color: "#e0e0e0", size: 12 },
+        xaxis: {
+          gridcolor: "rgba(255,255,255,0.05)",
+          showticklabels: false,
+          zeroline: false,
+        },
+        yaxis: {
+          gridcolor: "transparent",
+          showticklabels: false,
+          zeroline: false,
+        },
+        height: 120,
+        legend: {
+          x: 1.02,
+          y: 0.5,
+          xanchor: "left",
+          yanchor: "middle",
+          bgcolor: "transparent",
+          bordercolor: "transparent",
+        },
+      };
+
+      const config = { displayModeBar: false, responsive: true };
+      Plotly.newPlot(chartDiv, traces, layout, config);
+
+      // Generate insight text
+      textDiv.classList.remove("sf6-muted");
+      const total = sorted.reduce((sum, m) => sum + (m.matches || 0), 0);
+      const rankMode = sorted.find(m => (m.mode || "").toLowerCase() === "rank");
+      const rankPct = rankMode ? rankMode.share_pct : 0;
+      
+      if (rankPct >= 80) {
+        textDiv.textContent = `${rankPct}% ranked matches — focused competitive practice.`;
+      } else if (rankPct >= 70) {
+        textDiv.textContent = `Strong ranked focus with ${rankPct}% ranked matches.`;
+      } else if (rankPct >= 50) {
+        textDiv.textContent = `Balanced mix with ${rankPct}% ranked matches.`;
+      } else if (rankPct >= 40) {
+        textDiv.textContent = `Slight ranked lean — ${rankPct}% ranked.`;
+      } else {
+        textDiv.textContent = `Majority casual/hub play — only ${rankPct}% ranked.`;
+      }
     }
 
     // ------------------------------------------------------------
@@ -709,7 +904,8 @@
         // Render (hardening: don't let one bad field blank the whole page)
         try {
           // Ranked-only visuals (MR-filtered in Python)
-          renderCharacterBanner(rankedSummary, activityLabel);
+          renderCharacterBanner(rankedSummary, rootSummary, activityLabel);
+          renderModeDistribution(rootSummary.overall || {});
           renderSnapshot(rankedSummary);
           renderFixOneMatchup(rankedSummary);
           renderMatchupCards(rankedSummary);
