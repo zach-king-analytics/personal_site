@@ -6,6 +6,7 @@
   PYTHON_VERSION = "3.11"
   PIP = "python -m pip"
   NETLIFY_SKIP_INSTALL = "true"
+  PATH = "${PATH}:/opt/build/repo/bin"
 
 # Redirect legacy Lab URLs to Insights
 [[redirects]]
