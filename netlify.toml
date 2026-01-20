@@ -3,7 +3,6 @@
   publish = "site"
 
 [build.environment]
-  PYTHON_VERSION = "3.11"
   PIP = "python -m pip"
   NETLIFY_SKIP_INSTALL = "true"
   PATH = "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/build/repo/bin"
