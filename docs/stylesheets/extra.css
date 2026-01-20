@@ -14,7 +14,7 @@
 
 .md-typeset h1 {
   font-weight: 600;
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 4vw, 2rem);
   letter-spacing: -0.01em;
   margin-bottom: 1rem;
   border-bottom: 2px solid var(--md-primary-fg-color);
@@ -23,7 +23,7 @@
 
 .md-typeset h2 {
   font-weight: 600;
-  font-size: 1.5rem;
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
   margin-top: 2rem;
   margin-bottom: 0.875rem;
   letter-spacing: -0.01em;
@@ -213,13 +213,14 @@ body.sf6-has-report .sf6-report-header {
 
 .sf6-report-title {
   margin: 0;
-  font-size: 2.5rem;
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
   font-weight: 700;
   background: linear-gradient(135deg, #2c8c89, #17a2a2);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   transition: all 0.3s ease;
+  word-break: break-word;
 }
 
 .sf6-report-title.sf6-report-active {
@@ -269,22 +270,24 @@ body.sf6-has-report .sf6-load-another-btn {
 
 .sf6-input-row {
   display: flex;
-  gap: 1rem;
-  align-items: center;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: stretch;
   justify-content: center;
   margin-bottom: 1.5rem;
   margin-top: 1rem;
 }
 
 .sf6-input-row input {
-  flex: 0 1 300px;
-  padding: 0.65rem 1rem;
+  flex: 1;
+  padding: 0.75rem 1rem;
   font-size: 1rem;
   border: 2px solid #374151;
   border-radius: 6px;
   background: #050816;
   color: #e0e0e0;
   transition: all 0.2s ease;
+  min-width: 0;
 }
 
 .sf6-input-row input:focus {
@@ -294,7 +297,7 @@ body.sf6-has-report .sf6-load-another-btn {
 }
 
 .sf6-input-row button {
-  padding: 0.6rem 1.5rem;
+  padding: 0.75rem 1.5rem;
   background: #2c8c89;
   color: #ffffff;
   border: 2px solid #2c8c89;
@@ -304,6 +307,16 @@ body.sf6-has-report .sf6-load-another-btn {
   cursor: pointer;
   transition: all 0.2s ease;
   white-space: nowrap;
+}
+
+@media (min-width: 640px) {
+  .sf6-input-row {
+    flex-direction: row;
+    align-items: center;
+  }
+  .sf6-input-row input {
+    flex: 0 1 300px;
+  }
 }
 
 .sf6-input-row button:hover {
@@ -319,8 +332,20 @@ body.sf6-has-report .sf6-load-another-btn {
 
 .sf6-chart-wrapper {
   position: relative;
-  height: 450px;   /* gives Plotly room to draw */
+  height: 300px;
   margin-top: 1rem;
+}
+
+@media (min-width: 640px) {
+  .sf6-chart-wrapper {
+    height: 400px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .sf6-chart-wrapper {
+    height: 450px;
+  }
 }
 
 /* Fix search icon vertical alignment */
@@ -405,9 +430,16 @@ body.sf6-has-report .sf6-load-another-btn {
 
 .sf6-snapshot-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
   margin-top: 1rem;
+}
+
+@media (min-width: 640px) {
+  .sf6-snapshot-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
 }
 
 .sf6-snapshot-card {
@@ -518,9 +550,23 @@ body.sf6-has-report .sf6-matchup-grid {
 /* Matchup overview cards (top/bottom 5) */
 
 .sf6-matchup-grid {
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
   margin-top: 1rem;
+}
+
+@media (min-width: 640px) {
+  .sf6-matchup-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .sf6-matchup-grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
 }
 
 .sf6-matchup-card {
