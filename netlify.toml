@@ -1,11 +1,10 @@
 [build]
-  command = "python -m pip install -r requirements.txt && mkdocs build"
+  command = "pip install -r requirements.txt && mkdocs build"
   publish = "site"
 
 [build.environment]
-  PIP = "python -m pip"
-  NETLIFY_SKIP_INSTALL = "true"
-  PATH = "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/build/repo/bin"
+  # Skip Netlify's dependency manager entirely; build command handles pip
+  SKIP_BUILD_STEP = "true"
 
 # Redirect legacy Lab URLs to Insights
 [[redirects]]
