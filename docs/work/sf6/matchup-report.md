@@ -4,21 +4,22 @@ hide:
   - toc
 ---
 
-# Street Fighter 6 Matchup Lab
-
-Enter your CFN below to generate a personalized report. You'll see trend lines, matchup breakdowns, and a coaching-style insight on where to focus next.
-
----
-
-## Generate a report
-
-<div class="sf6-input-row">
-  <input id="sf6-cfn-input" type="text" placeholder="e.g., karatesnacks">
-  <button id="sf6-cfn-submit">Generate report</button>
-  <button id="sf6-copy-link">Copy shareable link</button>
+<div id="sf6-input-section" class="sf6-input-section">
+  <p class="sf6-input-intro">Enter your CFN below to generate a personalized report. You'll see trend lines, matchup breakdowns, and a coaching-style insight on where to focus next.</p>
+  
+  <div class="sf6-input-row">
+    <input id="sf6-cfn-input" type="text" placeholder="e.g., karatesnacks">
+    <button id="sf6-cfn-submit">Generate report</button>
+    <button id="sf6-copy-link">Copy shareable link</button>
+  </div>
 </div>
 
-<p id="sf6-report-status" class="sf6-muted"></p>
+<div class="sf6-report-header">
+  <div class="sf6-report-header-row">
+    <h1 id="sf6-report-status" class="sf6-report-title">Street Fighter 6 Matchup Lab</h1>
+    <button id="sf6-clear-report" class="sf6-load-another-btn">Clear current report</button>
+  </div>
+</div>
 
 <section id="sf6-character-banner" class="sf6-char-banner">
   <div id="sf6-character-banner-content" class="sf6-char-banner-content sf6-muted">

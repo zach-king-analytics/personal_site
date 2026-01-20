@@ -182,6 +182,18 @@
       clearMatchupCards();
       clearActivity();
       safePurge(chartDiv); // OK if chartDiv is null
+      
+      // Clear report header styling
+      const reportTitle = document.getElementById("sf6-report-status");
+      if (reportTitle) {
+        reportTitle.classList.remove("sf6-report-active");
+        reportTitle.textContent = "Street Fighter 6 Matchup Lab";
+      }
+      const reportHeader = document.querySelector(".sf6-report-header");
+      if (reportHeader) {
+        reportHeader.classList.remove("sf6-report-loaded");
+      }
+      
       setReportVisible(false);
     }
 
@@ -641,7 +653,7 @@
 
       const layout = {
         barmode: "stack",
-        margin: { l: 0, r: 20, t: 20, b: 20 },
+        margin: { l: 0, r: 120, t: 20, b: 20 },
         paper_bgcolor: "rgba(0,0,0,0)",
         plot_bgcolor: "rgba(0,0,0,0)",
         font: { color: "#e0e0e0", size: 12 },
@@ -668,6 +680,23 @@
 
       const config = { displayModeBar: false, responsive: true };
       Plotly.newPlot(chartDiv, traces, layout, config);
+      
+      // Force full-width layout on load and resize
+      const forceFullWidth = () => {
+        const rect = chartDiv.getBoundingClientRect();
+        if (rect.width > 0) {
+          Plotly.relayout(chartDiv, { 
+            width: rect.width,
+            "xaxis.autorange": true
+          });
+        }
+      };
+      
+      // Initial resize after render
+      setTimeout(forceFullWidth, 50);
+      
+      // Listen for viewport changes
+      window.addEventListener('resize', forceFullWidth);
 
       // Generate insight text
       textDiv.classList.remove("sf6-muted");
@@ -871,7 +900,15 @@
         }
 
         const data = await res.json();
-        setStatus(`Report for ${data.player_cfn}`);
+        const reportTitle = document.getElementById("sf6-report-status");
+        if (reportTitle) {
+          reportTitle.textContent = `Report for ${data.player_cfn}`;
+          reportTitle.classList.add("sf6-report-active");
+        }
+        const reportHeader = document.querySelector(".sf6-report-header");
+        if (reportHeader) {
+          reportHeader.classList.add("sf6-report-loaded");
+        }
 
         const rootSummary = data.summary || {};
 
@@ -956,6 +993,31 @@
         } catch (err) {
           console.error("[sf6-report] Clipboard error", err);
         }
+      });
+    }
+
+    const clearBtn = document.getElementById("sf6-clear-report");
+    if (clearBtn) {
+      clearBtn.addEventListener("click", () => {
+        // Reset input and status
+        input.value = "";
+        if (status) status.textContent = "Enter a CFN.";
+
+        // Clear visuals and hide report sections
+        clearAll();
+        setReportVisible(false);
+
+        // Drop ?cfn from URL
+        try {
+          const url = new URL(window.location.href);
+          url.searchParams.delete("cfn");
+          window.history.replaceState({}, "", url);
+        } catch (e) {
+          console.warn("[sf6-report] Could not clear URL param", e);
+        }
+
+        // Focus back to input
+        input.focus();
       });
     }
 

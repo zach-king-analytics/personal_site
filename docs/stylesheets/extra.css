@@ -174,6 +174,99 @@ form input,form textarea{width:100%;max-width:42rem}
 
 /* ---------------- SF6 Lab styles ---------------- */
 
+.sf6-input-section {
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+  max-height: 500px;
+  overflow: hidden;
+}
+
+body.sf6-has-report .sf6-input-section {
+  max-height: 0;
+  margin-bottom: 0;
+  opacity: 0;
+}
+
+.sf6-input-intro {
+  text-align: center;
+  color: #d1d5db;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+body.sf6-has-report .sf6-input-intro {
+  display: none;
+}
+
+.sf6-report-header {
+  margin-bottom: 2rem;
+  padding: 1.5rem 0;
+  border-bottom: 2px solid #1f2937;
+  opacity: 0;
+  transition: opacity 0.3s ease 0.15s;
+}
+
+body.sf6-has-report .sf6-report-header {
+  opacity: 1;
+}
+
+.sf6-report-title {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #2c8c89, #17a2a2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: all 0.3s ease;
+}
+
+.sf6-report-title.sf6-report-active {
+  background: linear-gradient(135deg, #6EE7B7, #2c8c89);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.sf6-report-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.sf6-load-another-btn {
+  padding: 0.6rem 1.2rem;
+  background: #1f2937;
+  color: #6ee7b7;
+  border: 1px solid #2c8c89;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateY(4px);
+}
+
+body.sf6-has-report .sf6-load-another-btn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.sf6-load-another-btn:hover {
+  background: #2c8c89;
+  border-color: #3da09c;
+  box-shadow: 0 4px 12px rgba(44, 140, 137, 0.3);
+}
+
+.sf6-load-another-btn:active {
+  transform: translateY(1px);
+}
+
 .sf6-input-row {
   display: flex;
   gap: 1rem;
@@ -584,6 +677,26 @@ button {
 
 #sf6-activity-chart .js-plotly-plot {
   border-radius: 12px;
+}
+
+.sf6-card {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #374151;
+  background: #0f1419;
+}
+
+.sf6-card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  color: #e5e7eb;
+}
+
+#sf6-mode-distribution-chart {
+  width: 100%;
+  min-height: 150px;
 }
 
 #sf6-mode-distribution-chart .js-plotly-plot {
