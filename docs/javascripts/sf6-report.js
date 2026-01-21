@@ -129,17 +129,10 @@
     const fixOneText = document.getElementById("sf6-fix-one-matchup-text");
 
     // Matchup overview card bodies (summary + full)
-    // Overall (all modes)
-    const overallBestSummaryBody = document.getElementById("sf6-matchup-overall-best-summary");
-    const overallWorstSummaryBody = document.getElementById("sf6-matchup-overall-worst-summary");
-    const overallBestFullBody = document.getElementById("sf6-matchup-overall-best-full");
-    const overallWorstFullBody = document.getElementById("sf6-matchup-overall-worst-full");
-    
-    // Ranked (MR-filtered)
-    const rankedBestSummaryBody = document.getElementById("sf6-matchup-ranked-best-summary");
-    const rankedWorstSummaryBody = document.getElementById("sf6-matchup-ranked-worst-summary");
-    const rankedBestFullBody = document.getElementById("sf6-matchup-ranked-best-full");
-    const rankedWorstFullBody = document.getElementById("sf6-matchup-ranked-worst-full");
+    const bestSummaryBody = document.getElementById("sf6-matchup-best-summary");
+    const worstSummaryBody = document.getElementById("sf6-matchup-worst-summary");
+    const bestFullBody = document.getElementById("sf6-matchup-best-full");
+    const worstFullBody = document.getElementById("sf6-matchup-worst-full");
 
     // Start “resting” state hidden
     setReportVisible(false);
@@ -173,14 +166,10 @@
     }
 
     function clearMatchupCards() {
-      if (overallBestSummaryBody) overallBestSummaryBody.innerHTML = "";
-      if (overallWorstSummaryBody) overallWorstSummaryBody.innerHTML = "";
-      if (overallBestFullBody) overallBestFullBody.innerHTML = "";
-      if (overallWorstFullBody) overallWorstFullBody.innerHTML = "";
-      if (rankedBestSummaryBody) rankedBestSummaryBody.innerHTML = "";
-      if (rankedWorstSummaryBody) rankedWorstSummaryBody.innerHTML = "";
-      if (rankedBestFullBody) rankedBestFullBody.innerHTML = "";
-      if (rankedWorstFullBody) rankedWorstFullBody.innerHTML = "";
+      if (bestSummaryBody) bestSummaryBody.innerHTML = "";
+      if (worstSummaryBody) worstSummaryBody.innerHTML = "";
+      if (bestFullBody) bestFullBody.innerHTML = "";
+      if (worstFullBody) worstFullBody.innerHTML = "";
     }
 
     function clearActivity() {
@@ -762,69 +751,55 @@
     }
 
     // ------------------------------------------------------------
-    // Matchup overview cards (render overall + ranked separately)
+    // Matchup overview cards (ranked/MR-filtered summary expected)
     // ------------------------------------------------------------
-    function renderMatchupCards(rankedSummary, overallSummary) {
-      // Check if any DOM targets exist
-      const hasOverallTargets = overallBestSummaryBody || overallWorstSummaryBody || overallBestFullBody || overallWorstFullBody;
-      const hasRankedTargets = rankedBestSummaryBody || rankedWorstSummaryBody || rankedBestFullBody || rankedWorstFullBody;
-      
-      if (!hasOverallTargets && !hasRankedTargets) return;
+    function renderMatchupCards(summary) {
+      if (!bestSummaryBody && !worstSummaryBody && !bestFullBody && !worstFullBody) return;
 
-      function populateMatchupSection(bestSummaryEl, worstSummaryEl, bestFullEl, worstFullEl, summary) {
-        if (!summary) return;
-        
-        const rows = (summary && summary.matchup_table) || [];
-        if (!Array.isArray(rows) || rows.length === 0) return;
-
-        const stable = rows.filter((r) => Number.isFinite(r.games) && r.games >= 10);
-        if (stable.length === 0) return;
-
-        const bestAll = stable
-          .slice()
-          .sort(
-            (a, b) =>
-              (b.winrate_pct != null ? b.winrate_pct : -999) - (a.winrate_pct != null ? a.winrate_pct : -999)
-          );
-
-        const worstAll = stable
-          .slice()
-          .sort(
-            (a, b) =>
-              (a.winrate_pct != null ? a.winrate_pct : 999) - (b.winrate_pct != null ? b.winrate_pct : 999)
-          );
-
-        const bestTop = bestAll.slice(0, 3);
-        const worstTop = worstAll.slice(0, 3);
-
-        function rowHtml(r) {
-          const opp = r.opponent != null ? r.opponent : "—";
-          const games = Number.isFinite(r.games) ? r.games : "—";
-          const wr = Number.isFinite(r.winrate_pct) ? `${r.winrate_pct.toFixed(1)}%` : "—";
-          const mr = Number.isFinite(r.avg_opponent_mr) ? Math.round(r.avg_opponent_mr).toString() : "—";
-          return `<tr>
-            <td>${opp}</td>
-            <td>${games}</td>
-            <td>${wr}</td>
-            <td>${mr}</td>
-          </tr>`;
-        }
-
-        if (bestSummaryEl) bestSummaryEl.innerHTML = bestTop.map(rowHtml).join("");
-        if (worstSummaryEl) worstSummaryEl.innerHTML = worstTop.map(rowHtml).join("");
-        if (bestFullEl) bestFullEl.innerHTML = bestAll.map(rowHtml).join("");
-        if (worstFullEl) worstFullEl.innerHTML = worstAll.map(rowHtml).join("");
+      const rows = (summary && summary.matchup_table) || [];
+      if (!Array.isArray(rows) || rows.length === 0) {
+        clearMatchupCards();
+        return;
       }
 
-      // Render overall (all modes)
-      if (hasOverallTargets) {
-        populateMatchupSection(overallBestSummaryBody, overallWorstSummaryBody, overallBestFullBody, overallWorstFullBody, overallSummary);
+      const stable = rows.filter((r) => Number.isFinite(r.games) && r.games >= 10);
+
+      const bestAll = stable
+        .slice()
+        .sort(
+          (a, b) =>
+            (b.winrate_pct != null ? b.winrate_pct : -999) - (a.winrate_pct != null ? a.winrate_pct : -999)
+        )
+        ;
+
+      const worstAll = stable
+        .slice()
+        .sort(
+          (a, b) =>
+            (a.winrate_pct != null ? a.winrate_pct : 999) - (b.winrate_pct != null ? b.winrate_pct : 999)
+        )
+        ;
+
+      const bestTop = bestAll.slice(0, 3);
+      const worstTop = worstAll.slice(0, 3);
+
+      function rowHtml(r) {
+        const opp = r.opponent != null ? r.opponent : "—";
+        const games = Number.isFinite(r.games) ? r.games : "—";
+        const wr = Number.isFinite(r.winrate_pct) ? `${r.winrate_pct.toFixed(1)}%` : "—";
+        const mr = Number.isFinite(r.avg_opponent_mr) ? Math.round(r.avg_opponent_mr).toString() : "—";
+        return `<tr>
+          <td>${opp}</td>
+          <td>${games}</td>
+          <td>${wr}</td>
+          <td>${mr}</td>
+        </tr>`;
       }
 
-      // Render ranked (MR-filtered)
-      if (hasRankedTargets) {
-        populateMatchupSection(rankedBestSummaryBody, rankedWorstSummaryBody, rankedBestFullBody, rankedWorstFullBody, rankedSummary);
-      }
+      if (bestSummaryBody) bestSummaryBody.innerHTML = bestTop.map(rowHtml).join("");
+      if (worstSummaryBody) worstSummaryBody.innerHTML = worstTop.map(rowHtml).join("");
+      if (bestFullBody) bestFullBody.innerHTML = bestAll.map(rowHtml).join("");
+      if (worstFullBody) worstFullBody.innerHTML = worstAll.map(rowHtml).join("");
     }
 
     // ------------------------------------------------------------
@@ -977,12 +952,9 @@
           // Ranked-only visuals (MR-filtered in Python)
           renderCharacterBanner(rankedSummary, rootSummary, activityLabel);
           renderModeDistribution(rootSummary.overall || {});
-          // renderSnapshot(rankedSummary); // Removed: snapshot cards no longer used
+          renderSnapshot(rankedSummary);
           renderFixOneMatchup(rankedSummary);
-          
-          // Render both overall and ranked matchups
-          const overallSummary = rootSummary.overall || rootSummary;
-          renderMatchupCards(rankedSummary, overallSummary);
+          renderMatchupCards(rankedSummary);
           renderChart(data);
 
           // Activity viz: prefer all-modes weeks, else fall back to ranked weeks/day
