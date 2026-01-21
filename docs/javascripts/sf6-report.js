@@ -712,7 +712,10 @@
       const chartDiv = document.getElementById("sf6-character-distribution-chart");
       if (!chartDiv) return;
 
-      const charBreakdown = (summary && summary.character_breakdown) || [];
+      let charBreakdown = (summary && summary.character_breakdown) || [];
+      if (!Array.isArray(charBreakdown) || charBreakdown.length === 0) {
+        charBreakdown = (summary && summary.overall && summary.overall.character_breakdown) || [];
+      }
       
       if (!Array.isArray(charBreakdown) || charBreakdown.length === 0) {
         safePurge(chartDiv);
@@ -997,8 +1000,8 @@
           renderCharacterBanner(rankedSummary, rootSummary, activityLabel);
           // Use overall summary for mode distribution (Overall Play)
           renderModeDistribution(rootSummary);
-          // Keep character distribution on ranked summary to preserve current behavior
-          renderCharacterDistribution(rankedSummary);
+          // Character distribution should reflect overall play
+          renderCharacterDistribution(rootSummary);
           renderSnapshot(rankedSummary);
           renderFixOneMatchup(rankedSummary);
           renderMatchupCards(rankedSummary);
