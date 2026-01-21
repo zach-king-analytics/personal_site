@@ -8,7 +8,7 @@
 
 /* Global typography improvements */
 .md-typeset {
-  font-size: 0.95rem;
+  font-size: 0.8rem;
   line-height: 1.7;
 }
 
@@ -245,7 +245,7 @@ body.sf6-has-report .sf6-report-header {
   border: 1px solid #2c8c89;
   border-radius: 6px;
   font-weight: 500;
-  font-size: 0.95rem;
+  font-size: 0.8rem;
   cursor: pointer;
   transition: all 0.2s ease;
   white-space: nowrap;
@@ -261,7 +261,7 @@ body.sf6-has-report .sf6-load-another-btn {
 .sf6-load-another-btn:hover {
   background: #2c8c89;
   border-color: #3da09c;
-  box-shadow: 0 4px 12px rgba(44, 140, 137, 0.3);
+  box-shadow: 0 2px 8px rgba(44, 140, 137, 0.25);
 }
 
 .sf6-load-another-btn:active {
@@ -303,7 +303,7 @@ body.sf6-has-report .sf6-load-another-btn {
   border: 2px solid #2c8c89;
   border-radius: 6px;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 0.8rem;
   cursor: pointer;
   transition: all 0.2s ease;
   white-space: nowrap;
@@ -323,7 +323,7 @@ body.sf6-has-report .sf6-load-another-btn {
   background: #3da09c;
   border-color: #3da09c;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(44, 140, 137, 0.3);
+  box-shadow: 0 2px 8px rgba(44, 140, 137, 0.25);
 }
 
 .sf6-input-row button:active {
@@ -358,7 +358,7 @@ body.sf6-has-report .sf6-load-another-btn {
 
 .sf6-status {
   margin-top: 0.25rem;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 .sf6-status--hint      { color: #9CA3AF; }
@@ -485,7 +485,7 @@ body.sf6-has-report .sf6-load-another-btn {
 .sf6-snapshot-card h4 {
   margin-top: 0;
   margin-bottom: 0.75rem;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: #9CA3AF;
@@ -504,13 +504,13 @@ body.sf6-has-report .sf6-load-another-btn {
 
 .sf6-snapshot-card dd {
   margin: 0 0 0.6rem 0;
-  font-size: 0.95rem;
+  font-size: 0.8rem;
   color: #F9FAFB;
 }
 
 .sf6-muted {
   color: #9CA3AF;
-  font-size: 0.95rem;
+  font-size: 0.8rem;
 }
 
 /* Auto-hide snapshot + insight + matchup overview until a report is loaded */
@@ -612,7 +612,7 @@ body.sf6-has-report .sf6-matchup-grid {
 .sf6-matchup-card h4 {
   margin-top: 0;
   margin-bottom: 0.75rem;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: #9CA3AF;
@@ -690,23 +690,23 @@ body.sf6-has-report .sf6-matchup-grid {
   font-weight: 600;
   background-color: var(--md-primary-fg-color);
   border: none;
-  padding: 0.5rem 1.25rem;
-  font-size: 0.95rem;
+  padding: 0.35rem 0.9rem;
+  font-size: 0.8rem;
   transition: all 0.2s ease;
 }
 
 .md-button--primary:hover {
   background-color: color-mix(in srgb, var(--md-primary-fg-color) 85%, white);
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(44, 140, 137, 0.3);
+  box-shadow: 0 2px 8px rgba(44, 140, 137, 0.25);
 }
 
 .md-button {
   font-weight: 500;
   border-radius: 6px;
   transition: all 0.2s ease;
-  padding: 0.5rem 1rem;
-  font-size: 0.9rem;
+  padding: 0.35rem 0.8rem;
+  font-size: 0.8rem;
 }
 
 /* ============================
