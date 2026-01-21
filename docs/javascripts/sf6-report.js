@@ -387,6 +387,19 @@
         safePurge(activityChartDiv);
         if (typeof Plotly !== "undefined" && activityChartDiv) {
           Plotly.newPlot(activityChartDiv, [heat], layout, config);
+          const forceFullWidth = () => {
+            const rect = activityChartDiv.getBoundingClientRect();
+            if (rect && rect.width > 0) {
+              Plotly.relayout(activityChartDiv, { width: rect.width });
+            }
+          };
+          // Initial sizing after render
+          setTimeout(forceFullWidth, 50);
+          // Bind resize listener once
+          if (!activityChartDiv.dataset.resizeBound) {
+            window.addEventListener("resize", forceFullWidth);
+            activityChartDiv.dataset.resizeBound = "1";
+          }
         }
         return;
       }
