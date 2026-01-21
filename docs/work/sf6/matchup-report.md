@@ -55,76 +55,16 @@ hide:
 
 ---
 
-## Player snapshot
-
-<p class="sf6-muted">
-A quick summary of this dataset (coverage, skill bracket via MR, and where you’re currently strong/weak).
-</p>
-
-<section id="sf6-player-snapshot">
-  <div class="sf6-snapshot-grid">
-
-    <section class="sf6-snapshot-card">
-      <h4>Profile</h4>
-      <dl>
-        <dt>Main character</dt>
-        <dd id="sf6-main-character">—</dd>
-
-        <dt>Dataset coverage</dt>
-        <dd id="sf6-data-range">—</dd>
-
-        <dt>Matches analyzed</dt>
-        <dd id="sf6-matches-analyzed">—</dd>
-      </dl>
-    </section>
-
-    <section class="sf6-snapshot-card">
-      <h4>Performance</h4>
-      <dl>
-        <dt>Overall win rate</dt>
-        <dd id="sf6-overall-winrate">—</dd>
-
-        <dt>Average MR</dt>
-        <dd id="sf6-average-mr">—</dd>
-
-        <dt>Avg opponent MR</dt>
-        <dd id="sf6-average-opponent-mr">—</dd>
-      </dl>
-    </section>
-
-    <section class="sf6-snapshot-card">
-      <h4>Matchup profile</h4>
-      <dl>
-        <dt>Most played matchup</dt>
-        <dd id="sf6-most-played-matchup">—</dd>
-
-        <dt>Best matchup (min 10 games)</dt>
-        <dd id="sf6-best-matchup">—</dd>
-
-        <dt>Worst matchup (min 10 games)</dt>
-        <dd id="sf6-worst-matchup">—</dd>
-      </dl>
-    </section>
-
-  </div>
-</section>
-
----
-
-## Coaching insight
-
-### If you fixed one matchup…
+## Matchup Analysis
 
 <p id="sf6-fix-one-matchup-text" class="sf6-muted">
-Load a report to see which matchup would move your overall win rate the most if you brought it up to 50%.
+Load a report to see matchup data and coaching insights.
 </p>
 
----
+### Overall Play
 
-## Matchup overview (stable matchups)
-
-<p class="sf6-muted">
-Top and bottom matchups with enough games to be meaningful. Top three are shown; expand for the full tables.
+<p class="sf6-muted" style="font-size: 0.9rem;">
+All modes. Top three best/toughest shown; expand for full table.
 </p>
 
 <div class="sf6-matchup-grid">
@@ -140,7 +80,7 @@ Top and bottom matchups with enough games to be meaningful. Top three are shown;
           <th>Avg Opp MR</th>
         </tr>
       </thead>
-      <tbody id="sf6-matchup-best-summary">
+      <tbody id="sf6-matchup-overall-best-summary">
         <!-- Filled by sf6-report.js -->
       </tbody>
     </table>
@@ -156,7 +96,7 @@ Top and bottom matchups with enough games to be meaningful. Top three are shown;
               <th>Avg Opp MR</th>
             </tr>
           </thead>
-          <tbody id="sf6-matchup-best-full">
+          <tbody id="sf6-matchup-overall-best-full">
             <!-- Filled by sf6-report.js -->
           </tbody>
         </table>
@@ -175,7 +115,7 @@ Top and bottom matchups with enough games to be meaningful. Top three are shown;
           <th>Avg Opp MR</th>
         </tr>
       </thead>
-      <tbody id="sf6-matchup-worst-summary">
+      <tbody id="sf6-matchup-overall-worst-summary">
         <!-- Filled by sf6-report.js -->
       </tbody>
     </table>
@@ -191,7 +131,89 @@ Top and bottom matchups with enough games to be meaningful. Top three are shown;
               <th>Avg Opp MR</th>
             </tr>
           </thead>
-          <tbody id="sf6-matchup-worst-full">
+          <tbody id="sf6-matchup-overall-worst-full">
+            <!-- Filled by sf6-report.js -->
+          </tbody>
+        </table>
+      </div>
+    </details>
+  </section>
+
+</div>
+
+---
+
+### Ranked (MR-filtered)
+
+<p class="sf6-muted" style="font-size: 0.9rem;">
+Ranked matches only. Top three best/toughest shown; expand for full table.
+</p>
+
+<div class="sf6-matchup-grid">
+
+  <section class="sf6-matchup-card">
+    <h4>Best matchups (min 10 games)</h4>
+    <table class="sf6-matchup-table">
+      <thead>
+        <tr>
+          <th>Opponent</th>
+          <th>Games</th>
+          <th>Win rate</th>
+          <th>Avg Opp MR</th>
+        </tr>
+      </thead>
+      <tbody id="sf6-matchup-ranked-best-summary">
+        <!-- Filled by sf6-report.js -->
+      </tbody>
+    </table>
+    <details class="sf6-collapsible">
+      <summary>View full table</summary>
+      <div class="sf6-table-scroll">
+        <table class="sf6-matchup-table">
+          <thead>
+            <tr>
+              <th>Opponent</th>
+              <th>Games</th>
+              <th>Win rate</th>
+              <th>Avg Opp MR</th>
+            </tr>
+          </thead>
+          <tbody id="sf6-matchup-ranked-best-full">
+            <!-- Filled by sf6-report.js -->
+          </tbody>
+        </table>
+      </div>
+    </details>
+  </section>
+
+  <section class="sf6-matchup-card">
+    <h4>Toughest matchups (min 10 games)</h4>
+    <table class="sf6-matchup-table">
+      <thead>
+        <tr>
+          <th>Opponent</th>
+          <th>Games</th>
+          <th>Win rate</th>
+          <th>Avg Opp MR</th>
+        </tr>
+      </thead>
+      <tbody id="sf6-matchup-ranked-worst-summary">
+        <!-- Filled by sf6-report.js -->
+      </tbody>
+    </table>
+    <details class="sf6-collapsible">
+      <summary>View full table</summary>
+      <div class="sf6-table-scroll">
+        <table class="sf6-matchup-table">
+          <thead>
+            <tr>
+              <th>Opponent</th>
+              <th>Games</th>
+              <th>Win rate</th>
+              <th>Avg Opp MR</th>
+            </tr>
+          </thead>
+          <tbody id="sf6-matchup-ranked-worst-full">
             <!-- Filled by sf6-report.js -->
           </tbody>
         </table>
@@ -202,5 +224,6 @@ Top and bottom matchups with enough games to be meaningful. Top three are shown;
 </div>
 
 </div>
+
 
 
