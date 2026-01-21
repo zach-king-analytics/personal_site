@@ -650,6 +650,34 @@ body.sf6-has-report .sf6-matchup-grid {
   white-space: nowrap;
 }
 
+.sf6-collapsible {
+  margin-top: 0.75rem;
+  background: #0b1016;
+  border: 1px solid #1f2937;
+  border-radius: 10px;
+  padding: 0.75rem 0.9rem;
+}
+
+.sf6-collapsible summary {
+  cursor: pointer;
+  color: #9ca3af;
+  font-weight: 600;
+  outline: none;
+}
+
+.sf6-collapsible summary::-webkit-details-marker {
+  display: none;
+}
+
+.sf6-collapsible[open] summary {
+  color: #e5e7eb;
+}
+
+.sf6-table-scroll {
+  overflow-x: auto;
+  margin-top: 0.75rem;
+}
+
 .work-grid {
   display: grid;
   grid-template-columns: 1fr;

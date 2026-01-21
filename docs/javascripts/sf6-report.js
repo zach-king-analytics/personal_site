@@ -128,9 +128,11 @@
     // Insight text
     const fixOneText = document.getElementById("sf6-fix-one-matchup-text");
 
-    // Matchup overview card bodies (top/bottom 5)
-    const bestBody = document.getElementById("sf6-matchup-best-body");
-    const worstBody = document.getElementById("sf6-matchup-worst-body");
+    // Matchup overview card bodies (summary + full)
+    const bestSummaryBody = document.getElementById("sf6-matchup-best-summary");
+    const worstSummaryBody = document.getElementById("sf6-matchup-worst-summary");
+    const bestFullBody = document.getElementById("sf6-matchup-best-full");
+    const worstFullBody = document.getElementById("sf6-matchup-worst-full");
 
     // Start “resting” state hidden
     setReportVisible(false);
@@ -164,8 +166,10 @@
     }
 
     function clearMatchupCards() {
-      if (bestBody) bestBody.innerHTML = "";
-      if (worstBody) worstBody.innerHTML = "";
+      if (bestSummaryBody) bestSummaryBody.innerHTML = "";
+      if (worstSummaryBody) worstSummaryBody.innerHTML = "";
+      if (bestFullBody) bestFullBody.innerHTML = "";
+      if (worstFullBody) worstFullBody.innerHTML = "";
     }
 
     function clearActivity() {
@@ -750,7 +754,7 @@
     // Matchup overview cards (ranked/MR-filtered summary expected)
     // ------------------------------------------------------------
     function renderMatchupCards(summary) {
-      if (!bestBody && !worstBody) return;
+      if (!bestSummaryBody && !worstSummaryBody && !bestFullBody && !worstFullBody) return;
 
       const rows = (summary && summary.matchup_table) || [];
       if (!Array.isArray(rows) || rows.length === 0) {
@@ -760,21 +764,24 @@
 
       const stable = rows.filter((r) => Number.isFinite(r.games) && r.games >= 10);
 
-      const best = stable
+      const bestAll = stable
         .slice()
         .sort(
           (a, b) =>
             (b.winrate_pct != null ? b.winrate_pct : -999) - (a.winrate_pct != null ? a.winrate_pct : -999)
         )
-        .slice(0, 5);
+        ;
 
-      const worst = stable
+      const worstAll = stable
         .slice()
         .sort(
           (a, b) =>
             (a.winrate_pct != null ? a.winrate_pct : 999) - (b.winrate_pct != null ? b.winrate_pct : 999)
         )
-        .slice(0, 5);
+        ;
+
+      const bestTop = bestAll.slice(0, 3);
+      const worstTop = worstAll.slice(0, 3);
 
       function rowHtml(r) {
         const opp = r.opponent != null ? r.opponent : "—";
@@ -789,8 +796,10 @@
         </tr>`;
       }
 
-      if (bestBody) bestBody.innerHTML = best.map(rowHtml).join("");
-      if (worstBody) worstBody.innerHTML = worst.map(rowHtml).join("");
+      if (bestSummaryBody) bestSummaryBody.innerHTML = bestTop.map(rowHtml).join("");
+      if (worstSummaryBody) worstSummaryBody.innerHTML = worstTop.map(rowHtml).join("");
+      if (bestFullBody) bestFullBody.innerHTML = bestAll.map(rowHtml).join("");
+      if (worstFullBody) worstFullBody.innerHTML = worstAll.map(rowHtml).join("");
     }
 
     // ------------------------------------------------------------

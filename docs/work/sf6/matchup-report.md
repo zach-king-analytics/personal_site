@@ -124,7 +124,7 @@ Load a report to see which matchup would move your overall win rate the most if 
 ## Matchup overview (stable matchups)
 
 <p class="sf6-muted">
-Top and bottom matchups by win rate, filtered to matchups with enough games to be meaningful.
+Top and bottom matchups with enough games to be meaningful. Top three are shown; expand for the full tables.
 </p>
 
 <div class="sf6-matchup-grid">
@@ -140,10 +140,28 @@ Top and bottom matchups by win rate, filtered to matchups with enough games to b
           <th>Avg Opp MR</th>
         </tr>
       </thead>
-      <tbody id="sf6-matchup-best-body">
+      <tbody id="sf6-matchup-best-summary">
         <!-- Filled by sf6-report.js -->
       </tbody>
     </table>
+    <details class="sf6-collapsible">
+      <summary>View full table</summary>
+      <div class="sf6-table-scroll">
+        <table class="sf6-matchup-table">
+          <thead>
+            <tr>
+              <th>Opponent</th>
+              <th>Games</th>
+              <th>Win rate</th>
+              <th>Avg Opp MR</th>
+            </tr>
+          </thead>
+          <tbody id="sf6-matchup-best-full">
+            <!-- Filled by sf6-report.js -->
+          </tbody>
+        </table>
+      </div>
+    </details>
   </section>
 
   <section class="sf6-matchup-card">
@@ -157,10 +175,28 @@ Top and bottom matchups by win rate, filtered to matchups with enough games to b
           <th>Avg Opp MR</th>
         </tr>
       </thead>
-      <tbody id="sf6-matchup-worst-body">
+      <tbody id="sf6-matchup-worst-summary">
         <!-- Filled by sf6-report.js -->
       </tbody>
     </table>
+    <details class="sf6-collapsible">
+      <summary>View full table</summary>
+      <div class="sf6-table-scroll">
+        <table class="sf6-matchup-table">
+          <thead>
+            <tr>
+              <th>Opponent</th>
+              <th>Games</th>
+              <th>Win rate</th>
+              <th>Avg Opp MR</th>
+            </tr>
+          </thead>
+          <tbody id="sf6-matchup-worst-full">
+            <!-- Filled by sf6-report.js -->
+          </tbody>
+        </table>
+      </div>
+    </details>
   </section>
 
 </div>
