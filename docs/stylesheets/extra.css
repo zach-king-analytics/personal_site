@@ -14,7 +14,7 @@
 
 .md-typeset h1 {
   font-weight: 600;
-  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-size: clamp(1.25rem, 3.5vw, 1.875rem);
   letter-spacing: -0.01em;
   margin-bottom: 1rem;
   border-bottom: 2px solid var(--md-primary-fg-color);
@@ -23,7 +23,7 @@
 
 .md-typeset h2 {
   font-weight: 600;
-  font-size: clamp(1.25rem, 3vw, 1.5rem);
+  font-size: clamp(1.1rem, 2.5vw, 1.3rem);
   margin-top: 2rem;
   margin-bottom: 0.875rem;
   letter-spacing: -0.01em;
@@ -213,7 +213,7 @@ body.sf6-has-report .sf6-report-header {
 
 .sf6-report-title {
   margin: 0;
-  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  font-size: clamp(1.25rem, 4vw, 2rem);
   font-weight: 700;
   background: linear-gradient(135deg, #2c8c89, #17a2a2);
   -webkit-background-clip: text;
@@ -384,7 +384,7 @@ body.sf6-has-report .sf6-load-another-btn {
 .sf6-char-banner {
   margin-top: 2rem;
   margin-bottom: 2.5rem;
-  padding: 0 2rem;
+  padding: 0 1rem;
   border-radius: 0;
   background: transparent;
   border: none;
@@ -394,6 +394,12 @@ body.sf6-has-report .sf6-load-another-btn {
   width: 100%;
 }
 
+@media (min-width: 768px) {
+  .sf6-char-banner {
+    padding: 0 2rem;
+  }
+}
+
 .sf6-char-banner .admonition {
   margin-left: 0;
   margin-right: 0;
@@ -401,6 +407,13 @@ body.sf6-has-report .sf6-load-another-btn {
   width: 100%;
   margin-top: 0;
   margin-bottom: 0;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .sf6-char-banner .admonition {
+    padding: 1.5rem;
+  }
 }
 
 .sf6-char-banner .admonition-title {
@@ -424,6 +437,26 @@ body.sf6-has-report .sf6-load-another-btn {
   border: 1px solid #4B5563;
   font-size: 0.8rem;
   white-space: nowrap;
+}
+
+/* Stats row for dataset overview (rendered by JS) */
+.sf6-char-banner [style*="display: flex"][style*="gap: 3rem"] {
+  flex-direction: column;
+  gap: 1.5rem !important;
+}
+
+.sf6-char-banner [style*="height: 60px"][style*="background: linear-gradient"] {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .sf6-char-banner [style*="display: flex"][style*="gap: 3rem"] {
+    flex-direction: row;
+    gap: 3rem !important;
+  }
+  .sf6-char-banner [style*="height: 60px"][style*="background: linear-gradient"] {
+    display: block;
+  }
 }
 
 /* Snapshot styling */
@@ -657,7 +690,8 @@ body.sf6-has-report .sf6-matchup-grid {
   font-weight: 600;
   background-color: var(--md-primary-fg-color);
   border: none;
-  padding: 0.6rem 1.5rem;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.95rem;
   transition: all 0.2s ease;
 }
 
@@ -671,6 +705,8 @@ body.sf6-has-report .sf6-matchup-grid {
   font-weight: 500;
   border-radius: 6px;
   transition: all 0.2s ease;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
 }
 
 /* ============================
