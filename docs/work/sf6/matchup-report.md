@@ -37,6 +37,11 @@ hide:
   <div id="sf6-mode-distribution-text" class="sf6-muted"></div>
 </div>
 
+<div class="sf6-card">
+  <div class="sf6-card-title">Character distribution</div>
+  <div id="sf6-character-distribution-chart"></div>
+</div>
+
 ---
 
 ## Practice Volume & Consistency

@@ -797,6 +797,27 @@ button {
   background: #0f1419;
 }
 
+/* Side-by-side for mode and character distribution cards */
+#sf6-report-sections .sf6-card:nth-child(1),
+#sf6-report-sections .sf6-card:nth-child(2) {
+  display: inline-block;
+  width: calc(50% - 0.75rem);
+  vertical-align: top;
+}
+
+#sf6-report-sections .sf6-card:nth-child(1) {
+  margin-right: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  #sf6-report-sections .sf6-card:nth-child(1),
+  #sf6-report-sections .sf6-card:nth-child(2) {
+    display: block;
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
 .sf6-card-title {
   font-size: 1.2rem;
   font-weight: 600;
@@ -810,6 +831,15 @@ button {
 }
 
 #sf6-mode-distribution-chart .js-plotly-plot {
+  width: 100% !important;
+}
+
+#sf6-character-distribution-chart {
+  width: 100%;
+  min-height: 200px;
+}
+
+#sf6-character-distribution-chart .js-plotly-plot {
   width: 100% !important;
 }
 

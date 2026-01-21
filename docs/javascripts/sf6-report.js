@@ -701,6 +701,66 @@
     }
 
     // ------------------------------------------------------------
+    // Character Distribution Chart (barchart ≤5 chars, barchart ≥6)
+    // ------------------------------------------------------------
+    function renderCharacterDistribution(summary) {
+      const chartDiv = document.getElementById("sf6-character-distribution-chart");
+      if (!chartDiv) return;
+
+      const charBreakdown = (summary && summary.character_breakdown) || [];
+      
+      if (!Array.isArray(charBreakdown) || charBreakdown.length === 0) {
+        safePurge(chartDiv);
+        chartDiv.innerHTML = "<p style='text-align: center; color: #9ca3af; padding: 2rem;'>Character data unavailable</p>";
+        return;
+      }
+
+      // Sort by matches descending
+      const sorted = charBreakdown.slice().sort((a, b) => (b.games || 0) - (a.games || 0));
+      
+      // Create horizontal barchart (works well for all character counts)
+      const traces = [{
+        name: "Matches",
+        x: sorted.map(c => c.games || 0),
+        y: sorted.map(c => c.character || "—"),
+        type: "bar",
+        orientation: "h",
+        marker: { 
+          color: sorted.map((_, i) => {
+            const colors = ["#2c8c89", "#5a9bd4", "#e87c3e", "#9b59b6", "#f39c12", "#e74c3c"];
+            return colors[i % colors.length];
+          })
+        },
+        text: sorted.map(c => `${c.character}: ${c.games} (${(c.share_pct || 0).toFixed(1)}%)`),
+        textposition: "outside",
+        textfont: { color: "#e0e0e0", size: 11 },
+        hovertemplate: "%{text}<extra></extra>",
+        showlegend: false,
+      }];
+
+      const layout = {
+        margin: { l: 100, r: 20, t: 10, b: 20 },
+        paper_bgcolor: "rgba(0,0,0,0)",
+        plot_bgcolor: "rgba(0,0,0,0)",
+        font: { color: "#e0e0e0", size: 12 },
+        xaxis: {
+          gridcolor: "rgba(255,255,255,0.05)",
+          showticklabels: true,
+          zeroline: false,
+        },
+        yaxis: {
+          gridcolor: "transparent",
+          showticklabels: true,
+          zeroline: false,
+        },
+        height: Math.max(200, sorted.length * 40),
+      };
+
+      const config = { displayModeBar: false, responsive: true };
+      Plotly.newPlot(chartDiv, traces, layout, config);
+    }
+
+    // ------------------------------------------------------------
     // Fix-one insight (ranked/MR-filtered summary expected)
     // ------------------------------------------------------------
     function renderFixOneMatchup(summary) {
@@ -931,6 +991,7 @@
           // Ranked-only visuals (MR-filtered in Python)
           renderCharacterBanner(rankedSummary, rootSummary, activityLabel);
           renderModeDistribution(rootSummary.overall || {});
+          renderCharacterDistribution(rankedSummary);
           renderSnapshot(rankedSummary);
           renderFixOneMatchup(rankedSummary);
           renderMatchupCards(rankedSummary);
