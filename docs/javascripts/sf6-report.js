@@ -570,42 +570,21 @@
 
       charBannerContent.appendChild(admon);
 
-      // Create character breakdown callout
+      // Create character & scope callout
       const charAdmon = document.createElement("div");
       charAdmon.className = "admonition warning";
       charAdmon.style.marginTop = "1.5rem";
 
       const charTitle = document.createElement("p");
       charTitle.className = "admonition-title";
-      charTitle.textContent = "Characters & Matchup Scope";
+      charTitle.textContent = "About This Report";
       charAdmon.appendChild(charTitle);
-
-      // Get character breakdown
-      const charBreakdown = (ranked && ranked.character_breakdown) || [];
-      let charList = "";
-      if (Array.isArray(charBreakdown) && charBreakdown.length > 0) {
-        charList = charBreakdown
-          .map(c => {
-            const name = c.character || "—";
-            const games = Number.isFinite(c.games) ? c.games : "—";
-            const pct = typeof c.share_pct === "number" ? c.share_pct.toFixed(1) : "—";
-            return `${name} (${games} matches, ${pct}%)`;
-          })
-          .join(", ");
-      } else {
-        charList = "Character data not available";
-      }
-
-      const charDescription = document.createElement("p");
-      charDescription.style.marginBottom = "0.75rem";
-      charDescription.style.marginTop = "0";
-      charDescription.innerHTML = `<strong>Characters played:</strong> ${charList}`;
-      charAdmon.appendChild(charDescription);
 
       const scopeNote = document.createElement("p");
       scopeNote.style.marginBottom = "0";
       scopeNote.style.fontSize = "0.95rem";
-      scopeNote.innerHTML = `<strong>Note:</strong> Matchup statistics below aggregate performance across all characters played. Individual character performance may vary significantly.`;
+      scopeNote.style.lineHeight = "1.6";
+      scopeNote.innerHTML = `All statistics below aggregate performance across your entire character pool and dataset. Individual character matchups may vary significantly from these aggregate trends.`;
       charAdmon.appendChild(scopeNote);
 
       charBannerContent.appendChild(charAdmon);
