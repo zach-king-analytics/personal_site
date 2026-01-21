@@ -995,7 +995,7 @@
         try {
           // Ranked-only visuals (MR-filtered in Python)
           renderCharacterBanner(rankedSummary, rootSummary, activityLabel);
-          renderModeDistribution(rootSummary.overall || {});
+          renderModeDistribution(rootSummary);
           renderCharacterDistribution(rankedSummary);
           renderSnapshot(rankedSummary);
           renderFixOneMatchup(rankedSummary);
