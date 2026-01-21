@@ -995,7 +995,7 @@
         try {
           // Ranked-only visuals (MR-filtered in Python)
           renderCharacterBanner(rankedSummary, rootSummary, activityLabel);
-          renderModeDistribution(rootSummary);
+          renderModeDistribution(rankedSummary);
           renderCharacterDistribution(rankedSummary);
           renderSnapshot(rankedSummary);
           renderFixOneMatchup(rankedSummary);
@@ -1094,3 +1094,4 @@
     document$.subscribe(() => boot());
   }
 })();
+
