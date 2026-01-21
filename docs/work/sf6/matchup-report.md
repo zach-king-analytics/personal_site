@@ -31,15 +31,23 @@ hide:
 
 <div id="sf6-report-sections" class="sf6-hidden" markdown="1">
 
-<div class="sf6-card">
-  <div class="sf6-card-title">Mode distribution</div>
-  <div id="sf6-mode-distribution-chart"></div>
-  <div id="sf6-mode-distribution-text" class="sf6-muted"></div>
-</div>
+## Overall Play
 
-<div class="sf6-card">
-  <div class="sf6-card-title">Character distribution</div>
-  <div id="sf6-character-distribution-chart"></div>
+<p id="sf6-play-overview-text" class="sf6-insight-card">
+  <strong>Load a report to see your play patterns.</strong> Understanding your mode mix and character breadth helps you identify where your time is going and where to focus next.
+</p>
+
+<div class="sf6-distribution-row">
+  <div class="sf6-card">
+    <div class="sf6-card-title">Mode distribution</div>
+    <div id="sf6-mode-distribution-chart"></div>
+    <div id="sf6-mode-distribution-text" class="sf6-muted"></div>
+  </div>
+
+  <div class="sf6-card">
+    <div class="sf6-card-title">Character distribution</div>
+    <div id="sf6-character-distribution-chart"></div>
+  </div>
 </div>
 
 ---
