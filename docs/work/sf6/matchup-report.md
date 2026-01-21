@@ -29,7 +29,7 @@ hide:
 
 ---
 
-<div id="sf6-report-sections" class="sf6-hidden" markdown="1">
+<div id="sf6-report-sections" class="sf6-hidden">
 
 ## Overall Play
 

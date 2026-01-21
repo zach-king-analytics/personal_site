@@ -3,10 +3,8 @@
 /* Brand color (header chips, links, etc.) */
 :root {
   --md-primary-fg-color: #2c8c89; /* deeper teal for authority */
-  width: 100% !important;
+  --md-accent-fg-color: #2c8c89;
 }
-#sf6-activity-chart .js-plotly-plot {
-  border-radius: 12px;
 
 /* Global typography improvements */
 .md-typeset {
@@ -336,7 +334,7 @@ body.sf6-has-report .sf6-load-another-btn {
   position: relative;
   height: 300px;
   margin-top: 1rem;
-  width: 100%;
+}
 
 @media (min-width: 640px) {
   .sf6-chart-wrapper {
@@ -789,7 +787,6 @@ button {
 
 #sf6-activity-chart .js-plotly-plot {
   border-radius: 12px;
-  width: 100% !important;
 }
 
 .sf6-card {
