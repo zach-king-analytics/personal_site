@@ -599,7 +599,12 @@
       
       if (!chartDiv || !textDiv) return;
 
-      const modeBreakdown = (summary && summary.mode_breakdown) || [];
+      // Handle nested data structure: try direct mode_breakdown first, then dig deeper
+      let modeBreakdown = (summary && summary.mode_breakdown) || [];
+      if (!Array.isArray(modeBreakdown) || modeBreakdown.length === 0) {
+        // Try to get from overall.overall if we have nested structure
+        modeBreakdown = (summary && summary.overall && summary.overall.mode_breakdown) || [];
+      }
       
       if (!Array.isArray(modeBreakdown) || modeBreakdown.length === 0) {
         safePurge(chartDiv);

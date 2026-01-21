@@ -799,19 +799,25 @@ button {
 
 /* Side-by-side layout for distribution row */
 .sf6-distribution-row {
-  display: flex;
+  display: flex !important;
   gap: 1.5rem;
   margin-bottom: 2rem;
 }
 
 .sf6-distribution-row .sf6-card {
-  flex: 1;
-  margin-bottom: 0;
+  flex: 1 !important;
+  margin-bottom: 0 !important;
+  width: auto !important;
+  min-width: 0 !important;
 }
 
 @media (max-width: 768px) {
   .sf6-distribution-row {
-    flex-direction: column;
+    flex-direction: column !important;
+  }
+  
+  .sf6-distribution-row .sf6-card {
+    flex: 1 !important;
   }
 }
 
