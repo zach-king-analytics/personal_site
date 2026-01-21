@@ -29,7 +29,7 @@ hide:
 
 ---
 
-<div id="sf6-report-sections" class="sf6-hidden">
+<div id="sf6-report-sections" class="sf6-hidden" markdown="1">
 
 ## Overall Play
 
@@ -47,8 +47,15 @@ hide:
   <div class="sf6-card">
     <div class="sf6-card-title">Character distribution</div>
     <div id="sf6-character-distribution-chart"></div>
-  </div>
-</div>
+  </div></div><script>
+setTimeout(() => {
+  const cards = document.querySelectorAll(".sf6-distribution-row .sf6-card");
+  if (cards.length === 2) {
+    cards[0].style.display = "inline-block"; cards[0].style.width = "calc(50% - 0.75rem)"; cards[0].style.marginRight = "1.5rem";
+    cards[1].style.display = "inline-block"; cards[1].style.width = "calc(50% - 0.75rem)";
+  }
+}, 50);
+</script>
 ---
 
 ## Practice Volume & Consistency

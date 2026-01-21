@@ -995,9 +995,7 @@
         try {
           // Ranked-only visuals (MR-filtered in Python)
           renderCharacterBanner(rankedSummary, rootSummary, activityLabel);
-          // Use overall summary for mode distribution (Overall Play)
-          renderModeDistribution(rootSummary);
-          // Keep character distribution on ranked summary to preserve current behavior
+          renderModeDistribution(rankedSummary);
           renderCharacterDistribution(rankedSummary);
           renderSnapshot(rankedSummary);
           renderFixOneMatchup(rankedSummary);
