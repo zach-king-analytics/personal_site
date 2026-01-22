@@ -795,29 +795,25 @@ button {
   border-radius: 8px;
   border: 1px solid #374151;
   background: #0f1419;
+  height: 100%;
 }
 
 /* Side-by-side layout for distribution row */
 .sf6-distribution-row {
-  display: flex !important;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 1.5rem;
   margin-bottom: 2rem;
+  align-items: stretch;
 }
 
 .sf6-distribution-row .sf6-card {
-  flex: 1 !important;
-  margin-bottom: 0 !important;
-  width: auto !important;
-  min-width: 0 !important;
+  margin: 0;
 }
 
 @media (max-width: 768px) {
   .sf6-distribution-row {
-    flex-direction: column !important;
-  }
-  
-  .sf6-distribution-row .sf6-card {
-    flex: 1 !important;
+    grid-template-columns: 1fr;
   }
 }
 
@@ -841,28 +837,32 @@ button {
 
 #sf6-mode-distribution-chart {
   width: 100%;
-  min-height: 150px;
+  min-height: 220px;
 }
 
 #sf6-mode-distribution-chart .js-plotly-plot {
   width: 100% !important;
+  height: 220px !important;
 }
 
 #sf6-character-distribution-chart {
   width: 100%;
-  min-height: 200px;
+  min-height: 280px;
 }
 
 #sf6-character-distribution-chart .js-plotly-plot {
   width: 100% !important;
 }
 
-/* SF6 Report: Hide sections until report is loaded */
+/* SF6 Report: Hide sections until a report is loaded */
+#sf6-report-sections,
 .sf6-hidden {
   display: none;
 }
 
-.sf6-hidden.sf6-visible {
+#sf6-report-sections.sf6-visible,
+.sf6-hidden.sf6-visible,
+body.sf6-has-report #sf6-report-sections {
   display: block;
 }
 

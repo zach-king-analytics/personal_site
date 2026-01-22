@@ -387,6 +387,16 @@
         safePurge(activityChartDiv);
         if (typeof Plotly !== "undefined" && activityChartDiv) {
           Plotly.newPlot(activityChartDiv, [heat], layout, config);
+
+          // Keep the heatmap width in sync with the container
+          const resizeHeat = () => {
+            const rect = activityChartDiv.getBoundingClientRect();
+            if (rect.width > 0) {
+              Plotly.relayout(activityChartDiv, { width: rect.width });
+            }
+          };
+          setTimeout(resizeHeat, 50);
+          window.addEventListener("resize", resizeHeat);
         }
         return;
       }
@@ -616,24 +626,25 @@
       // Sort by matches descending
       const sorted = modeBreakdown.slice().sort((a, b) => (b.matches || 0) - (a.matches || 0));
       
-      // Create traces for horizontal stacked bar
+      // Create traces for a vertical stacked bar (single category "Modes")
       const traces = sorted.map((m) => {
         const mode = (m.mode || "unknown").toUpperCase();
         let color = "#888";
-        if ((m.mode || "").toLowerCase() === "rank") color = "#2c8c89";
-        if ((m.mode || "").toLowerCase() === "hub") color = "#5a9bd4";
-        
+        const lower = (m.mode || "").toLowerCase();
+        if (lower === "rank") color = "#2c8c89";
+        if (lower === "hub") color = "#5a9bd4";
+
         return {
           name: mode,
-          x: [m.matches || 0],
-          y: [""],
+          x: ["Modes"],
+          y: [m.matches || 0],
           type: "bar",
-          orientation: "h",
           marker: { color },
-          text: `${mode}<br>${m.matches} (${m.share_pct}%)`,
-          textposition: "inside",
-          textfont: { color: "#fff", size: 12 },
-          hovertemplate: `${mode}: %{x} matches (%{customdata}%)<extra></extra>`,
+          text: [`${m.matches} (${m.share_pct}%)`],
+          textposition: "auto",
+          constraintext: "both",
+          textfont: { color: "#f5f5f5", size: 12 },
+          hovertemplate: `${mode}: %{y} matches (%{customdata}%)<extra></extra>`,
           customdata: [m.share_pct],
           showlegend: true,
         };
@@ -641,28 +652,31 @@
 
       const layout = {
         barmode: "stack",
-        margin: { l: 0, r: 120, t: 20, b: 20 },
+        margin: { l: 50, r: 40, t: 35, b: 45 },
         paper_bgcolor: "rgba(0,0,0,0)",
         plot_bgcolor: "rgba(0,0,0,0)",
-        font: { color: "#e0e0e0", size: 12 },
+        font: { color: "#e0e0e0", size: 11 },
         xaxis: {
-          gridcolor: "rgba(255,255,255,0.05)",
-          showticklabels: false,
+          showgrid: false,
           zeroline: false,
+          tickfont: { size: 11 },
         },
         yaxis: {
-          gridcolor: "transparent",
-          showticklabels: false,
+          gridcolor: "rgba(255,255,255,0.08)",
           zeroline: false,
+          tickfont: { size: 11 },
         },
-        height: 120,
+        bargap: 0.78,
+        height: 200,
         legend: {
-          x: 1.02,
-          y: 0.5,
+          orientation: "h",
+          y: -0.25,
+          x: 0,
           xanchor: "left",
-          yanchor: "middle",
+          yanchor: "top",
           bgcolor: "transparent",
           bordercolor: "transparent",
+          font: { size: 10 },
         },
       };
 
@@ -673,10 +687,7 @@
       const forceFullWidth = () => {
         const rect = chartDiv.getBoundingClientRect();
         if (rect.width > 0) {
-          Plotly.relayout(chartDiv, { 
-            width: rect.width,
-            "xaxis.autorange": true
-          });
+          Plotly.relayout(chartDiv, { width: rect.width, "yaxis.autorange": true });
         }
       };
       
@@ -737,14 +748,15 @@
           })
         },
         text: sorted.map(c => `${c.character}: ${c.games} (${(c.share_pct || 0).toFixed(1)}%)`),
-        textposition: "outside",
+        textposition: "auto",
+        constraintext: "both",
         textfont: { color: "#e0e0e0", size: 11 },
         hovertemplate: "%{text}<extra></extra>",
         showlegend: false,
       }];
 
       const layout = {
-        margin: { l: 100, r: 20, t: 10, b: 20 },
+        margin: { l: 110, r: 90, t: 20, b: 30 },
         paper_bgcolor: "rgba(0,0,0,0)",
         plot_bgcolor: "rgba(0,0,0,0)",
         font: { color: "#e0e0e0", size: 12 },
@@ -752,17 +764,29 @@
           gridcolor: "rgba(255,255,255,0.05)",
           showticklabels: true,
           zeroline: false,
+          automargin: true,
         },
         yaxis: {
           gridcolor: "transparent",
           showticklabels: true,
           zeroline: false,
+          automargin: true,
         },
         height: Math.max(200, sorted.length * 40),
       };
 
       const config = { displayModeBar: false, responsive: true };
       Plotly.newPlot(chartDiv, traces, layout, config);
+
+      // Keep chart width in sync with container to avoid overflow
+      const resizeChars = () => {
+        const rect = chartDiv.getBoundingClientRect();
+        if (rect.width > 0) {
+          Plotly.relayout(chartDiv, { width: rect.width });
+        }
+      };
+      setTimeout(resizeChars, 50);
+      window.addEventListener("resize", resizeChars);
     }
 
     // ------------------------------------------------------------
@@ -995,7 +1019,7 @@
         try {
           // Ranked-only visuals (MR-filtered in Python)
           renderCharacterBanner(rankedSummary, rootSummary, activityLabel);
-          renderModeDistribution(rankedSummary);
+          renderModeDistribution(rootSummary);
           renderCharacterDistribution(rankedSummary);
           renderSnapshot(rankedSummary);
           renderFixOneMatchup(rankedSummary);
