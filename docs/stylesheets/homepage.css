@@ -84,6 +84,13 @@ html.is-home body::before {
   filter: grayscale(0.5) contrast(1.05) brightness(0.8);
 }
 
+@media (max-width: 768px) {
+  html.is-home body::before {
+    opacity: 0.45;
+    filter: grayscale(0.5) contrast(1.2) brightness(0.9);
+  }
+}
+
 /* ============================================
    HERO SECTION
    ============================================ */
