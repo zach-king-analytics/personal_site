@@ -1,6 +1,6 @@
 {
   "player_cfn": "karatesnacks",
-  "generated_at": "2026-01-22T21:27:50.185591+00:00",
+  "generated_at": "2026-01-23T03:37:52.491498+00:00",
   "baseline_n": 5,
   "summary": {
     "overall": {
@@ -285,18 +285,28 @@
       "character_breakdown": [
         {
           "character": "Juri",
-          "games": 764,
-          "share_pct": 83.0
+          "games": 1447,
+          "share_pct": 83.1
+        },
+        {
+          "character": "Mai",
+          "games": 106,
+          "share_pct": 6.1
         },
         {
           "character": "Ryu",
           "games": 94,
-          "share_pct": 10.2
+          "share_pct": 5.4
         },
         {
-          "character": "Mai",
-          "games": 62,
-          "share_pct": 6.7
+          "character": "Manon",
+          "games": 53,
+          "share_pct": 3.0
+        },
+        {
+          "character": "Chun-Li",
+          "games": 42,
+          "share_pct": 2.4
         }
       ],
       "session_stats": {

@@ -1,6 +1,6 @@
 {
   "player_cfn": "shazoomba",
-  "generated_at": "2026-01-22T21:27:51.955679+00:00",
+  "generated_at": "2026-01-23T03:37:54.219015+00:00",
   "baseline_n": 5,
   "summary": {
     "overall": {
@@ -270,13 +270,18 @@
       "character_breakdown": [
         {
           "character": "Sagat",
-          "games": 253,
-          "share_pct": 65.0
+          "games": 655,
+          "share_pct": 73.0
         },
         {
           "character": "Ryu",
-          "games": 136,
-          "share_pct": 35.0
+          "games": 225,
+          "share_pct": 25.1
+        },
+        {
+          "character": "Zangief",
+          "games": 17,
+          "share_pct": 1.9
         }
       ],
       "session_stats": {

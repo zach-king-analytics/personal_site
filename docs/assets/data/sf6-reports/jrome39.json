@@ -1,6 +1,6 @@
 {
   "player_cfn": "jrome39",
-  "generated_at": "2026-01-22T21:27:51.175581+00:00",
+  "generated_at": "2026-01-23T03:37:53.410707+00:00",
   "baseline_n": 5,
   "summary": {
     "overall": {
@@ -256,8 +256,18 @@
       "character_breakdown": [
         {
           "character": "Ryu",
-          "games": 200,
-          "share_pct": 100.0
+          "games": 506,
+          "share_pct": 81.9
+        },
+        {
+          "character": "Akuma",
+          "games": 107,
+          "share_pct": 17.3
+        },
+        {
+          "character": "Sagat",
+          "games": 5,
+          "share_pct": 0.8
         }
       ],
       "session_stats": {

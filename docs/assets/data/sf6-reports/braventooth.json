@@ -1,6 +1,6 @@
 {
   "player_cfn": "braventooth",
-  "generated_at": "2026-01-22T21:27:48.936151+00:00",
+  "generated_at": "2026-01-23T03:37:51.212064+00:00",
   "baseline_n": 5,
   "summary": {
     "overall": {
@@ -279,7 +279,7 @@
       "character_breakdown": [
         {
           "character": "Ryu",
-          "games": 656,
+          "games": 867,
           "share_pct": 100.0
         }
       ],

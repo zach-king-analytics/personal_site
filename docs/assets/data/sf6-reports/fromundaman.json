@@ -1,6 +1,6 @@
 {
   "player_cfn": "fromundaman",
-  "generated_at": "2026-01-22T21:27:50.530443+00:00",
+  "generated_at": "2026-01-23T03:37:52.800659+00:00",
   "baseline_n": 5,
   "summary": {
     "overall": {
@@ -277,8 +277,13 @@
       "character_breakdown": [
         {
           "character": "Ed",
-          "games": 589,
-          "share_pct": 100.0
+          "games": 1928,
+          "share_pct": 97.1
+        },
+        {
+          "character": "A.K.I.",
+          "games": 58,
+          "share_pct": 2.9
         }
       ],
       "session_stats": {

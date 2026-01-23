@@ -1,6 +1,6 @@
 {
   "player_cfn": "kaylen",
-  "generated_at": "2026-01-22T21:27:51.355144+00:00",
+  "generated_at": "2026-01-23T03:37:53.598798+00:00",
   "baseline_n": 5,
   "summary": {
     "overall": {
@@ -330,18 +330,73 @@
       "character_breakdown": [
         {
           "character": "C. Viper",
-          "games": 192,
-          "share_pct": 69.8
+          "games": 820,
+          "share_pct": 55.9
         },
         {
           "character": "Elena",
-          "games": 73,
-          "share_pct": 26.5
+          "games": 350,
+          "share_pct": 23.8
+        },
+        {
+          "character": "M. Bison",
+          "games": 61,
+          "share_pct": 4.2
+        },
+        {
+          "character": "Ed",
+          "games": 53,
+          "share_pct": 3.6
         },
         {
           "character": "A.K.I.",
-          "games": 10,
-          "share_pct": 3.6
+          "games": 51,
+          "share_pct": 3.5
+        },
+        {
+          "character": "Ryu",
+          "games": 39,
+          "share_pct": 2.7
+        },
+        {
+          "character": "Mai",
+          "games": 39,
+          "share_pct": 2.7
+        },
+        {
+          "character": "Cammy",
+          "games": 19,
+          "share_pct": 1.3
+        },
+        {
+          "character": "Juri",
+          "games": 9,
+          "share_pct": 0.6
+        },
+        {
+          "character": "Terry",
+          "games": 9,
+          "share_pct": 0.6
+        },
+        {
+          "character": "Luke",
+          "games": 7,
+          "share_pct": 0.5
+        },
+        {
+          "character": "Akuma",
+          "games": 6,
+          "share_pct": 0.4
+        },
+        {
+          "character": "Kimberly",
+          "games": 3,
+          "share_pct": 0.2
+        },
+        {
+          "character": "Guile",
+          "games": 2,
+          "share_pct": 0.1
         }
       ],
       "session_stats": {

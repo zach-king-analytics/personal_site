@@ -531,14 +531,28 @@ def build_overall_summary(df: pd.DataFrame) -> dict:
             )
 
     char_breakdown = []
-    if "player_character" in df and not df["player_character"].isna().all() and total:
-        counts = df["player_character"].astype(str).str.strip().str.title().value_counts()
-        for character, games in counts.items():
+    if "player_character" in df and total:
+        # Count games with valid character data
+        df_chars = df[df["player_character"].notna() & (df["player_character"].astype(str).str.strip() != "")]
+        if not df_chars.empty:
+            counts = df_chars["player_character"].astype(str).str.strip().str.title().value_counts()
+            for character, games in counts.items():
+                char_breakdown.append(
+                    {
+                        "character": character,
+                        "games": int(games),
+                        "share_pct": round(100 * int(games) / total, 1),
+                    }
+                )
+        
+        # Add "Unknown" for games without character data
+        unknown_count = total - len(df_chars)
+        if unknown_count > 0:
             char_breakdown.append(
                 {
-                    "character": character,
-                    "games": int(games),
-                    "share_pct": round(100 * int(games) / total, 1),
+                    "character": "Unknown",
+                    "games": int(unknown_count),
+                    "share_pct": round(100 * unknown_count / total, 1),
                 }
             )
 
@@ -551,26 +565,48 @@ def build_overall_summary(df: pd.DataFrame) -> dict:
     }
 
 
-def build_ranked_summary(df_rank_mr: pd.DataFrame) -> dict:
-    """Ranked-only, MR-valid subset. (Your existing build_summary logic, cleaned up minimally.)"""
+def build_ranked_summary(df_rank_mr: pd.DataFrame, df_all: pd.DataFrame = None) -> dict:
+    """
+    Ranked-only, MR-valid subset for stats.
+    df_rank_mr: MR-valid ranked games (for MR trends, matchups, stats)
+    df_all: All matches (for character breakdown, defaults to df_rank_mr if None)
+    """
     df = df_rank_mr
+    if df_all is None:
+        df_all = df_rank_mr  # fallback for backward compatibility
+    
     total_matches = int(len(df))
     overall_wr = float(df["win_int"].mean()) if total_matches else 0.0
 
-    if "player_character" in df and not df["player_character"].isna().all():
-        main_char = df["player_character"].astype(str).str.strip().mode().iloc[0]
+    if "player_character" in df_all and not df_all["player_character"].isna().all():
+        main_char = df_all["player_character"].astype(str).str.strip().mode().iloc[0] if not df_all.empty else None
     else:
         main_char = None
 
     char_breakdown: list[dict] = []
-    if "player_character" in df and not df["player_character"].isna().all():
-        counts = df["player_character"].astype(str).str.strip().str.title().value_counts()
-        for character, games in counts.items():
+    if "player_character" in df_all:
+        total_all = int(len(df_all))
+        # Filter to non-null characters only, from ALL matches
+        df_chars = df_all[df_all["player_character"].notna() & (df_all["player_character"].astype(str).str.strip() != "")]
+        if not df_chars.empty:
+            counts = df_chars["player_character"].astype(str).str.strip().str.title().value_counts()
+            for character, games in counts.items():
+                char_breakdown.append(
+                    {
+                        "character": character,
+                        "games": int(games),
+                        "share_pct": round(100.0 * games / total_all, 1) if total_all else None,
+                    }
+                )
+        
+        # Add "Unknown" for games without character data
+        unknown_count = total_all - len(df_chars)
+        if unknown_count > 0:
             char_breakdown.append(
                 {
-                    "character": character,
-                    "games": int(games),
-                    "share_pct": round(100.0 * games / total_matches, 1) if total_matches else None,
+                    "character": "Unknown",
+                    "games": int(unknown_count),
+                    "share_pct": round(100 * unknown_count / total_all, 1),
                 }
             )
 
@@ -758,7 +794,8 @@ def build_player_json(engine, player_cfn: str) -> dict:
     )
 
     df_all = df.copy()
-    df_rank_mr = df_all[df_all["match_mode"].eq("rank") & df_all["mr_valid"]].copy()
+    df_rank_all = df_all[df_all["match_mode"].eq("rank")].copy()  # ALL ranked games (for character breakdown)
+    df_rank_mr = df_all[df_all["match_mode"].eq("rank") & df_all["mr_valid"]].copy()  # MR-valid only (for MR chart/matchups)
 
     # Ranked matchup curves should use ranked+MR-valid only
     matchups_out = []
@@ -787,7 +824,7 @@ def build_player_json(engine, player_cfn: str) -> dict:
         "baseline_n": BASELINE_N,
         "summary": {
             "overall": build_overall_summary(df_all),
-            "ranked": build_ranked_summary(df_rank_mr) if not df_rank_mr.empty else {},
+            "ranked": build_ranked_summary(df_rank_mr, df_all) if not df_rank_mr.empty else {},
             "activity_by_week_modes": compute_activity_by_week_modes(df_all),  # ✅ all-modes heatmap input
         },
         "matchups": matchups_out,

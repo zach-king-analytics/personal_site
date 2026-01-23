@@ -1,6 +1,6 @@
 {
   "player_cfn": "avaris",
-  "generated_at": "2026-01-22T21:27:50.783915+00:00",
+  "generated_at": "2026-01-23T03:37:53.032973+00:00",
   "baseline_n": 5,
   "summary": {
     "overall": {
@@ -334,63 +334,63 @@
       "character_breakdown": [
         {
           "character": "Luke",
-          "games": 404,
-          "share_pct": 32.9
+          "games": 1000,
+          "share_pct": 40.6
         },
         {
           "character": "Ryu",
-          "games": 241,
-          "share_pct": 19.6
+          "games": 373,
+          "share_pct": 15.2
         },
         {
           "character": "Sagat",
-          "games": 153,
-          "share_pct": 12.4
-        },
-        {
-          "character": "Akuma",
-          "games": 105,
-          "share_pct": 8.5
-        },
-        {
-          "character": "Ed",
-          "games": 80,
-          "share_pct": 6.5
-        },
-        {
-          "character": "Ken",
-          "games": 73,
-          "share_pct": 5.9
+          "games": 287,
+          "share_pct": 11.7
         },
         {
           "character": "Terry",
-          "games": 70,
-          "share_pct": 5.7
+          "games": 275,
+          "share_pct": 11.2
+        },
+        {
+          "character": "Akuma",
+          "games": 197,
+          "share_pct": 8.0
+        },
+        {
+          "character": "Ed",
+          "games": 89,
+          "share_pct": 3.6
         },
         {
           "character": "Juri",
-          "games": 62,
-          "share_pct": 5.0
+          "games": 86,
+          "share_pct": 3.5
         },
         {
-          "character": "Manon",
-          "games": 18,
-          "share_pct": 1.5
-        },
-        {
-          "character": "Mai",
-          "games": 17,
-          "share_pct": 1.4
-        },
-        {
-          "character": "Cammy",
-          "games": 4,
-          "share_pct": 0.3
+          "character": "Ken",
+          "games": 85,
+          "share_pct": 3.5
         },
         {
           "character": "Marisa",
-          "games": 2,
-          "share_pct": 0.2
+          "games": 20,
+          "share_pct": 0.8
+        },
+        {
+          "character": "Manon",
+          "games": 20,
+          "share_pct": 0.8
+        },
+        {
+          "character": "Mai",
+          "games": 19,
+          "share_pct": 0.8
+        },
+        {
+          "character": "Cammy",
+          "games": 10,
+          "share_pct": 0.4
         }
       ],
       "session_stats": {

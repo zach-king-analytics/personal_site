@@ -1,6 +1,6 @@
 {
   "player_cfn": "buttinjector",
-  "generated_at": "2026-01-22T21:27:49.774862+00:00",
+  "generated_at": "2026-01-23T03:37:52.106139+00:00",
   "baseline_n": 5,
   "summary": {
     "overall": {
@@ -129,13 +129,18 @@
       "character_breakdown": [
         {
           "character": "Luke",
-          "games": 17,
-          "share_pct": 70.8
+          "games": 186,
+          "share_pct": 61.8
         },
         {
           "character": "Mai",
-          "games": 7,
-          "share_pct": 29.2
+          "games": 110,
+          "share_pct": 36.5
+        },
+        {
+          "character": "Akuma",
+          "games": 5,
+          "share_pct": 1.7
         }
       ],
       "session_stats": {

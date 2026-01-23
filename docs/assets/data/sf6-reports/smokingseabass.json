@@ -1,6 +1,6 @@
 {
   "player_cfn": "smokingseabass",
-  "generated_at": "2026-01-22T21:27:49.912700+00:00",
+  "generated_at": "2026-01-23T03:37:52.235881+00:00",
   "baseline_n": 5,
   "summary": {
     "overall": {
@@ -287,18 +287,28 @@
       "character_breakdown": [
         {
           "character": "Marisa",
-          "games": 249,
-          "share_pct": 50.4
+          "games": 464,
+          "share_pct": 55.3
         },
         {
           "character": "Akuma",
-          "games": 149,
+          "games": 253,
           "share_pct": 30.2
         },
         {
           "character": "Mai",
-          "games": 96,
-          "share_pct": 19.4
+          "games": 98,
+          "share_pct": 11.7
+        },
+        {
+          "character": "Ryu",
+          "games": 18,
+          "share_pct": 2.1
+        },
+        {
+          "character": "Zangief",
+          "games": 6,
+          "share_pct": 0.7
         }
       ],
       "session_stats": {

@@ -1,6 +1,6 @@
 {
   "player_cfn": "scrubzbane",
-  "generated_at": "2026-01-22T21:27:52.158130+00:00",
+  "generated_at": "2026-01-23T03:37:54.420230+00:00",
   "baseline_n": 5,
   "summary": {
     "overall": {
@@ -38,7 +38,7 @@
       ]
     },
     "ranked": {
-      "main_character": "Jamie",
+      "main_character": "Guile",
       "matches_analyzed": 278,
       "dataset_start": "2025-11-22",
       "dataset_end": "2025-12-08",
@@ -250,14 +250,14 @@
       },
       "character_breakdown": [
         {
-          "character": "Jamie",
-          "games": 164,
-          "share_pct": 59.0
+          "character": "Guile",
+          "games": 316,
+          "share_pct": 60.4
         },
         {
-          "character": "Guile",
-          "games": 114,
-          "share_pct": 41.0
+          "character": "Jamie",
+          "games": 207,
+          "share_pct": 39.6
         }
       ],
       "session_stats": {

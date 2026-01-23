@@ -1,6 +1,6 @@
 {
   "player_cfn": "legendaryjiggxv",
-  "generated_at": "2026-01-22T21:27:49.405601+00:00",
+  "generated_at": "2026-01-23T03:37:51.745193+00:00",
   "baseline_n": 5,
   "summary": {
     "overall": {
@@ -272,8 +272,13 @@
       "character_breakdown": [
         {
           "character": "Sagat",
-          "games": 710,
-          "share_pct": 100.0
+          "games": 2605,
+          "share_pct": 99.6
+        },
+        {
+          "character": "Ryu",
+          "games": 11,
+          "share_pct": 0.4
         }
       ],
       "session_stats": {
