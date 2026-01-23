@@ -2,6 +2,15 @@
 (() => {
   const INIT_FLAG = "sf6ReportInit";
 
+  // Debounce helper for resize events
+  function debounce(fn, delay) {
+    let timeoutId;
+    return function(...args) {
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => fn(...args), delay);
+    };
+  }
+
   // ------------------------------------------------------------
   // Helpers
   // ------------------------------------------------------------
@@ -772,16 +781,16 @@
       const config = { displayModeBar: false, responsive: true };
       Plotly.newPlot(chartDiv, traces, layout, config);
       
-      // Relayout on resize to avoid overflow
-      const forceLayout = () => {
+      // Debounced relayout on resize to avoid thrashing
+      const debouncedResize = debounce(() => {
         const rect = chartDiv.getBoundingClientRect();
         if (rect.width > 0) {
           Plotly.relayout(chartDiv, { "yaxis.autorange": true });
         }
-      };
+      }, 250);
       
-      setTimeout(forceLayout, 100);
-      window.addEventListener('resize', forceLayout);
+      setTimeout(debouncedResize, 100);
+      window.addEventListener('resize', debouncedResize);
 
       // Hide insight text to give more vertical room inside the card
       textDiv.textContent = "";
@@ -875,15 +884,15 @@
       const config = { displayModeBar: false, responsive: true };
       Plotly.newPlot(chartDiv, traces, layout, config);
 
-      // Relayout on resize to avoid overflow
-      const forceLayout = () => {
+      // Debounced relayout on resize to avoid thrashing
+      const debouncedResize = debounce(() => {
         const rect = chartDiv.getBoundingClientRect();
         if (rect.width > 0) {
           Plotly.relayout(chartDiv, { "automargin": true });
         }
-      };
-      setTimeout(forceLayout, 100);
-      window.addEventListener("resize", forceLayout);
+      }, 250);
+      setTimeout(debouncedResize, 100);
+      window.addEventListener("resize", debouncedResize);
     }
 
     // ------------------------------------------------------------
@@ -1313,6 +1322,12 @@
 
         // Render (hardening: don't let one bad field blank the whole page)
         try {
+          // Ensure containers are visible before rendering charts
+          setReportVisible(true);
+          
+          // Give the DOM a moment to lay out before rendering charts
+          await new Promise(resolve => setTimeout(resolve, 100));
+          
           // Ranked-only visuals (MR-filtered in Python)
           renderCharacterBanner(rankedSummary, rootSummary, activityLabel);
           renderModeDistribution(rootSummary);
@@ -1328,8 +1343,14 @@
           generateOverviewBullets(modeBreakdown, charBreakdown, (rootSummary && rootSummary.activity_by_week) || null, activitySummary);
           generateRankedBullets(rankedSummary);
           renderFixOneMatchup(rankedSummary);
+          
+          // Render MR charts with staggered timing to prevent layout thrashing
+          await new Promise(resolve => setTimeout(resolve, 50));
           renderMrTrend(rankedSummary);
+          
+          await new Promise(resolve => setTimeout(resolve, 50));
           renderMrWeekly(rankedSummary);
+          
           renderMatchupCards(rankedSummary);
           renderChart(data);
 
@@ -1341,8 +1362,6 @@
           clearAll();
           return;
         }
-
-        setReportVisible(true);
 
         try {
           const currentUrl = new URL(window.location.href);
