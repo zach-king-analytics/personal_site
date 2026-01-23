@@ -1,6 +1,6 @@
 # Work
 
-Below you will find some projects that I work on in my spare time that have real-world application and are tied inherently to data workflows that have enterprise application.
+Below you will find some projects that I work on in my spare time that have real-world application and are tied inherently to data workflows that have a strong parallel within an enterprise space.
 
 <div class="work-grid" markdown>
 
@@ -14,7 +14,8 @@ A data-driven matchup report tool built from ranked MR match data, with shareabl
 
 <div class="work-card" markdown>
 ## Personal Finance
-Privacy-first financial analytics: clean ingest, staging, and insights.
+A personal finance engine/workflow I've built over the past 5-7 years. Hosted on this personal website. The meat and potatoes will be
+password protected, but reach out on the "Inquiries," tab if you'd like to see it. The writeup is available for your review.
 
 **Coming soon** — End-to-end pipeline for personal financial data with dashboards and reporting.
 
@@ -23,7 +24,8 @@ Privacy-first financial analytics: clean ingest, staging, and insights.
 
 <div class="work-card" markdown>
 ## Recipe Studio
-A design and data playground for recipe workflows.
+A data first solution to the dreaded question **"What are we going to cook tonight?"** Now, this could be bringing a nuke to a knife-fight, but
+it works for me and it shows well.
 
 **Coming soon** — Structured content, tagging, and publishing workflows for recipes.
 
