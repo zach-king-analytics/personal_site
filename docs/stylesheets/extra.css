@@ -817,7 +817,7 @@ button {
   }
 }
 
-#sf6-play-overview-text {
+.sf6-insight-card {
   padding: 1rem;
   margin-bottom: 1.5rem;
   border-radius: 6px;
@@ -852,6 +852,26 @@ button {
 
 #sf6-character-distribution-chart .js-plotly-plot {
   width: 100% !important;
+  height: auto !important;
+}
+
+/* Mobile optimizations for charts */
+@media (max-width: 640px) {
+  #sf6-mode-distribution-chart {
+    min-height: 220px;
+  }
+
+  #sf6-mode-distribution-chart .js-plotly-plot {
+    height: 220px !important;
+  }
+
+  #sf6-character-distribution-chart {
+    min-height: 260px;
+  }
+
+  #sf6-character-distribution-chart .js-plotly-plot {
+    height: 260px !important;
+  }
 }
 
 /* SF6 Report: Hide sections until a report is loaded */
@@ -876,6 +896,112 @@ body.sf6-has-report #sf6-report-sections {
 
 .sf6-charts-grid > * {
   min-width: 0; /* Prevent grid overflow */
+}
+
+/* Distribution row and cards for charts */
+.sf6-distribution-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  width: 100%;
+}
+
+/* Two-column layout for mode + character on desktop */
+.sf6-distribution-row:has(> .sf6-card:nth-child(2)) {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 1024px) {
+  .sf6-distribution-row:has(> .sf6-card:nth-child(2)) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.sf6-card {
+  background: #050816;
+  border-radius: 0.75rem;
+  border: 1px solid #374151;
+  padding: 1rem;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .sf6-card {
+    padding: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .sf6-card {
+    padding: 1.5rem;
+  }
+}
+
+.sf6-card-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #e5e7eb;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+@media (min-width: 768px) {
+  .sf6-card-title {
+    font-size: 0.95rem;
+  }
+}
+
+.sf6-chart-container {
+  width: 100%;
+  min-height: 220px;
+}
+
+@media (min-width: 640px) {
+  .sf6-chart-container {
+    min-height: 260px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .sf6-chart-container {
+    min-height: 300px;
+  }
+}
+
+.sf6-insight-card {
+  background: #050816;
+  border-radius: 0.75rem;
+  border: 1px solid #374151;
+  padding: 1rem;
+  margin-top: 1.5rem;
+  color: #e5e7eb;
+  line-height: 1.6;
+  font-size: 0.9rem;
+}
+
+@media (min-width: 640px) {
+  .sf6-insight-card {
+    padding: 1.25rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .sf6-insight-card {
+    padding: 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+.sf6-insight-card ul {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.sf6-insight-card li {
+  margin-bottom: 0.75rem;
 }
 
 /* Stack on smaller screens */

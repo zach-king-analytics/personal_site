@@ -663,6 +663,55 @@ def build_ranked_summary(df_rank_mr: pd.DataFrame) -> dict:
     activity_by_day = compute_activity_by_day(df)   # ranked+MR only (fine)
     activity_by_week = compute_activity_by_week(df) # ranked+MR only (fine)
 
+    mr_timeseries = []
+    if not df.empty:
+        df_mr = df.sort_values("match_timestamp").copy()
+        df_mr["player_mr_num"] = pd.to_numeric(df_mr["player_mr"], errors="coerce")
+        df_mr["opponent_mr_num"] = pd.to_numeric(df_mr["opponent_mr"], errors="coerce")
+
+        for _, row in df_mr.iterrows():
+            ts = row.get("match_timestamp")
+            ts_iso = ts.isoformat() if pd.notna(ts) else None
+            player_mr_val = row.get("player_mr_num")
+            opp_mr_val = row.get("opponent_mr_num")
+            mr_timeseries.append(
+                {
+                    "ts": ts_iso,
+                    "mr": float(player_mr_val) if pd.notna(player_mr_val) else None,
+                    "opp_mr": float(opp_mr_val) if pd.notna(opp_mr_val) else None,
+                    "win": int(row.get("win_int", 0)),
+                    "opponent": str(row.get("opp_char_norm") or "").title(),
+                }
+            )
+
+        # Weekly MR deltas (Monday start in REPORT_TZ)
+        df_mr["local_ts"] = _ensure_tz(df_mr["match_timestamp"])
+        # Ensure tz-aware, then take Monday start (tz-aware) and strip to date
+        df_mr["week_start"] = df_mr["local_ts"].dt.to_period("W-MON").dt.start_time.dt.tz_localize(None)
+        weekly = (
+            df_mr.groupby("week_start")["player_mr_num"]
+            .agg(["first", "last"])
+            .reset_index()
+            .dropna()
+        )
+        weekly["delta"] = weekly["last"] - weekly["first"]
+
+        mr_weekly_delta = []
+        for _, r in weekly.sort_values("week_start").iterrows():
+            wk_val = r["week_start"]
+            wk = wk_val.date().isoformat() if pd.notna(wk_val) else None
+            delta = float(r["delta"]) if pd.notna(r["delta"]) else None
+            start_val = float(r["first"]) if pd.notna(r["first"]) else None
+            end_val = float(r["last"]) if pd.notna(r["last"]) else None
+            mr_weekly_delta.append(
+                {
+                    "week_start": wk,
+                    "mr_delta": round(delta, 1) if delta is not None else None,
+                    "mr_start": round(start_val, 1) if start_val is not None else None,
+                    "mr_end": round(end_val, 1) if end_val is not None else None,
+                }
+            )
+
     return {
         "main_character": main_char.title() if isinstance(main_char, str) else main_char,
         "matches_analyzed": total_matches,
@@ -682,6 +731,8 @@ def build_ranked_summary(df_rank_mr: pd.DataFrame) -> dict:
         "session_stats": session_stats,
         "activity_by_day": activity_by_day,
         "activity_by_week": activity_by_week,
+        "mr_timeseries": mr_timeseries,
+        "mr_weekly_delta": mr_weekly_delta,
     }
 
 
