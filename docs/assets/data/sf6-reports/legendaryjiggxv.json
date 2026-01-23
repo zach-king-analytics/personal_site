@@ -1,6 +1,6 @@
 {
   "player_cfn": "legendaryjiggxv",
-  "generated_at": "2026-01-23T03:37:51.745193+00:00",
+  "generated_at": "2026-01-23T03:44:56.227812+00:00",
   "baseline_n": 5,
   "summary": {
     "overall": {
@@ -7768,69 +7768,69 @@
       ],
       "mr_weekly_delta": [
         {
-          "week_start": "2025-11-11",
-          "mr_delta": 24.0,
+          "week_start": "2025-11-10",
+          "mr_delta": -3.0,
           "mr_start": 1753.0,
-          "mr_end": 1777.0
+          "mr_end": 1750.0
         },
         {
-          "week_start": "2025-11-18",
-          "mr_delta": -8.0,
-          "mr_start": 1780.0,
-          "mr_end": 1772.0
+          "week_start": "2025-11-17",
+          "mr_delta": 11.0,
+          "mr_start": 1759.0,
+          "mr_end": 1770.0
         },
         {
-          "week_start": "2025-11-25",
-          "mr_delta": -19.0,
-          "mr_start": 1781.0,
+          "week_start": "2025-11-24",
+          "mr_delta": -11.0,
+          "mr_start": 1773.0,
           "mr_end": 1762.0
         },
         {
-          "week_start": "2025-12-02",
-          "mr_delta": 51.0,
+          "week_start": "2025-12-01",
+          "mr_delta": 52.0,
           "mr_start": 1769.0,
-          "mr_end": 1820.0
+          "mr_end": 1821.0
         },
         {
-          "week_start": "2025-12-09",
-          "mr_delta": 34.0,
-          "mr_start": 1826.0,
+          "week_start": "2025-12-08",
+          "mr_delta": 44.0,
+          "mr_start": 1816.0,
           "mr_end": 1860.0
         },
         {
-          "week_start": "2025-12-16",
-          "mr_delta": -57.0,
+          "week_start": "2025-12-15",
+          "mr_delta": -75.0,
           "mr_start": 1863.0,
-          "mr_end": 1806.0
+          "mr_end": 1788.0
         },
         {
-          "week_start": "2025-12-23",
-          "mr_delta": 65.0,
-          "mr_start": 1814.0,
-          "mr_end": 1879.0
+          "week_start": "2025-12-22",
+          "mr_delta": 72.0,
+          "mr_start": 1795.0,
+          "mr_end": 1867.0
         },
         {
-          "week_start": "2025-12-30",
-          "mr_delta": 61.0,
-          "mr_start": 1884.0,
+          "week_start": "2025-12-29",
+          "mr_delta": 69.0,
+          "mr_start": 1876.0,
           "mr_end": 1945.0
         },
         {
-          "week_start": "2026-01-06",
-          "mr_delta": -153.0,
+          "week_start": "2026-01-05",
+          "mr_delta": -2.0,
           "mr_start": 1949.0,
-          "mr_end": 1796.0
+          "mr_end": 1947.0
         },
         {
-          "week_start": "2026-01-13",
-          "mr_delta": 105.0,
-          "mr_start": 1802.0,
-          "mr_end": 1907.0
+          "week_start": "2026-01-12",
+          "mr_delta": -18.0,
+          "mr_start": 1869.0,
+          "mr_end": 1851.0
         },
         {
-          "week_start": "2026-01-20",
-          "mr_delta": -27.0,
-          "mr_start": 1916.0,
+          "week_start": "2026-01-19",
+          "mr_delta": 27.0,
+          "mr_start": 1862.0,
           "mr_end": 1889.0
         }
       ]

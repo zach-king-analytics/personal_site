@@ -1,6 +1,6 @@
 {
   "player_cfn": "mistah d. mojo",
-  "generated_at": "2026-01-23T03:37:53.808638+00:00",
+  "generated_at": "2026-01-23T03:44:58.325314+00:00",
   "baseline_n": 5,
   "summary": {
     "overall": {
@@ -3090,51 +3090,45 @@
       ],
       "mr_weekly_delta": [
         {
-          "week_start": "2025-11-25",
+          "week_start": "2025-11-24",
           "mr_delta": -131.0,
           "mr_start": 1500.0,
           "mr_end": 1369.0
         },
         {
-          "week_start": "2025-12-02",
+          "week_start": "2025-12-01",
           "mr_delta": -46.0,
           "mr_start": 1362.0,
           "mr_end": 1316.0
         },
         {
-          "week_start": "2025-12-09",
+          "week_start": "2025-12-08",
           "mr_delta": -12.0,
           "mr_start": 1324.0,
           "mr_end": 1312.0
         },
         {
-          "week_start": "2025-12-16",
+          "week_start": "2025-12-15",
           "mr_delta": -118.0,
           "mr_start": 1286.0,
           "mr_end": 1168.0
         },
         {
-          "week_start": "2025-12-30",
+          "week_start": "2025-12-29",
           "mr_delta": -5.0,
           "mr_start": 1176.0,
           "mr_end": 1171.0
         },
         {
-          "week_start": "2026-01-06",
+          "week_start": "2026-01-05",
           "mr_delta": 3.0,
           "mr_start": 1181.0,
           "mr_end": 1184.0
         },
         {
-          "week_start": "2026-01-13",
-          "mr_delta": -20.0,
+          "week_start": "2026-01-19",
+          "mr_delta": 1.0,
           "mr_start": 1195.0,
-          "mr_end": 1175.0
-        },
-        {
-          "week_start": "2026-01-20",
-          "mr_delta": 12.0,
-          "mr_start": 1184.0,
           "mr_end": 1196.0
         }
       ]

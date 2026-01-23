@@ -1,6 +1,6 @@
 {
   "player_cfn": "jrome39",
-  "generated_at": "2026-01-23T03:37:53.410707+00:00",
+  "generated_at": "2026-01-23T03:44:57.955990+00:00",
   "baseline_n": 5,
   "summary": {
     "overall": {
@@ -2393,37 +2393,43 @@
       ],
       "mr_weekly_delta": [
         {
-          "week_start": "2025-11-11",
-          "mr_delta": 20.0,
+          "week_start": "2025-11-10",
+          "mr_delta": 1.0,
           "mr_start": 1624.0,
-          "mr_end": 1644.0
+          "mr_end": 1625.0
         },
         {
-          "week_start": "2025-11-18",
-          "mr_delta": 19.0,
-          "mr_start": 1651.0,
+          "week_start": "2025-11-17",
+          "mr_delta": 38.0,
+          "mr_start": 1632.0,
           "mr_end": 1670.0
         },
         {
-          "week_start": "2025-11-25",
-          "mr_delta": -41.0,
+          "week_start": "2025-11-24",
+          "mr_delta": -23.0,
           "mr_start": 1677.0,
-          "mr_end": 1636.0
+          "mr_end": 1654.0
         },
         {
-          "week_start": "2025-12-02",
-          "mr_delta": -2.0,
-          "mr_start": 1643.0,
+          "week_start": "2025-12-01",
+          "mr_delta": -20.0,
+          "mr_start": 1661.0,
           "mr_end": 1641.0
         },
         {
-          "week_start": "2026-01-06",
-          "mr_delta": -10.0,
+          "week_start": "2026-01-05",
+          "mr_delta": -11.0,
           "mr_start": 1636.0,
+          "mr_end": 1625.0
+        },
+        {
+          "week_start": "2026-01-12",
+          "mr_delta": -7.0,
+          "mr_start": 1633.0,
           "mr_end": 1626.0
         },
         {
-          "week_start": "2026-01-20",
+          "week_start": "2026-01-19",
           "mr_delta": 0.0,
           "mr_start": 1619.0,
           "mr_end": 1619.0

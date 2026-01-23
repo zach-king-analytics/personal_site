@@ -1,6 +1,6 @@
 {
   "player_cfn": "scrubzbane",
-  "generated_at": "2026-01-23T03:37:54.420230+00:00",
+  "generated_at": "2026-01-23T03:44:58.975171+00:00",
   "baseline_n": 5,
   "summary": {
     "overall": {
@@ -2874,21 +2874,21 @@
       ],
       "mr_weekly_delta": [
         {
-          "week_start": "2025-11-18",
-          "mr_delta": -168.0,
+          "week_start": "2025-11-17",
+          "mr_delta": -173.0,
           "mr_start": 1385.0,
-          "mr_end": 1217.0
+          "mr_end": 1212.0
         },
         {
-          "week_start": "2025-11-25",
-          "mr_delta": -20.0,
-          "mr_start": 1225.0,
-          "mr_end": 1205.0
+          "week_start": "2025-11-24",
+          "mr_delta": 39.0,
+          "mr_start": 1204.0,
+          "mr_end": 1243.0
         },
         {
-          "week_start": "2025-12-02",
-          "mr_delta": 407.0,
-          "mr_start": 1197.0,
+          "week_start": "2025-12-01",
+          "mr_delta": 351.0,
+          "mr_start": 1253.0,
           "mr_end": 1604.0
         }
       ]

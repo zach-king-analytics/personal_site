@@ -1,6 +1,6 @@
 {
   "player_cfn": "shazoomba",
-  "generated_at": "2026-01-23T03:37:54.219015+00:00",
+  "generated_at": "2026-01-23T03:44:58.776582+00:00",
   "baseline_n": 5,
   "summary": {
     "overall": {
@@ -3996,39 +3996,57 @@
       ],
       "mr_weekly_delta": [
         {
-          "week_start": "2025-11-11",
+          "week_start": "2025-11-10",
           "mr_delta": 2.0,
           "mr_start": 1609.0,
           "mr_end": 1611.0
         },
         {
-          "week_start": "2025-11-18",
-          "mr_delta": 5.0,
+          "week_start": "2025-11-17",
+          "mr_delta": -20.0,
           "mr_start": 1619.0,
+          "mr_end": 1599.0
+        },
+        {
+          "week_start": "2025-11-24",
+          "mr_delta": 17.0,
+          "mr_start": 1607.0,
           "mr_end": 1624.0
         },
         {
-          "week_start": "2025-12-02",
-          "mr_delta": -3.0,
+          "week_start": "2025-12-01",
+          "mr_delta": -55.0,
           "mr_start": 1609.0,
+          "mr_end": 1554.0
+        },
+        {
+          "week_start": "2025-12-08",
+          "mr_delta": 45.0,
+          "mr_start": 1561.0,
           "mr_end": 1606.0
         },
         {
-          "week_start": "2025-12-16",
+          "week_start": "2025-12-15",
           "mr_delta": 0.0,
           "mr_start": 1615.0,
           "mr_end": 1615.0
         },
         {
-          "week_start": "2025-12-23",
-          "mr_delta": -48.0,
+          "week_start": "2025-12-22",
+          "mr_delta": -86.0,
           "mr_start": 1517.0,
-          "mr_end": 1469.0
+          "mr_end": 1431.0
         },
         {
-          "week_start": "2025-12-30",
-          "mr_delta": 145.0,
-          "mr_start": 1462.0,
+          "week_start": "2025-12-29",
+          "mr_delta": 71.0,
+          "mr_start": 1423.0,
+          "mr_end": 1494.0
+        },
+        {
+          "week_start": "2026-01-05",
+          "mr_delta": 105.0,
+          "mr_start": 1502.0,
           "mr_end": 1607.0
         }
       ]

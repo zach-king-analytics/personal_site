@@ -1,6 +1,6 @@
 {
   "player_cfn": "galaxybran",
-  "generated_at": "2026-01-23T03:37:54.609810+00:00",
+  "generated_at": "2026-01-23T03:44:59.164702+00:00",
   "baseline_n": 5,
   "summary": {
     "overall": {
@@ -4514,39 +4514,39 @@
       ],
       "mr_weekly_delta": [
         {
-          "week_start": "2025-12-02",
+          "week_start": "2025-12-01",
           "mr_delta": -5.0,
           "mr_start": 1785.0,
           "mr_end": 1780.0
         },
         {
-          "week_start": "2025-12-09",
+          "week_start": "2025-12-08",
           "mr_delta": -17.0,
           "mr_start": 1817.0,
           "mr_end": 1800.0
         },
         {
-          "week_start": "2025-12-16",
+          "week_start": "2025-12-15",
           "mr_delta": -26.0,
           "mr_start": 1869.0,
           "mr_end": 1843.0
         },
         {
-          "week_start": "2025-12-23",
-          "mr_delta": 1.0,
+          "week_start": "2025-12-22",
+          "mr_delta": -13.0,
           "mr_start": 1853.0,
-          "mr_end": 1854.0
+          "mr_end": 1840.0
         },
         {
-          "week_start": "2025-12-30",
-          "mr_delta": 41.0,
-          "mr_start": 1859.0,
-          "mr_end": 1900.0
+          "week_start": "2025-12-29",
+          "mr_delta": 63.0,
+          "mr_start": 1844.0,
+          "mr_end": 1907.0
         },
         {
-          "week_start": "2026-01-06",
-          "mr_delta": 95.0,
-          "mr_start": 1908.0,
+          "week_start": "2026-01-05",
+          "mr_delta": 131.0,
+          "mr_start": 1872.0,
           "mr_end": 2003.0
         }
       ]

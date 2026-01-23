@@ -722,8 +722,8 @@ def build_ranked_summary(df_rank_mr: pd.DataFrame, df_all: pd.DataFrame = None) 
 
         # Weekly MR deltas (Monday start in REPORT_TZ)
         df_mr["local_ts"] = _ensure_tz(df_mr["match_timestamp"])
-        # Ensure tz-aware, then take Monday start (tz-aware) and strip to date
-        df_mr["week_start"] = df_mr["local_ts"].dt.to_period("W-MON").dt.start_time.dt.tz_localize(None)
+        # Calculate Monday start while preserving timezone, then convert to date string
+        df_mr["week_start"] = (df_mr["local_ts"] - pd.to_timedelta(df_mr["local_ts"].dt.weekday, unit="D")).dt.date.astype(str)
         weekly = (
             df_mr.groupby("week_start")["player_mr_num"]
             .agg(["first", "last"])
@@ -735,7 +735,7 @@ def build_ranked_summary(df_rank_mr: pd.DataFrame, df_all: pd.DataFrame = None) 
         mr_weekly_delta = []
         for _, r in weekly.sort_values("week_start").iterrows():
             wk_val = r["week_start"]
-            wk = wk_val.date().isoformat() if pd.notna(wk_val) else None
+            wk = wk_val if pd.notna(wk_val) else None  # already a string
             delta = float(r["delta"]) if pd.notna(r["delta"]) else None
             start_val = float(r["first"]) if pd.notna(r["first"]) else None
             end_val = float(r["last"]) if pd.notna(r["last"]) else None

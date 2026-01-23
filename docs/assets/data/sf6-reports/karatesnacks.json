@@ -1,6 +1,6 @@
 {
   "player_cfn": "karatesnacks",
-  "generated_at": "2026-01-23T03:37:52.491498+00:00",
+  "generated_at": "2026-01-23T03:44:56.959610+00:00",
   "baseline_n": 5,
   "summary": {
     "overall": {
@@ -8548,69 +8548,69 @@
       ],
       "mr_weekly_delta": [
         {
-          "week_start": "2025-11-11",
-          "mr_delta": 26.0,
+          "week_start": "2025-11-10",
+          "mr_delta": 11.0,
           "mr_start": 1604.0,
-          "mr_end": 1630.0
-        },
-        {
-          "week_start": "2025-11-18",
-          "mr_delta": -13.0,
-          "mr_start": 1636.0,
-          "mr_end": 1623.0
-        },
-        {
-          "week_start": "2025-11-25",
-          "mr_delta": -16.0,
-          "mr_start": 1631.0,
           "mr_end": 1615.0
         },
         {
-          "week_start": "2025-12-02",
-          "mr_delta": 16.0,
-          "mr_start": 1604.0,
+          "week_start": "2025-11-17",
+          "mr_delta": -1.0,
+          "mr_start": 1624.0,
+          "mr_end": 1623.0
+        },
+        {
+          "week_start": "2025-11-24",
+          "mr_delta": -29.0,
+          "mr_start": 1631.0,
+          "mr_end": 1602.0
+        },
+        {
+          "week_start": "2025-12-01",
+          "mr_delta": 10.0,
+          "mr_start": 1610.0,
           "mr_end": 1620.0
         },
         {
-          "week_start": "2025-12-09",
+          "week_start": "2025-12-08",
           "mr_delta": 1.0,
           "mr_start": 1635.0,
           "mr_end": 1636.0
         },
         {
-          "week_start": "2025-12-16",
+          "week_start": "2025-12-15",
           "mr_delta": -212.0,
           "mr_start": 1644.0,
           "mr_end": 1432.0
         },
         {
-          "week_start": "2025-12-23",
+          "week_start": "2025-12-22",
           "mr_delta": 229.0,
           "mr_start": 1423.0,
           "mr_end": 1652.0
         },
         {
-          "week_start": "2025-12-30",
-          "mr_delta": -22.0,
+          "week_start": "2025-12-29",
+          "mr_delta": 3.0,
           "mr_start": 1662.0,
-          "mr_end": 1640.0
+          "mr_end": 1665.0
         },
         {
-          "week_start": "2026-01-06",
-          "mr_delta": 24.0,
-          "mr_start": 1647.0,
+          "week_start": "2026-01-05",
+          "mr_delta": 0.0,
+          "mr_start": 1671.0,
           "mr_end": 1671.0
         },
         {
-          "week_start": "2026-01-13",
-          "mr_delta": -56.0,
+          "week_start": "2026-01-12",
+          "mr_delta": -182.0,
           "mr_start": 1681.0,
-          "mr_end": 1625.0
+          "mr_end": 1499.0
         },
         {
-          "week_start": "2026-01-20",
-          "mr_delta": 3.0,
-          "mr_start": 1633.0,
+          "week_start": "2026-01-19",
+          "mr_delta": -4.0,
+          "mr_start": 1640.0,
           "mr_end": 1636.0
         }
       ]

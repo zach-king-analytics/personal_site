@@ -1,6 +1,6 @@
 {
   "player_cfn": "kaylen",
-  "generated_at": "2026-01-23T03:37:53.598798+00:00",
+  "generated_at": "2026-01-23T03:44:58.136593+00:00",
   "baseline_n": 5,
   "summary": {
     "overall": {
@@ -2855,25 +2855,19 @@
       ],
       "mr_weekly_delta": [
         {
-          "week_start": "2025-11-11",
-          "mr_delta": 16.0,
+          "week_start": "2025-11-17",
+          "mr_delta": 89.0,
           "mr_start": 1704.0,
-          "mr_end": 1720.0
-        },
-        {
-          "week_start": "2025-11-18",
-          "mr_delta": 81.0,
-          "mr_start": 1712.0,
           "mr_end": 1793.0
         },
         {
-          "week_start": "2025-12-02",
+          "week_start": "2025-12-01",
           "mr_delta": 59.0,
           "mr_start": 1619.0,
           "mr_end": 1678.0
         },
         {
-          "week_start": "2025-12-09",
+          "week_start": "2025-12-08",
           "mr_delta": 223.0,
           "mr_start": 1569.0,
           "mr_end": 1792.0

@@ -1,6 +1,6 @@
 {
   "player_cfn": "xhaos",
-  "generated_at": "2026-01-23T03:37:54.023398+00:00",
+  "generated_at": "2026-01-23T03:44:58.532597+00:00",
   "baseline_n": 5,
   "summary": {
     "overall": {
@@ -3714,25 +3714,25 @@
       ],
       "mr_weekly_delta": [
         {
-          "week_start": "2025-11-18",
+          "week_start": "2025-11-17",
           "mr_delta": 17.0,
           "mr_start": 1455.0,
           "mr_end": 1472.0
         },
         {
-          "week_start": "2025-11-25",
+          "week_start": "2025-11-24",
           "mr_delta": 57.0,
           "mr_start": 1480.0,
           "mr_end": 1537.0
         },
         {
-          "week_start": "2025-12-09",
+          "week_start": "2025-12-08",
           "mr_delta": -59.0,
           "mr_start": 1550.0,
           "mr_end": 1491.0
         },
         {
-          "week_start": "2025-12-16",
+          "week_start": "2025-12-15",
           "mr_delta": 36.0,
           "mr_start": 1484.0,
           "mr_end": 1520.0

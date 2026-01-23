@@ -1,6 +1,6 @@
 {
   "player_cfn": "buttinjector",
-  "generated_at": "2026-01-23T03:37:52.106139+00:00",
+  "generated_at": "2026-01-23T03:44:56.573219+00:00",
   "baseline_n": 5,
   "summary": {
     "overall": {
@@ -537,13 +537,13 @@
       ],
       "mr_weekly_delta": [
         {
-          "week_start": "2025-11-18",
+          "week_start": "2025-11-17",
           "mr_delta": 8.0,
           "mr_start": 1545.0,
           "mr_end": 1553.0
         },
         {
-          "week_start": "2025-11-25",
+          "week_start": "2025-11-24",
           "mr_delta": 51.0,
           "mr_start": 1525.0,
           "mr_end": 1576.0

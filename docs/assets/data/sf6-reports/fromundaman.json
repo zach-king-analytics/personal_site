@@ -1,6 +1,6 @@
 {
   "player_cfn": "fromundaman",
-  "generated_at": "2026-01-23T03:37:52.800659+00:00",
+  "generated_at": "2026-01-23T03:44:57.309699+00:00",
   "baseline_n": 5,
   "summary": {
     "overall": {
@@ -5207,25 +5207,19 @@
       ],
       "mr_weekly_delta": [
         {
-          "week_start": "2025-11-25",
-          "mr_delta": -66.0,
+          "week_start": "2025-12-01",
+          "mr_delta": -162.0,
           "mr_start": 1500.0,
-          "mr_end": 1434.0
-        },
-        {
-          "week_start": "2025-12-02",
-          "mr_delta": -88.0,
-          "mr_start": 1426.0,
           "mr_end": 1338.0
         },
         {
-          "week_start": "2025-12-09",
+          "week_start": "2025-12-08",
           "mr_delta": -42.0,
           "mr_start": 1330.0,
           "mr_end": 1288.0
         },
         {
-          "week_start": "2026-01-13",
+          "week_start": "2026-01-12",
           "mr_delta": 106.0,
           "mr_start": 1334.0,
           "mr_end": 1440.0
