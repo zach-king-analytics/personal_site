@@ -19,9 +19,9 @@ I've outlined the architecture and explained it more within, but it comes down t
 ```mermaid
 graph LR
   A["🎮 Buckler<br/>Headless Browser"]
-  B["� PostgreSQL<br/>Match History"]
+  B[("💾 PostgreSQL<br/>Match History")]
   C["⚙️ Python<br/>Report Generator"]
-  D["📄 Static JSON<br/>Reports"]
+  D[/"📄 Static JSON<br/>Reports"/]
   E["📊 Browser<br/>Plotly Charts"]
   
   A -->|Scrape CFN| B
@@ -29,7 +29,7 @@ graph LR
   C -->|Offline transforms| D
   D -->|On load| E
   
-  classDef stage fill:#2c8c89,stroke:#1a5653,stroke-width:2px,color:#fff
+  classDef stage fill:#1e3a3a,stroke:#3d7a7a,stroke-width:3px,color:#fff,font-size:20px,font-weight:bold
   class A,B,C,D,E stage
 ```
 </div>
