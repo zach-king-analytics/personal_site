@@ -18,10 +18,11 @@ hide:
 
 ## Summary
 
-Director of Analytics with a record of leading cross-functional teams to deliver
-enterprise intelligence through Power BI, SQL, and Python. Drives modernization
-of internal and external data architectures, producing seven-figure business impact
-through advanced analytics and AI initiatives.
+Director of AI & Analytics with a record of leading cross-functional teams to deliver
+enterprise intelligence. 
+
+Drives modernization of internal and customer data architectures, 
+producing seven-figure business impact through advanced analytics and AI initiatives.
 
 Combines strong business acumen with disciplined inquiry and process-driven design
 to build high-clarity, production-ready solutions.
@@ -39,17 +40,17 @@ data architecture, and applied AI delivery.
 **Director – AI & Analytics Consulting**
 *Jun 2024 – Present*
 
-Lead strategic AI and analytics initiatives, delivering data-driven insights and business transformation through applied machine learning, predictive analytics, and modern data architecture.
+Lead strategic AI and analytics initiatives internally and with customers, delivering data-driven insights and business transformation through agentic workflows, analytics, and modern data architecture.
 
 **Senior Manager – Analytics & Insights**
 *Dec 2020 – Jun 2024*
 
-Oversaw analytics strategy and reporting frameworks; developed scalable insight platforms; guided teams in leveraging BI tools and advanced analytics for enterprise decision-making.
+Formed and grew centralized analytics practice; returned over 10,000 hours to the business in the first 12 months; guided teams in leveraging BI tools and advanced analytics for enterprise decision-making.
 
 **Senior Manager – Information Management**
 *Nov 2018 – Dec 2020*
 
-Directed information management operations; implemented data governance, warehousing, and integration strategies to optimize information flow and accessibility.
+Launched BI transformation initiative from the ground up; architected data governance frameworks and enterprise integration strategies that democratized data access, accelerated decision-making velocity, and established decision intelligence as a core organizational capability.
 
 ---
 
@@ -57,7 +58,7 @@ Directed information management operations; implemented data governance, warehou
 
 **Senior Contract Analyst**
 *Mar 2017 – Nov 2018*
-Managed complex healthcare contracting processes; analyzed pricing structures and negotiated terms to optimize cost and compliance outcomes.
+Led supply chain analytics within a top customer; expanded data coverage to include healthcare quality data, and clinical pharmaceutical data in Tableau.
 
 **Contract Analyst**
 *Jan 2015 – Mar 2017*
@@ -65,16 +66,15 @@ Executed contract reviews and performance analyses; collaborated with cross-func
 
 **Associate Contract Analyst**
 *Aug 2013 – Jan 2015*
-Supported contract development and data validation; assisted in maintaining accurate records and compliance documentation.
+Supported contract analytics and data validation; assisted in maintaining accurate records and contract calendar compliance.
 
 ---
 
 ## Skills
 
-**Technical:** Power BI, SQL, Python, Tableau, Salesforce, ERP, data pipelines, AI deployment, ML Inferencing  
-**Leadership:** Agile delivery, stakeholder alignment, process design, data governance  
-**Core strengths:** Analytical clarity, rapid assimilation, quality-driven execution
+**Technical:** Power BI, SQL, Fabric, Python, SQL Server, Prompt Engineering, AI Enhanced Workflows (Copilot, OpenAI, Anthropic) Tableau, Salesforce, Service Now, SAP, Dynamics
 
+**Leadership:** Analytics Strategy, Analytics Operations, Agile delivery, Cross Functional Excellence, Process Design, Data Governance  
 
 ---
 

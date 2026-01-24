@@ -65,6 +65,7 @@ extra_javascript:
   - javascripts/contact.js
   - https://cdn.plot.ly/plotly-2.32.0.min.js
   - javascripts/sf6-report.js
+  - javascripts/mermaid-animate.js
 
 
 markdown_extensions:

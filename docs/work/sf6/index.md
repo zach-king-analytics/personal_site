@@ -13,6 +13,29 @@ I've outlined the architecture and explained it more within, but it comes down t
 
 ---
 
+## How it works
+
+<div class="mermaid-animated" markdown>
+```mermaid
+graph LR
+  A["🎮 Buckler<br/>Headless Browser"]
+  B["� PostgreSQL<br/>Match History"]
+  C["⚙️ Python<br/>Report Generator"]
+  D["📄 Static JSON<br/>Reports"]
+  E["📊 Browser<br/>Plotly Charts"]
+  
+  A -->|Scrape CFN| B
+  B -->|SQL queries| C
+  C -->|Offline transforms| D
+  D -->|On load| E
+  
+  classDef stage fill:#2c8c89,stroke:#1a5653,stroke-width:2px,color:#fff
+  class A,B,C,D,E stage
+```
+</div>
+
+---
+
 ## What you can do here
 
 - Generate a **player-specific report** from offline-computed ranked data
@@ -31,15 +54,3 @@ I've outlined the architecture and explained it more within, but it comes down t
 **Python handles the heavy lifting** – All calculations auditable in code. The browser's job is simple: fetch → render → visualize.
 
 **Always fresh** – Reports regenerate periodically from the latest match history; check the timestamp in your report.
-
----
-
-## Technical architecture (at a glance)
-
-```mermaid
-flowchart LR
-  A[(PostgreSQL<br/>Normalized match data)] --> B[Python report generator<br/>tools/generate_sf6_reports.py]
-  B --> C[Static JSON reports<br/>docs/assets/data/sf6-reports/<cfn>.json]
-  C --> D[MkDocs Material site]
-  D --> E[Browser renderer<br/>sf6-report.js + Plotly]
-```
