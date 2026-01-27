@@ -1161,3 +1161,21 @@ body.sf6-has-report #sf6-report-sections {
 }
 
 }
+
+/* SF6 Report: Tight chart spacing */
+#sf6-mr-trend-chart,
+#sf6-mr-weekly-chart {
+  margin: 0 !important;
+  padding: 0 !important;
+  margin-bottom: 2px !important;
+}
+
+#sf6-mr-trend-chart {
+  margin-bottom: 0 !important;
+}
+
+#sf6-mr-trend-chart .js-plotly-plot,
+#sf6-mr-weekly-chart .js-plotly-plot {
+  margin: 0 !important;
+  padding: 0 !important;
+}

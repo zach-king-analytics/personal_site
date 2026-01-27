@@ -21,8 +21,6 @@ nav:
       - Street Fighter 6 Matchup Lab:
           - Overview: work/sf6/index.md
           - Matchup Report: work/sf6/matchup-report.md
-          - Architecture: work/sf6/architecture.md
-          - Build & Deploy: work/sf6/build-deploy.md
       - Personal Finance:
           - Overview: work/personal-finance/index.md
       - Recipe Studio:

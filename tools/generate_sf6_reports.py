@@ -700,25 +700,38 @@ def build_ranked_summary(df_rank_mr: pd.DataFrame, df_all: pd.DataFrame = None) 
     activity_by_week = compute_activity_by_week(df) # ranked+MR only (fine)
 
     mr_timeseries = []
+    character_mr_timeseries = {}  # {character: [timeseries]}
+    
     if not df.empty:
         df_mr = df.sort_values("match_timestamp").copy()
         df_mr["player_mr_num"] = pd.to_numeric(df_mr["player_mr"], errors="coerce")
         df_mr["opponent_mr_num"] = pd.to_numeric(df_mr["opponent_mr"], errors="coerce")
+        df_mr["player_char_norm"] = df_mr["player_character"].astype(str).str.strip().str.lower() if "player_character" in df_mr else ""
+        df_mr["opp_char_norm"] = df_mr["opponent_character"].astype(str).str.strip().str.lower() if "opponent_character" in df_mr else ""
 
         for _, row in df_mr.iterrows():
             ts = row.get("match_timestamp")
             ts_iso = ts.isoformat() if pd.notna(ts) else None
             player_mr_val = row.get("player_mr_num")
             opp_mr_val = row.get("opponent_mr_num")
-            mr_timeseries.append(
-                {
-                    "ts": ts_iso,
-                    "mr": float(player_mr_val) if pd.notna(player_mr_val) else None,
-                    "opp_mr": float(opp_mr_val) if pd.notna(opp_mr_val) else None,
-                    "win": int(row.get("win_int", 0)),
-                    "opponent": str(row.get("opp_char_norm") or "").title(),
-                }
-            )
+            player_char = str(row.get("player_char_norm") or "").strip()
+            opponent_char = str(row.get("opp_char_norm") or "").strip().title()
+            
+            entry = {
+                "ts": ts_iso,
+                "mr": float(player_mr_val) if pd.notna(player_mr_val) else None,
+                "opp_mr": float(opp_mr_val) if pd.notna(opp_mr_val) else None,
+                "win": int(row.get("win_int", 0)),
+                "opponent": opponent_char,
+            }
+            mr_timeseries.append(entry)
+            
+            # Track per-character MR timeseries
+            if player_char and pd.notna(player_mr_val):
+                player_char_title = player_char.title()
+                if player_char_title not in character_mr_timeseries:
+                    character_mr_timeseries[player_char_title] = []
+                character_mr_timeseries[player_char_title].append(entry)
 
         # Weekly MR deltas (Monday start in REPORT_TZ)
         df_mr["local_ts"] = _ensure_tz(df_mr["match_timestamp"])
@@ -768,6 +781,7 @@ def build_ranked_summary(df_rank_mr: pd.DataFrame, df_all: pd.DataFrame = None) 
         "activity_by_day": activity_by_day,
         "activity_by_week": activity_by_week,
         "mr_timeseries": mr_timeseries,
+        "character_mr_timeseries": character_mr_timeseries,
         "mr_weekly_delta": mr_weekly_delta,
     }
 

@@ -8,7 +8,6 @@ I've outlined the architecture and explained it more within, but it comes down t
 
 <div class="sf6-cta-row" markdown>
 [Open the Matchup Report →](matchup-report.md){ .md-button .md-button--primary }
-[Architecture →](architecture.md){ .md-button }
 </div>
 
 ---
@@ -54,3 +53,14 @@ graph LR
 **Python handles the heavy lifting** – All calculations auditable in code. The browser's job is simple: fetch → render → visualize.
 
 **Always fresh** – Reports regenerate periodically from the latest match history; check the timestamp in your report.
+
+---
+
+## Key Decisions
+
+| What | Why |
+|------|-----|
+| **Offline reports (not live API)** | Pre-computed JSON is fast, cache-friendly, and immune to backend outages. |
+| **Ranked MR filtering** | Analysis is scoped to meaningful ranked matches. No noise from casual or invalid data. |
+| **Plotly charts** | Interactive, responsive, and renders beautifully without extra dependencies. |
+| **Python + SQL** | Full control over calculations. All math is auditable in source code. |

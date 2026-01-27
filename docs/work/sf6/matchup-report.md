@@ -70,7 +70,13 @@ hide:
 
     <div class="sf6-distribution-row">
       <div class="sf6-card">
-        <div class="sf6-card-title">Fastest ranked gain</div>
+        <div class="sf6-card-title">MR Trend (weekly summary)</div>
+        
+        <!-- Tabs for character selection -->
+        <div id="sf6-char-tabs" style="display: flex; gap: 0.5rem; margin-bottom: 1rem; border-bottom: 1px solid #333; flex-wrap: wrap;">
+          <button id="sf6-char-tab-aggregate" class="sf6-char-tab sf6-char-tab-active" data-char="aggregate" style="padding: 0.5rem 1rem; background: #1e3a3a; border: none; color: #e5e7eb; cursor: pointer; font-size: 0.9rem;">All Characters</button>
+        </div>
+        
         <div id="sf6-mr-trend-chart" class="sf6-chart-container">
           <p id="sf6-mr-trend-text" class="sf6-muted" style="margin: 0; text-align: center; padding: 2rem;">Load a report to see your ranked MR trend.</p>
         </div>

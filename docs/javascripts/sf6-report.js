@@ -653,6 +653,36 @@
       const bullets = [];
       const fix = rankedSummary && rankedSummary.fix_one_matchup;
 
+      // Up to three top characters with usage and win rate
+      const charBreakdown = Array.isArray(rankedSummary && rankedSummary.character_breakdown)
+        ? rankedSummary.character_breakdown.slice()
+        : [];
+      if (charBreakdown.length) {
+        const totalGames = charBreakdown.reduce((sum, c) => sum + (Number.isFinite(c.games) ? c.games : 0), 0);
+        const topChars = charBreakdown
+          .filter((c) => c && c.character)
+          .sort((a, b) => (b.games || 0) - (a.games || 0))
+          .slice(0, 3)
+          .map((c) => {
+            const name = c.character || "?";
+            const share = Number.isFinite(c.share_pct)
+              ? `${c.share_pct.toFixed(0)}%`
+              : totalGames > 0 && Number.isFinite(c.games)
+              ? `${Math.round((c.games / totalGames) * 100)}%`
+              : null;
+            const games = Number.isFinite(c.games) ? `${c.games} games` : null;
+            const wr = Number.isFinite(c.winrate_pct) ? `${c.winrate_pct.toFixed(1)}% WR` : null;
+            const pieces = [share, games, wr].filter(Boolean).join(", ");
+            return pieces ? `${name} (${pieces})` : name;
+          });
+
+        if (topChars.length) {
+          bullets.push(
+            `<li><strong>Character mix (top ${topChars.length}):</strong> ${topChars.join(" · ")}</li>`
+          );
+        }
+      }
+
       if (fix && fix.opponent) {
         const games = Number.isFinite(fix.games) ? `${fix.games} ranked game${fix.games === 1 ? '' : 's'}` : "recent ranked sets";
         const current = Number.isFinite(fix.current_winrate_pct) ? formatPct(fix.current_winrate_pct, 1) : "current win rate unknown";
@@ -895,6 +925,393 @@
       window.addEventListener("resize", debouncedResize);
     }
 
+    // Character tabs & per-character MR rendering
+    const charTabs = document.getElementById("sf6-char-tabs");
+
+    function renderCharacterTabs(rankedSummary) {
+      if (!charTabs) return;
+      
+      const charBreakdown = Array.isArray(rankedSummary && rankedSummary.character_breakdown)
+        ? rankedSummary.character_breakdown.slice()
+        : [];
+      
+      if (!charBreakdown.length) return;
+      
+      const topChars = charBreakdown
+        .filter((c) => c && c.character)
+        .sort((a, b) => (b.games || 0) - (a.games || 0))
+        .slice(0, 3)
+        .map((c) => c.character);
+      
+      // Clear existing tabs
+      const existingTabs = charTabs.querySelectorAll('[data-char]');
+      existingTabs.forEach((tab) => tab.remove());
+      
+      // Add tabs for top 3 characters
+      topChars.forEach((char) => {
+        const btn = document.createElement("button");
+        btn.className = "sf6-char-tab";
+        btn.setAttribute("data-char", char);
+        btn.textContent = char;
+        btn.style.cssText = "padding: 0.5rem 1rem; background: #1e3a3a; border: none; color: #e5e7eb; cursor: pointer; font-size: 0.9rem;";
+        btn.addEventListener("click", () => switchCharacterTab(char, rankedSummary));
+        charTabs.appendChild(btn);
+      });
+      
+      // Set first tab as active
+      if (topChars.length > 0) {
+        const firstTab = document.querySelector(`[data-char="${topChars[0]}"]`);
+        if (firstTab) {
+          firstTab.classList.add("sf6-char-tab-active");
+          firstTab.style.background = "#2c8c89";
+          switchCharacterTab(topChars[0], rankedSummary);
+        }
+      }
+    }
+
+    function switchCharacterTab(character, rankedSummary) {
+      // Update active tab styling
+      document.querySelectorAll(".sf6-char-tab").forEach((tab) => {
+        tab.classList.remove("sf6-char-tab-active");
+        tab.style.background = "#1e3a3a";
+      });
+      const tab = document.querySelector(`[data-char="${character}"]`);
+      if (tab) {
+        tab.classList.add("sf6-char-tab-active");
+        tab.style.background = "#2c8c89";
+      }
+      
+      // Render the character-specific MR trend and bars
+      renderMrTrendForCharacter(character, rankedSummary);
+      renderMrWeeklyForCharacter(character, rankedSummary);
+    }
+
+    function renderMrTrendForCharacter(character, rankedSummary) {
+      if (!mrTrendDiv || !mrTrendText) return;
+      
+      const charMrData = rankedSummary && rankedSummary.character_mr_timeseries 
+        ? rankedSummary.character_mr_timeseries[character]
+        : null;
+      
+      if (!charMrData || !Array.isArray(charMrData) || !charMrData.length) {
+        // Try matching by normalized name (case-insensitive)
+        const charMrDataObj = rankedSummary && rankedSummary.character_mr_timeseries ? rankedSummary.character_mr_timeseries : {};
+        const matchedKey = Object.keys(charMrDataObj).find(key => key.toLowerCase() === character.toLowerCase());
+        const data = matchedKey ? charMrDataObj[matchedKey] : null;
+        
+        if (!data || !Array.isArray(data) || !data.length) {
+          mrTrendText.textContent = `No MR data for ${character}.`;
+          mrTrendText.style.display = "block";
+          safePurge(mrTrendDiv);
+          safePurge(mrWeeklyDiv);
+          return;
+        }
+      }
+      
+      const cleaned = (charMrData || data)
+        .filter((p) => p && Number.isFinite(p.mr) && p.ts)
+        .map((p) => ({ ts: p.ts, mr: p.mr, win: Number(p.win) === 1, opponent: p.opponent || null }))
+        .sort((a, b) => new Date(a.ts) - new Date(b.ts));
+      
+      if (!cleaned.length) {
+        mrTrendText.textContent = `No ranked MR data for ${character}.`;
+        mrTrendText.style.display = "block";
+        safePurge(mrTrendDiv);
+        safePurge(mrWeeklyDiv);
+        return;
+      }
+      
+      mrTrendText.style.display = "none";
+      
+      const xs = cleaned.map((p) => p.ts);
+      const ys = cleaned.map((p) => p.mr);
+
+      // Calculate week-ending points (Sunday) - UTC-consistent
+      const toUtcIso = (dayStr) => {
+        const [y, m, d] = dayStr.split("-").map(Number);
+        return new Date(Date.UTC(y, m - 1, d)).toISOString();
+      };
+
+      const weekEndFromTs = (ts) => {
+        const dt = new Date(ts);
+        const utcStr = dt.toISOString().split("T")[0]; // YYYY-MM-DD in UTC
+        const [y, m, d] = utcStr.split("-").map(Number);
+        const utcDate = new Date(Date.UTC(y, m - 1, d));
+        const day = utcDate.getUTCDay(); // 0=Sun, 1=Mon, ..., 6=Sat
+        const daysToSunday = (7 - day) % 7;
+        const sunday = new Date(utcDate.getTime() + daysToSunday * 24 * 60 * 60 * 1000);
+        const sunStr = sunday.toISOString().split("T")[0];
+        return toUtcIso(sunStr);
+      };
+
+      const weeklyPoints = new Map();
+      for (let i = 0; i < cleaned.length; i++) {
+        const week = weekEndFromTs(cleaned[i].ts);
+        weeklyPoints.set(week, { ts: cleaned[i].ts, mr: cleaned[i].mr, index: i });
+      }
+
+      // Generate all week-end dates in the range with carry-forward MR values
+      const generateWeekMarkers = () => {
+        if (cleaned.length === 0) return { dates: [], mrs: [], labels: [] };
+        
+        const weekMs = 7 * 24 * 60 * 60 * 1000;
+        const firstWeek = weekEndFromTs(cleaned[0].ts);
+        const lastWeek = weekEndFromTs(cleaned[cleaned.length - 1].ts);
+        
+        const firstWeekMs = new Date(firstWeek).getTime();
+        const lastWeekMs = new Date(lastWeek).getTime();
+        
+        const weekDates = [];
+        const weekMRs = [];
+        const labels = [];
+        
+        // Generate all week-end dates
+        for (let weekMs = firstWeekMs; weekMs <= lastWeekMs; weekMs += 7 * 24 * 60 * 60 * 1000) {
+          const weekDate = new Date(weekMs).toISOString();
+          weekDates.push(weekDate);
+          
+          // Find most recent MR value AT OR BEFORE this week-end
+          let mostRecentMR = null;
+          let hasDataThisWeek = false;
+          
+          for (const point of cleaned) {
+            const pointTime = new Date(point.ts).getTime();
+            if (pointTime <= weekMs) {
+              mostRecentMR = point.mr;
+              if (weeklyPoints.has(weekDate)) {
+                hasDataThisWeek = true;
+              }
+            } else {
+              break;
+            }
+          }
+          
+          if (mostRecentMR !== null) {
+            weekMRs.push(mostRecentMR);
+            labels.push(hasDataThisWeek ? mostRecentMR.toFixed(0) : "");
+          }
+        }
+        
+        return { dates: weekDates, mrs: weekMRs, labels };
+      };
+
+      const weekMarkers = generateWeekMarkers();
+
+      const traces = [
+        {
+          name: `${character} MR`,
+          x: xs,
+          y: ys,
+          mode: "lines",
+          type: "scatter",
+          line: { color: "#2c8c89", width: 2, shape: "spline", smoothing: 0.6 },
+          hovertemplate: "<b>%{y:.0f}</b><br>%{x}<extra></extra>",
+        },
+        {
+          name: "Week End",
+          x: weekMarkers.dates,
+          y: weekMarkers.mrs,
+          mode: "markers+text",
+          type: "scatter",
+          marker: { color: "#f87171", size: 8, symbol: "circle" },
+          text: weekMarkers.labels,
+          textposition: "top right",
+          textfont: { color: "#f87171", size: 10, weight: "bold" },
+          hovertemplate: "<b>Week End: %{y:.0f} MR</b><br>%{x}<extra></extra>",
+        },
+      ];
+
+      const weekMs = 7 * 24 * 60 * 60 * 1000;
+      const firstSundayIso = weekMarkers.dates.length > 0 ? weekMarkers.dates[0] : null;
+      const lastSundayIso = weekMarkers.dates.length > 0 ? weekMarkers.dates[weekMarkers.dates.length - 1] : null;
+      const firstSundayMs = firstSundayIso ? new Date(firstSundayIso).getTime() : 0;
+      const xRange = firstSundayIso && lastSundayIso ? [firstSundayIso, new Date(new Date(lastSundayIso).getTime() + weekMs).toISOString()] : undefined;
+      
+      const layout = {
+        margin: { l: 30, r: 10, t: 5, b: 30 },
+        paper_bgcolor: "rgba(0,0,0,0)",
+        plot_bgcolor: "rgba(0,0,0,0)",
+        font: { color: "#e5e7eb", size: 8 },
+        xaxis: {
+          type: "date",
+          tickmode: "linear",
+          showgrid: true,
+          gridcolor: "rgba(255,255,255,0.05)",
+          tickangle: -45,
+          tickfont: { size: 7 },
+          tick0: firstSundayMs,
+          dtick: weekMs,
+          tickformat: "%b %d",
+          range: xRange,
+          showspikes: false,
+        },
+        yaxis: {
+          title: "",
+          showgrid: true,
+          gridcolor: "rgba(255,255,255,0.08)",
+          zeroline: false,
+          tickfont: { size: 7 },
+          showspikes: false,
+        },
+        height: 280,
+        legend: {
+          orientation: "h",
+          y: -0.12,
+          x: 0.5,
+          xanchor: "center",
+          font: { size: 7 },
+        },
+      };
+
+      const config = { displayModeBar: false, responsive: true };
+
+      // Ensure container is clear before rendering
+      safePurge(mrTrendDiv);
+      
+      Plotly.newPlot(mrTrendDiv, traces, layout, config)
+        .then(() => {
+          mrTrendText.style.display = "none";
+          // Render bars after trend line
+          renderMrWeeklyForCharacter(character, rankedSummary);
+        })
+        .catch((err) => {
+          console.error(`[sf6-report] MR trend for ${character} error`, err);
+          mrTrendText.textContent = `Could not render MR trend for ${character}.`;
+          mrTrendText.style.display = "block";
+        });
+    }
+
+    function renderMrWeeklyForCharacter(character, rankedSummary) {
+      if (!mrWeeklyDiv) return;
+
+      let charMrData = rankedSummary && rankedSummary.character_mr_timeseries 
+        ? rankedSummary.character_mr_timeseries[character]
+        : null;
+      
+      // Try case-insensitive match if exact key not found
+      if (!charMrData && rankedSummary && rankedSummary.character_mr_timeseries) {
+        const matchedKey = Object.keys(rankedSummary.character_mr_timeseries).find(
+          key => key.toLowerCase() === character.toLowerCase()
+        );
+        charMrData = matchedKey ? rankedSummary.character_mr_timeseries[matchedKey] : null;
+      }
+      
+      if (!charMrData || !Array.isArray(charMrData) || !charMrData.length) {
+        safePurge(mrWeeklyDiv);
+        return;
+      }
+
+      const toUtcIso = (dayStr) => {
+        const [y, m, d] = dayStr.split("-").map(Number);
+        return new Date(Date.UTC(y, m - 1, d)).toISOString();
+      };
+
+      const weekEndFromTs = (ts) => {
+        const dt = new Date(ts);
+        const utcStr = dt.toISOString().split("T")[0];
+        const [y, m, d] = utcStr.split("-").map(Number);
+        const utcDate = new Date(Date.UTC(y, m - 1, d));
+        const day = utcDate.getUTCDay();
+        const daysToSunday = (7 - day) % 7;
+        const sunday = new Date(utcDate.getTime() + daysToSunday * 24 * 60 * 60 * 1000);
+        const sunStr = sunday.toISOString().split("T")[0];
+        return toUtcIso(sunStr);
+      };
+
+      // Group by week and calculate deltas
+      const weekMap = new Map();
+      for (const entry of charMrData) {
+        if (entry.ts && Number.isFinite(entry.mr)) {
+          const week = weekEndFromTs(entry.ts);
+          if (!weekMap.has(week)) {
+            weekMap.set(week, { start: entry.mr, end: entry.mr });
+          } else {
+            weekMap.get(week).end = entry.mr;
+          }
+        }
+      }
+
+      const weeks = Array.from(weekMap.entries()).sort((a, b) => a[0].localeCompare(b[0]));
+      const weekDeltas = [];
+      for (let i = 1; i < weeks.length; i++) {
+        const prevMr = weeks[i - 1][1].end;
+        const currMr = weeks[i][1].end;
+        weekDeltas.push({
+          week: weeks[i][0],
+          delta: currMr - prevMr,
+        });
+      }
+
+      if (!weekDeltas.length) {
+        safePurge(mrWeeklyDiv);
+        return;
+      }
+
+      const xs = weekDeltas.map(w => w.week);
+      const ys = weekDeltas.map(w => w.delta);
+      const colors = ys.map(v => v >= 0 ? "#34d399" : "#f87171");
+
+      const weekMs = 7 * 24 * 60 * 60 * 1000;
+      const tick0 = xs.length ? new Date(xs[0]).getTime() : undefined;
+      const range = xs.length ? [xs[0], new Date(new Date(xs[xs.length - 1]).getTime() + weekMs).toISOString()] : undefined;
+      const barWidth = weekMs * 0.8;
+
+      const bars = {
+        type: "bar",
+        x: xs,
+        y: ys,
+        width: barWidth,
+        marker: { color: colors },
+        hovertemplate: "%{x}<br>Δ %{y:.0f} MR<extra></extra>",
+      };
+
+      const layout = {
+        margin: { l: 30, r: 10, t: 5, b: 30 },
+        paper_bgcolor: "rgba(0,0,0,0)",
+        plot_bgcolor: "rgba(0,0,0,0)",
+        font: { color: "#e5e7eb", size: 8 },
+        height: 240,
+        xaxis: {
+          type: "date",
+          tickmode: "linear",
+          tickangle: -45,
+          tickfont: { size: 7 },
+          showgrid: true,
+          gridcolor: "rgba(255,255,255,0.05)",
+          tick0: tick0,
+          dtick: weekMs,
+          tickformat: "%b %d",
+          range: range,
+          showspikes: false,
+        },
+        yaxis: {
+          title: "",
+          zeroline: true,
+          zerolinecolor: "rgba(255,255,255,0.1)",
+          gridcolor: "rgba(255,255,255,0.06)",
+          tickfont: { size: 7 },
+          showspikes: false,
+        },
+        showlegend: false,
+      };
+
+      const config = { displayModeBar: false, responsive: true };
+
+      safePurge(mrWeeklyDiv);
+      Plotly.newPlot(mrWeeklyDiv, [bars], layout, config)
+        .catch((err) => {
+          console.error(`[sf6-report] MR weekly for ${character} error`, err);
+        });
+    }
+
+    // Fix height layout for character weekly chart
+    // Change from height: isMobile ? 180 : isTablet ? 200 : 200 to 110/130/130
+    // Change margin from 70/68/64 bottom to 50/55/50
+    // Done above in renderMrWeeklyForCharacter layout definition
+
+    // Update the aggregate renderMrWeekly function to match heights
+    // Read through and verify both charts have consistent sizing
+
     // ------------------------------------------------------------
     // MR Trend (ranked only, MR-valid)
     // ------------------------------------------------------------
@@ -920,6 +1337,77 @@
       const xs = cleaned.map((p) => p.ts);
       const ys = cleaned.map((p) => p.mr);
 
+      // Calculate week-ending points (Sunday) - UTC-consistent
+      const toUtcIso = (dayStr) => {
+        const [y, m, d] = dayStr.split("-").map(Number);
+        return new Date(Date.UTC(y, m - 1, d)).toISOString();
+      };
+
+      const weekEndFromTs = (ts) => {
+        const dt = new Date(ts);
+        const utcStr = dt.toISOString().split("T")[0]; // YYYY-MM-DD in UTC
+        const [y, m, d] = utcStr.split("-").map(Number);
+        const utcDate = new Date(Date.UTC(y, m - 1, d));
+        const day = utcDate.getUTCDay(); // 0=Sun, 1=Mon, ..., 6=Sat
+        const daysToSunday = (7 - day) % 7;
+        const sunday = new Date(utcDate.getTime() + daysToSunday * 24 * 60 * 60 * 1000);
+        const sunStr = sunday.toISOString().split("T")[0];
+        return toUtcIso(sunStr);
+      };
+
+      const weeklyPoints = new Map();
+      for (let i = 0; i < cleaned.length; i++) {
+        const week = weekEndFromTs(cleaned[i].ts);
+        weeklyPoints.set(week, { ts: cleaned[i].ts, mr: cleaned[i].mr, index: i });
+      }
+
+      // Generate all week-end dates in the range with carry-forward MR values
+      const generateWeekMarkers = () => {
+        if (cleaned.length === 0) return { dates: [], mrs: [], labels: [] };
+        
+        const weekMs = 7 * 24 * 60 * 60 * 1000;
+        const firstWeek = weekEndFromTs(cleaned[0].ts);
+        const lastWeek = weekEndFromTs(cleaned[cleaned.length - 1].ts);
+        
+        const firstWeekMs = new Date(firstWeek).getTime();
+        const lastWeekMs = new Date(lastWeek).getTime();
+        
+        const weekDates = [];
+        const weekMRs = [];
+        const labels = [];
+        
+        // Generate all week-end dates
+        for (let weekMs = firstWeekMs; weekMs <= lastWeekMs; weekMs += 7 * 24 * 60 * 60 * 1000) {
+          const weekDate = new Date(weekMs).toISOString();
+          weekDates.push(weekDate);
+          
+          // Find most recent MR value AT OR BEFORE this week-end
+          let mostRecentMR = null;
+          let hasDataThisWeek = false;
+          
+          for (const point of cleaned) {
+            const pointTime = new Date(point.ts).getTime();
+            if (pointTime <= weekMs) {
+              mostRecentMR = point.mr;
+              if (weeklyPoints.has(weekDate)) {
+                hasDataThisWeek = true;
+              }
+            } else {
+              break;
+            }
+          }
+          
+          if (mostRecentMR !== null) {
+            weekMRs.push(mostRecentMR);
+            labels.push(hasDataThisWeek ? mostRecentMR.toFixed(0) : "");
+          }
+        }
+        
+        return { dates: weekDates, mrs: weekMRs, labels };
+      };
+
+      const weekMarkers = generateWeekMarkers();
+
       const traces = [
         {
           name: "MR (ranked)",
@@ -930,39 +1418,61 @@
           line: { color: "#2c8c89", width: 2, shape: "spline", smoothing: 0.6 },
           hovertemplate: "<b>%{y:.0f}</b><br>%{x}<extra></extra>",
         },
+        {
+          name: "Week End",
+          x: weekMarkers.dates,
+          y: weekMarkers.mrs,
+          mode: "markers+text",
+          type: "scatter",
+          marker: { color: "#f87171", size: 8, symbol: "circle" },
+          text: weekMarkers.labels,
+          textposition: "top right",
+          textfont: { color: "#f87171", size: 10, weight: "bold" },
+          hovertemplate: "<b>Week End: %{y:.0f} MR</b><br>%{x}<extra></extra>",
+        },
       ];
 
       const weekMs = 7 * 24 * 60 * 60 * 1000;
+      const firstSundayIso = weekMarkers.dates.length > 0 ? weekMarkers.dates[0] : null;
+      const lastSundayIso = weekMarkers.dates.length > 0 ? weekMarkers.dates[weekMarkers.dates.length - 1] : null;
+      const firstSundayMs = firstSundayIso ? new Date(firstSundayIso).getTime() : 0;
+      const xRange = firstSundayIso && lastSundayIso ? [firstSundayIso, new Date(new Date(lastSundayIso).getTime() + weekMs).toISOString()] : undefined;
       const isMobile = window.innerWidth < 640;
       const isTablet = window.innerWidth < 1024;
       
       const layout = {
-        margin: isMobile ? { l: 28, r: 12, t: 8, b: 70 } : isTablet ? { l: 36, r: 16, t: 10, b: 75 } : { l: 52, r: 28, t: 10, b: 70 },
+        margin: { l: 30, r: 10, t: 5, b: 30 },
         paper_bgcolor: "rgba(0,0,0,0)",
         plot_bgcolor: "rgba(0,0,0,0)",
-        font: { color: "#e5e7eb", size: isMobile ? 8 : isTablet ? 9 : 11 },
+        font: { color: "#e5e7eb", size: 8 },
         xaxis: {
+          type: "date",
+          tickmode: "linear",
           showgrid: true,
           gridcolor: "rgba(255,255,255,0.05)",
-          tickangle: isMobile ? -70 : isTablet ? -60 : -35,
-          tickfont: { size: isMobile ? 7 : isTablet ? 8 : 10 },
+          tickangle: -45,
+          tickfont: { size: 7 },
+          tick0: firstSundayMs,
           dtick: weekMs,
           tickformat: "%b %d",
+          range: xRange,
+          showspikes: false,
         },
         yaxis: {
-          title: isMobile ? "MR" : "Matchmaking Rating",
+          title: "",
           showgrid: true,
           gridcolor: "rgba(255,255,255,0.08)",
           zeroline: false,
-          tickfont: { size: isMobile ? 8 : isTablet ? 9 : 11 },
+          tickfont: { size: 7 },
+          showspikes: false,
         },
-        height: isMobile ? 250 : isTablet ? 290 : 300,
+        height: 280,
         legend: {
           orientation: "h",
-          y: isMobile ? -0.65 : isTablet ? -0.55 : -0.2,
-          x: isMobile ? 0.5 : 0,
-          xanchor: isMobile ? "center" : "left",
-          font: { size: isMobile ? 8 : isTablet ? 9 : 10 },
+          y: -0.12,
+          x: 0.5,
+          xanchor: "center",
+          font: { size: 7 },
         },
       };
 
@@ -1001,9 +1511,10 @@
         const weekKey = (d) => {
           const dt = new Date(d);
           const day = dt.getDay(); // Sun=0..Sat=6
-          const diff = (day === 0 ? 6 : day - 1); // shift so Monday is start
-          const monday = new Date(Date.UTC(dt.getUTCFullYear(), dt.getUTCMonth(), dt.getUTCDate() - diff));
-          return monday.toISOString().slice(0, 10);
+          const diff = (7 - day) % 7; // days until Sunday
+          const sunday = new Date(dt.getTime() + diff * 24 * 60 * 60 * 1000);
+          sunday.setHours(0, 0, 0, 0);
+          return sunday.toISOString().slice(0, 10);
         };
 
         const bucket = new Map();
@@ -1025,58 +1536,73 @@
         return;
       }
 
-      const xs = filtered.map((r) => r.week_start);
+      const toUtcIso = (dayStr) => {
+        const [y, m, d] = dayStr.split("-").map(Number);
+        return new Date(Date.UTC(y, m - 1, d)).toISOString();
+      };
+
+      const weekEndFromStart = (startDayStr) => {
+        const [y, m, d] = startDayStr.split("-").map(Number);
+        const dt = new Date(Date.UTC(y, m - 1, d));
+        const day = dt.getUTCDay(); // 0=Sun, 1=Mon, ..., 6=Sat
+        const daysToSunday = (7 - day) % 7;
+        const sunday = new Date(dt.getTime() + daysToSunday * 24 * 60 * 60 * 1000);
+        const sunStr = sunday.toISOString().split("T")[0];
+        return toUtcIso(sunStr);
+      };
+
+      const xs = filtered.map((r) => weekEndFromStart(r.week_start));
       const ys = filtered.map((r) => r.mr_delta);
       const colors = ys.map((v) => (v >= 0 ? "#34d399" : "#f87171"));
+
+      const weekMs = 7 * 24 * 60 * 60 * 1000;
+      const tick0 = xs.length ? new Date(xs[0]).getTime() : undefined;
+      const range = xs.length
+        ? [xs[0], new Date(new Date(xs[xs.length - 1]).getTime() + weekMs).toISOString()]
+        : undefined;
+      const barWidth = weekMs * 0.8;
 
       const bars = {
         type: "bar",
         x: xs,
         y: ys,
+        width: barWidth,
         marker: { color: colors },
         hovertemplate: "%{x}<br>Δ %{y:.0f} MR<extra></extra>",
-      };
-
-      const layout = {
-        margin: { l: 46, r: 20, t: 4, b: 64 },
-        paper_bgcolor: "rgba(0,0,0,0)",
-        plot_bgcolor: "rgba(0,0,0,0)",
-        font: { color: "#e5e7eb", size: 10 },
-        height: 200,
-        xaxis: {
-          tickangle: -45,
-          tickfont: { size: 9 },
-        },
-        yaxis: {
-          title: "MR Δ / week",
-          zeroline: true,
-          zerolinecolor: "#6b7280",
-          gridcolor: "rgba(255,255,255,0.06)",
-          tickfont: { size: 10 },
-        },
-        showlegend: false,
       };
 
       const isMobile = window.innerWidth < 640;
       const isTablet = window.innerWidth < 1024;
 
-      if (isMobile) {
-        layout.margin = { l: 28, r: 8, t: 2, b: 70 };
-        layout.height = 180;
-        layout.font.size = 8;
-        layout.xaxis.tickangle = -65;
-        layout.xaxis.tickfont.size = 7;
-        layout.yaxis.tickfont.size = 8;
-        layout.yaxis.title = "Δ MR";
-      } else if (isTablet) {
-        layout.margin = { l: 36, r: 12, t: 2, b: 68 };
-        layout.height = 200;
-        layout.font.size = 9;
-        layout.xaxis.tickangle = -55;
-        layout.xaxis.tickfont.size = 8;
-        layout.yaxis.tickfont.size = 9;
-        layout.yaxis.title = "Δ MR";
-      }
+      const layout = {
+        margin: { l: 30, r: 10, t: 5, b: 30 },
+        paper_bgcolor: "rgba(0,0,0,0)",
+        plot_bgcolor: "rgba(0,0,0,0)",
+        font: { color: "#e5e7eb", size: 8 },
+        height: 240,
+        xaxis: {
+          type: "date",
+          tickmode: "linear",
+          tickangle: -45,
+          tickfont: { size: 7 },
+          showgrid: true,
+          gridcolor: "rgba(255,255,255,0.05)",
+          tick0: tick0,
+          dtick: weekMs,
+          tickformat: "%b %d",
+          range: range,
+          showspikes: false,
+        },
+        yaxis: {
+          title: "",
+          zeroline: true,
+          zerolinecolor: "rgba(255,255,255,0.1)",
+          gridcolor: "rgba(255,255,255,0.06)",
+          tickfont: { size: 7 },
+          showspikes: false,
+        },
+        showlegend: false,
+      };
 
       const config = { displayModeBar: false, responsive: true };
 
@@ -1094,7 +1620,38 @@
         });
     }
 
-    // ------------------------------------------------------------
+    // Add dynamic CSS to eliminate spacing between charts
+    function initChartSpacing() {
+      if (typeof document === 'undefined') return;
+      const existingStyle = document.getElementById('sf6-chart-spacing');
+      if (existingStyle) existingStyle.remove();
+      
+      const style = document.createElement('style');
+      style.id = 'sf6-chart-spacing';
+      style.textContent = `
+        #sf6-mr-trend-chart,
+        #sf6-mr-weekly-chart {
+          margin: 0 !important;
+          padding: 0 !important;
+        }
+        #sf6-mr-trend-chart {
+          margin-bottom: 0 !important;
+        }
+        #sf6-mr-weekly-chart {
+          margin-top: 0 !important;
+        }
+      `;
+      document.head.appendChild(style);
+    }
+    
+    // Initialize on load
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initChartSpacing);
+    } else {
+      initChartSpacing();
+    }
+
+    // ------- -------------------------------------------------------
     // Fix-one insight (ranked/MR-filtered summary expected)
     // ------------------------------------------------------------
     function renderFixOneMatchup(summary) {
@@ -1342,15 +1899,10 @@
           const charBreakdown = (rankedSummary && rankedSummary.character_breakdown) || [];
           generateOverviewBullets(modeBreakdown, charBreakdown, (rootSummary && rootSummary.activity_by_week) || null, activitySummary);
           generateRankedBullets(rankedSummary);
+          renderCharacterTabs(rankedSummary);
+          // Character-specific MR charts are now rendered by renderCharacterTabs automatically
+          
           renderFixOneMatchup(rankedSummary);
-          
-          // Render MR charts with staggered timing to prevent layout thrashing
-          await new Promise(resolve => setTimeout(resolve, 50));
-          renderMrTrend(rankedSummary);
-          
-          await new Promise(resolve => setTimeout(resolve, 50));
-          renderMrWeekly(rankedSummary);
-          
           renderMatchupCards(rankedSummary);
           renderChart(data);
 
