@@ -1,44 +1,49 @@
 {
   "player_cfn": "xhaos",
-  "generated_at": "2026-01-31T19:36:52.866130+00:00",
+  "generated_at": "2026-02-07T19:45:14.434375+00:00",
   "baseline_n": 5,
   "summary": {
     "overall": {
-      "matches_analyzed": 1087,
+      "matches_analyzed": 1162,
       "dataset_start": "2025-11-15",
-      "dataset_end": "2026-01-31",
+      "dataset_end": "2026-02-07",
       "mode_breakdown": [
         {
           "mode": "custom",
-          "matches": 626,
-          "share_pct": 57.6
+          "matches": 701,
+          "share_pct": 60.3
         },
         {
           "mode": "rank",
           "matches": 418,
-          "share_pct": 38.5
+          "share_pct": 36.0
         },
         {
           "mode": "hub",
           "matches": 43,
-          "share_pct": 4.0
+          "share_pct": 3.7
         }
       ],
       "character_breakdown": [
         {
           "character": "M. Bison",
-          "games": 969,
-          "share_pct": 89.1
+          "games": 1032,
+          "share_pct": 88.8
         },
         {
           "character": "Ken",
           "games": 66,
-          "share_pct": 6.1
+          "share_pct": 5.7
         },
         {
           "character": "C. Viper",
           "games": 12,
-          "share_pct": 1.1
+          "share_pct": 1.0
+        },
+        {
+          "character": "Mai",
+          "games": 11,
+          "share_pct": 0.9
         },
         {
           "character": "Juri",
@@ -51,14 +56,9 @@
           "share_pct": 0.6
         },
         {
-          "character": "Mai",
-          "games": 6,
-          "share_pct": 0.6
-        },
-        {
           "character": "Ryu",
-          "games": 4,
-          "share_pct": 0.4
+          "games": 6,
+          "share_pct": 0.5
         },
         {
           "character": "Terry",
@@ -66,17 +66,12 @@
           "share_pct": 0.3
         },
         {
-          "character": "Elena",
-          "games": 2,
-          "share_pct": 0.2
+          "character": "Rashid",
+          "games": 3,
+          "share_pct": 0.3
         },
         {
           "character": "A.K.I.",
-          "games": 2,
-          "share_pct": 0.2
-        },
-        {
-          "character": "Marisa",
           "games": 2,
           "share_pct": 0.2
         },
@@ -86,7 +81,22 @@
           "share_pct": 0.2
         },
         {
+          "character": "Elena",
+          "games": 2,
+          "share_pct": 0.2
+        },
+        {
           "character": "Chun-Li",
+          "games": 2,
+          "share_pct": 0.2
+        },
+        {
+          "character": "Marisa",
+          "games": 2,
+          "share_pct": 0.2
+        },
+        {
+          "character": "Lily",
           "games": 2,
           "share_pct": 0.2
         },
@@ -332,18 +342,23 @@
       "character_breakdown": [
         {
           "character": "M. Bison",
-          "games": 969,
-          "share_pct": 89.1
+          "games": 1032,
+          "share_pct": 88.8
         },
         {
           "character": "Ken",
           "games": 66,
-          "share_pct": 6.1
+          "share_pct": 5.7
         },
         {
           "character": "C. Viper",
           "games": 12,
-          "share_pct": 1.1
+          "share_pct": 1.0
+        },
+        {
+          "character": "Mai",
+          "games": 11,
+          "share_pct": 0.9
         },
         {
           "character": "Juri",
@@ -356,14 +371,9 @@
           "share_pct": 0.6
         },
         {
-          "character": "Mai",
-          "games": 6,
-          "share_pct": 0.6
-        },
-        {
           "character": "Ryu",
-          "games": 4,
-          "share_pct": 0.4
+          "games": 6,
+          "share_pct": 0.5
         },
         {
           "character": "Terry",
@@ -371,17 +381,12 @@
           "share_pct": 0.3
         },
         {
-          "character": "Elena",
-          "games": 2,
-          "share_pct": 0.2
+          "character": "Rashid",
+          "games": 3,
+          "share_pct": 0.3
         },
         {
           "character": "A.K.I.",
-          "games": 2,
-          "share_pct": 0.2
-        },
-        {
-          "character": "Marisa",
           "games": 2,
           "share_pct": 0.2
         },
@@ -391,7 +396,22 @@
           "share_pct": 0.2
         },
         {
+          "character": "Elena",
+          "games": 2,
+          "share_pct": 0.2
+        },
+        {
           "character": "Chun-Li",
+          "games": 2,
+          "share_pct": 0.2
+        },
+        {
+          "character": "Marisa",
+          "games": 2,
+          "share_pct": 0.2
+        },
+        {
+          "character": "Lily",
           "games": 2,
           "share_pct": 0.2
         },
@@ -7582,6 +7602,57 @@
               "winrate": 0.4375
             }
           ]
+        },
+        {
+          "week_start": "2026-02-01",
+          "week_end": "2026-02-07",
+          "matches": 75,
+          "wins": 37,
+          "winrate": 0.4933,
+          "days": [
+            {
+              "date": "2026-02-01",
+              "matches": 11,
+              "wins": 8,
+              "winrate": 0.7273
+            },
+            {
+              "date": "2026-02-02",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2026-02-03",
+              "matches": 51,
+              "wins": 21,
+              "winrate": 0.4118
+            },
+            {
+              "date": "2026-02-04",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2026-02-05",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2026-02-06",
+              "matches": 13,
+              "wins": 8,
+              "winrate": 0.6154
+            },
+            {
+              "date": "2026-02-07",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            }
+          ]
         }
       ],
       "modes": {
@@ -8042,6 +8113,57 @@
                 "matches": 16,
                 "wins": 7,
                 "winrate": 0.4375
+              }
+            ]
+          },
+          {
+            "week_start": "2026-02-01",
+            "week_end": "2026-02-07",
+            "matches": 75,
+            "wins": 37,
+            "winrate": 0.4933,
+            "days": [
+              {
+                "date": "2026-02-01",
+                "matches": 11,
+                "wins": 8,
+                "winrate": 0.7273
+              },
+              {
+                "date": "2026-02-02",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2026-02-03",
+                "matches": 51,
+                "wins": 21,
+                "winrate": 0.4118
+              },
+              {
+                "date": "2026-02-04",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2026-02-05",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2026-02-06",
+                "matches": 13,
+                "wins": 8,
+                "winrate": 0.6154
+              },
+              {
+                "date": "2026-02-07",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
               }
             ]
           }

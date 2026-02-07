@@ -1,121 +1,121 @@
 {
   "player_cfn": "jrome39",
-  "generated_at": "2026-01-31T19:36:51.856148+00:00",
+  "generated_at": "2026-02-07T19:45:13.882924+00:00",
   "baseline_n": 5,
   "summary": {
     "overall": {
-      "matches_analyzed": 729,
+      "matches_analyzed": 938,
       "dataset_start": "2025-11-14",
-      "dataset_end": "2026-01-31",
+      "dataset_end": "2026-02-06",
       "mode_breakdown": [
         {
-          "mode": "custom",
-          "matches": 376,
-          "share_pct": 51.6
+          "mode": "rank",
+          "matches": 455,
+          "share_pct": 48.5
         },
         {
-          "mode": "rank",
-          "matches": 322,
-          "share_pct": 44.2
+          "mode": "custom",
+          "matches": 452,
+          "share_pct": 48.2
         },
         {
           "mode": "hub",
           "matches": 31,
-          "share_pct": 4.3
+          "share_pct": 3.3
         }
       ],
       "character_breakdown": [
         {
           "character": "Ryu",
-          "games": 609,
-          "share_pct": 83.5
+          "games": 755,
+          "share_pct": 80.5
         },
         {
           "character": "Akuma",
           "games": 115,
-          "share_pct": 15.8
+          "share_pct": 12.3
         },
         {
           "character": "Sagat",
-          "games": 5,
-          "share_pct": 0.7
+          "games": 68,
+          "share_pct": 7.2
         }
       ]
     },
     "ranked": {
       "main_character": "Ryu",
-      "matches_analyzed": 243,
+      "matches_analyzed": 354,
       "dataset_start": "2025-11-17",
-      "dataset_end": "2026-01-30",
-      "overall_winrate": 0.5267,
-      "overall_winrate_pct": 52.7,
-      "avg_mr": 1638.2181069958847,
-      "avg_opponent_mr": 1629.4197530864199,
+      "dataset_end": "2026-02-06",
+      "overall_winrate": 0.5282,
+      "overall_winrate_pct": 52.8,
+      "avg_mr": 1617.5988700564972,
+      "avg_opponent_mr": 1613.5225988700565,
       "most_played_matchup": {
-        "opponent": "Akuma",
-        "games": 25,
-        "winrate_pct": 52.0
+        "opponent": "C. Viper",
+        "games": 34,
+        "winrate_pct": 50.0
       },
       "best_matchup": {
-        "opponent": "Cammy",
+        "opponent": "Luke",
         "games": 14,
-        "winrate_pct": 71.4
+        "winrate_pct": 78.6
       },
       "worst_matchup": {
-        "opponent": "Ken",
-        "games": 13,
-        "winrate_pct": 30.8
+        "opponent": "Jp",
+        "games": 10,
+        "winrate_pct": 20.0
       },
       "min_games_for_stable": 10,
       "matchup_table": [
         {
           "opponent": "A.K.I.",
-          "games": 2,
-          "wins": 0,
-          "winrate_pct": 0.0,
-          "avg_opponent_mr": 1615.5
+          "games": 7,
+          "wins": 1,
+          "winrate_pct": 14.3,
+          "avg_opponent_mr": 1594.9
         },
         {
           "opponent": "Akuma",
-          "games": 25,
-          "wins": 13,
-          "winrate_pct": 52.0,
-          "avg_opponent_mr": 1654.8
+          "games": 31,
+          "wins": 16,
+          "winrate_pct": 51.6,
+          "avg_opponent_mr": 1657.7
         },
         {
           "opponent": "Blanka",
-          "games": 2,
-          "wins": 2,
-          "winrate_pct": 100.0,
-          "avg_opponent_mr": 1544.0
+          "games": 7,
+          "wins": 6,
+          "winrate_pct": 85.7,
+          "avg_opponent_mr": 1503.9
         },
         {
           "opponent": "C. Viper",
-          "games": 17,
-          "wins": 10,
-          "winrate_pct": 58.8,
-          "avg_opponent_mr": 1635.0
+          "games": 34,
+          "wins": 17,
+          "winrate_pct": 50.0,
+          "avg_opponent_mr": 1617.1
         },
         {
           "opponent": "Cammy",
-          "games": 14,
-          "wins": 10,
-          "winrate_pct": 71.4,
-          "avg_opponent_mr": 1628.2
+          "games": 21,
+          "wins": 14,
+          "winrate_pct": 66.7,
+          "avg_opponent_mr": 1622.5
         },
         {
           "opponent": "Chun-Li",
-          "games": 3,
-          "wins": 1,
-          "winrate_pct": 33.3,
-          "avg_opponent_mr": 1641.7
+          "games": 6,
+          "wins": 3,
+          "winrate_pct": 50.0,
+          "avg_opponent_mr": 1636.7
         },
         {
           "opponent": "Dee Jay",
-          "games": 5,
-          "wins": 3,
-          "winrate_pct": 60.0,
-          "avg_opponent_mr": 1696.8
+          "games": 9,
+          "wins": 5,
+          "winrate_pct": 55.6,
+          "avg_opponent_mr": 1647.7
         },
         {
           "opponent": "Dhalsim",
@@ -126,10 +126,10 @@
         },
         {
           "opponent": "Ed",
-          "games": 14,
-          "wins": 8,
-          "winrate_pct": 57.1,
-          "avg_opponent_mr": 1616.7
+          "games": 19,
+          "wins": 11,
+          "winrate_pct": 57.9,
+          "avg_opponent_mr": 1605.1
         },
         {
           "opponent": "Edmond Honda",
@@ -140,10 +140,10 @@
         },
         {
           "opponent": "Elena",
-          "games": 11,
-          "wins": 4,
-          "winrate_pct": 36.4,
-          "avg_opponent_mr": 1636.3
+          "games": 16,
+          "wins": 7,
+          "winrate_pct": 43.8,
+          "avg_opponent_mr": 1621.8
         },
         {
           "opponent": "Guile",
@@ -154,17 +154,17 @@
         },
         {
           "opponent": "Jamie",
-          "games": 14,
-          "wins": 7,
-          "winrate_pct": 50.0,
-          "avg_opponent_mr": 1647.0
+          "games": 17,
+          "wins": 9,
+          "winrate_pct": 52.9,
+          "avg_opponent_mr": 1629.1
         },
         {
           "opponent": "Jp",
-          "games": 8,
+          "games": 10,
           "wins": 2,
-          "winrate_pct": 25.0,
-          "avg_opponent_mr": 1633.4
+          "winrate_pct": 20.0,
+          "avg_opponent_mr": 1633.3
         },
         {
           "opponent": "Juri",
@@ -175,45 +175,45 @@
         },
         {
           "opponent": "Ken",
-          "games": 13,
-          "wins": 4,
-          "winrate_pct": 30.8,
-          "avg_opponent_mr": 1642.2
+          "games": 15,
+          "wins": 6,
+          "winrate_pct": 40.0,
+          "avg_opponent_mr": 1627.6
         },
         {
           "opponent": "Kimberly",
-          "games": 6,
-          "wins": 3,
-          "winrate_pct": 50.0,
-          "avg_opponent_mr": 1620.5
+          "games": 9,
+          "wins": 4,
+          "winrate_pct": 44.4,
+          "avg_opponent_mr": 1611.1
         },
         {
           "opponent": "Luke",
-          "games": 8,
-          "wins": 6,
-          "winrate_pct": 75.0,
-          "avg_opponent_mr": 1587.9
+          "games": 14,
+          "wins": 11,
+          "winrate_pct": 78.6,
+          "avg_opponent_mr": 1554.4
         },
         {
           "opponent": "M. Bison",
-          "games": 11,
-          "wins": 6,
-          "winrate_pct": 54.5,
-          "avg_opponent_mr": 1653.5
+          "games": 18,
+          "wins": 7,
+          "winrate_pct": 38.9,
+          "avg_opponent_mr": 1631.4
         },
         {
           "opponent": "Manon",
-          "games": 17,
-          "wins": 8,
-          "winrate_pct": 47.1,
-          "avg_opponent_mr": 1591.0
+          "games": 24,
+          "wins": 12,
+          "winrate_pct": 50.0,
+          "avg_opponent_mr": 1596.2
         },
         {
           "opponent": "Marisa",
-          "games": 8,
+          "games": 10,
           "wins": 6,
-          "winrate_pct": 75.0,
-          "avg_opponent_mr": 1584.1
+          "winrate_pct": 60.0,
+          "avg_opponent_mr": 1590.6
         },
         {
           "opponent": "Rashid",
@@ -224,17 +224,17 @@
         },
         {
           "opponent": "Ryu",
-          "games": 13,
-          "wins": 6,
-          "winrate_pct": 46.2,
-          "avg_opponent_mr": 1633.8
+          "games": 20,
+          "wins": 10,
+          "winrate_pct": 50.0,
+          "avg_opponent_mr": 1612.5
         },
         {
           "opponent": "Sagat",
-          "games": 9,
-          "wins": 5,
-          "winrate_pct": 55.6,
-          "avg_opponent_mr": 1599.7
+          "games": 13,
+          "wins": 7,
+          "winrate_pct": 53.8,
+          "avg_opponent_mr": 1565.9
         },
         {
           "opponent": "Terry",
@@ -245,36 +245,36 @@
         },
         {
           "opponent": "Zangief",
-          "games": 7,
-          "wins": 4,
-          "winrate_pct": 57.1,
-          "avg_opponent_mr": 1634.9
+          "games": 18,
+          "wins": 13,
+          "winrate_pct": 72.2,
+          "avg_opponent_mr": 1573.9
         }
       ],
       "fix_one_matchup": {
-        "opponent": "Dhalsim",
-        "games": 7,
-        "current_winrate_pct": 14.3,
+        "opponent": "Jp",
+        "games": 10,
+        "current_winrate_pct": 20.0,
         "simulated_winrate_pct": 50.0,
-        "overall_winrate_pct": 52.7,
+        "overall_winrate_pct": 52.8,
         "new_overall_winrate_pct": 53.7,
-        "lift_pct_points": 1.0
+        "lift_pct_points": 0.8
       },
       "character_breakdown": [
         {
           "character": "Ryu",
-          "games": 609,
-          "share_pct": 83.5
+          "games": 755,
+          "share_pct": 80.5
         },
         {
           "character": "Akuma",
           "games": 115,
-          "share_pct": 15.8
+          "share_pct": 12.3
         },
         {
           "character": "Sagat",
-          "games": 5,
-          "share_pct": 0.7
+          "games": 68,
+          "share_pct": 7.2
         }
       ],
       "session_stats": {
@@ -397,32 +397,102 @@
             "winrate": 0.75,
             "mr_delta": 21.0,
             "start_ts": "2026-01-30T21:11:00+00:00"
+          },
+          {
+            "size": 3,
+            "bucket": "1-5",
+            "winrate": 1.0,
+            "mr_delta": 13.0,
+            "start_ts": "2026-02-01T22:23:00+00:00"
+          },
+          {
+            "size": 2,
+            "bucket": "1-5",
+            "winrate": 0.0,
+            "mr_delta": -7.0,
+            "start_ts": "2026-02-01T23:37:00+00:00"
+          },
+          {
+            "size": 6,
+            "bucket": "6-10",
+            "winrate": 0.5,
+            "mr_delta": 53.0,
+            "start_ts": "2026-02-02T00:34:00+00:00"
+          },
+          {
+            "size": 2,
+            "bucket": "1-5",
+            "winrate": 0.5,
+            "mr_delta": 9.0,
+            "start_ts": "2026-02-03T02:42:00+00:00"
+          },
+          {
+            "size": 16,
+            "bucket": "16+",
+            "winrate": 0.75,
+            "mr_delta": -15.0,
+            "start_ts": "2026-02-03T15:20:00+00:00"
+          },
+          {
+            "size": 17,
+            "bucket": "16+",
+            "winrate": 0.5294,
+            "mr_delta": 5.0,
+            "start_ts": "2026-02-05T04:28:00+00:00"
+          },
+          {
+            "size": 9,
+            "bucket": "6-10",
+            "winrate": 0.6667,
+            "mr_delta": 11.0,
+            "start_ts": "2026-02-05T17:35:00+00:00"
+          },
+          {
+            "size": 5,
+            "bucket": "1-5",
+            "winrate": 0.0,
+            "mr_delta": -20.0,
+            "start_ts": "2026-02-05T18:47:00+00:00"
+          },
+          {
+            "size": 15,
+            "bucket": "11-15",
+            "winrate": 0.6,
+            "mr_delta": -59.0,
+            "start_ts": "2026-02-05T19:31:00+00:00"
+          },
+          {
+            "size": 36,
+            "bucket": "16+",
+            "winrate": 0.4444,
+            "mr_delta": -17.0,
+            "start_ts": "2026-02-06T19:46:00+00:00"
           }
         ],
         "by_length": [
           {
             "range": "1-5",
-            "avg_winrate": 0.4444,
-            "avg_mr_delta": -1.0,
-            "count": 3
+            "avg_winrate": 0.4048,
+            "avg_mr_delta": -1.1,
+            "count": 7
           },
           {
             "range": "6-10",
-            "avg_winrate": 0.6126,
-            "avg_mr_delta": 7.3,
-            "count": 6
+            "avg_winrate": 0.6053,
+            "avg_mr_delta": 13.5,
+            "count": 8
           },
           {
             "range": "11-15",
-            "avg_winrate": 0.4984,
-            "avg_mr_delta": -8.0,
-            "count": 4
+            "avg_winrate": 0.5187,
+            "avg_mr_delta": -18.2,
+            "count": 5
           },
           {
             "range": "16+",
-            "avg_winrate": 0.5179,
-            "avg_mr_delta": -1.8,
-            "count": 4
+            "avg_winrate": 0.5422,
+            "avg_mr_delta": -4.9,
+            "count": 7
           }
         ],
         "weekly_by_length": [
@@ -519,26 +589,67 @@
           },
           {
             "week_start": "2026-01-26",
+            "bucket": "1-5",
+            "count": 2,
+            "avg_winrate": 0.6,
+            "avg_mr_delta": 3.0
+          },
+          {
+            "week_start": "2026-01-26",
             "bucket": "6-10",
+            "count": 4,
+            "avg_winrate": 0.6364,
+            "avg_mr_delta": 22.0
+          },
+          {
+            "week_start": "2026-02-02",
+            "bucket": "1-5",
+            "count": 2,
+            "avg_winrate": 0.1429,
+            "avg_mr_delta": -5.5
+          },
+          {
+            "week_start": "2026-02-02",
+            "bucket": "11-15",
+            "count": 1,
+            "avg_winrate": 0.6,
+            "avg_mr_delta": -59.0
+          },
+          {
+            "week_start": "2026-02-02",
+            "bucket": "16+",
             "count": 3,
+            "avg_winrate": 0.5362,
+            "avg_mr_delta": -9.0
+          },
+          {
+            "week_start": "2026-02-02",
+            "bucket": "6-10",
+            "count": 1,
             "avg_winrate": 0.6667,
-            "avg_mr_delta": 11.67
+            "avg_mr_delta": 11.0
           }
         ],
         "warmup": {
-          "1": 0.5882,
-          "2": 0.3529,
-          "3-5": 0.5814
+          "1": 0.6296,
+          "2": 0.2963,
+          "3-5": 0.5538
         },
         "cooldown": {
-          "last3": 0.5918
+          "last3": 0.5844
         },
         "time_of_day": [
           {
             "day": "Friday",
+            "hour_bucket": 14,
+            "winrate": 0.6429,
+            "games": 14
+          },
+          {
+            "day": "Friday",
             "hour_bucket": 16,
-            "winrate": 0.75,
-            "games": 8
+            "winrate": 0.4333,
+            "games": 30
           },
           {
             "day": "Monday",
@@ -561,8 +672,8 @@
           {
             "day": "Monday",
             "hour_bucket": 20,
-            "winrate": 0.5625,
-            "games": 16
+            "winrate": 0.5556,
+            "games": 18
           },
           {
             "day": "Monday",
@@ -578,9 +689,15 @@
           },
           {
             "day": "Sunday",
+            "hour_bucket": 16,
+            "winrate": 1.0,
+            "games": 3
+          },
+          {
+            "day": "Sunday",
             "hour_bucket": 18,
-            "winrate": 0.75,
-            "games": 4
+            "winrate": 0.5,
+            "games": 12
           },
           {
             "day": "Sunday",
@@ -596,6 +713,12 @@
           },
           {
             "day": "Thursday",
+            "hour_bucket": 0,
+            "winrate": 0.6,
+            "games": 5
+          },
+          {
+            "day": "Thursday",
             "hour_bucket": 10,
             "winrate": 0.5,
             "games": 4
@@ -603,14 +726,20 @@
           {
             "day": "Thursday",
             "hour_bucket": 12,
-            "winrate": 0.4828,
-            "games": 29
+            "winrate": 0.4651,
+            "games": 43
           },
           {
             "day": "Thursday",
             "hour_bucket": 14,
             "winrate": 0.6,
-            "games": 10
+            "games": 25
+          },
+          {
+            "day": "Tuesday",
+            "hour_bucket": 10,
+            "winrate": 0.75,
+            "games": 16
           },
           {
             "day": "Tuesday",
@@ -639,8 +768,8 @@
           {
             "day": "Wednesday",
             "hour_bucket": 22,
-            "winrate": 0.6667,
-            "games": 6
+            "winrate": 0.5556,
+            "games": 18
           }
         ],
         "momentum": [
@@ -745,6 +874,66 @@
             "max_win_streak": 4,
             "max_loss_streak": 1,
             "mr_delta": 21.0
+          },
+          {
+            "size": 3,
+            "max_win_streak": 3,
+            "max_loss_streak": 0,
+            "mr_delta": 13.0
+          },
+          {
+            "size": 2,
+            "max_win_streak": 0,
+            "max_loss_streak": 2,
+            "mr_delta": -7.0
+          },
+          {
+            "size": 6,
+            "max_win_streak": 1,
+            "max_loss_streak": 2,
+            "mr_delta": 53.0
+          },
+          {
+            "size": 2,
+            "max_win_streak": 1,
+            "max_loss_streak": 1,
+            "mr_delta": 9.0
+          },
+          {
+            "size": 16,
+            "max_win_streak": 8,
+            "max_loss_streak": 3,
+            "mr_delta": -15.0
+          },
+          {
+            "size": 17,
+            "max_win_streak": 4,
+            "max_loss_streak": 2,
+            "mr_delta": 5.0
+          },
+          {
+            "size": 9,
+            "max_win_streak": 3,
+            "max_loss_streak": 2,
+            "mr_delta": 11.0
+          },
+          {
+            "size": 5,
+            "max_win_streak": 0,
+            "max_loss_streak": 5,
+            "mr_delta": -20.0
+          },
+          {
+            "size": 15,
+            "max_win_streak": 3,
+            "max_loss_streak": 3,
+            "mr_delta": -59.0
+          },
+          {
+            "size": 36,
+            "max_win_streak": 2,
+            "max_loss_streak": 4,
+            "mr_delta": -17.0
           }
         ]
       },
@@ -826,6 +1015,42 @@
           "matches": 8,
           "wins": 6,
           "winrate": 0.75
+        },
+        {
+          "date": "2026-02-01",
+          "matches": 11,
+          "wins": 6,
+          "winrate": 0.5455
+        },
+        {
+          "date": "2026-02-02",
+          "matches": 2,
+          "wins": 1,
+          "winrate": 0.5
+        },
+        {
+          "date": "2026-02-03",
+          "matches": 16,
+          "wins": 12,
+          "winrate": 0.75
+        },
+        {
+          "date": "2026-02-04",
+          "matches": 12,
+          "wins": 6,
+          "winrate": 0.5
+        },
+        {
+          "date": "2026-02-05",
+          "matches": 34,
+          "wins": 18,
+          "winrate": 0.5294
+        },
+        {
+          "date": "2026-02-06",
+          "matches": 36,
+          "wins": 16,
+          "winrate": 0.4444
         }
       ],
       "activity_by_week": [
@@ -1180,6 +1405,57 @@
             },
             {
               "date": "2026-01-31",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            }
+          ]
+        },
+        {
+          "week_start": "2026-02-01",
+          "week_end": "2026-02-07",
+          "matches": 111,
+          "wins": 59,
+          "winrate": 0.5315,
+          "days": [
+            {
+              "date": "2026-02-01",
+              "matches": 11,
+              "wins": 6,
+              "winrate": 0.5455
+            },
+            {
+              "date": "2026-02-02",
+              "matches": 2,
+              "wins": 1,
+              "winrate": 0.5
+            },
+            {
+              "date": "2026-02-03",
+              "matches": 16,
+              "wins": 12,
+              "winrate": 0.75
+            },
+            {
+              "date": "2026-02-04",
+              "matches": 12,
+              "wins": 6,
+              "winrate": 0.5
+            },
+            {
+              "date": "2026-02-05",
+              "matches": 34,
+              "wins": 18,
+              "winrate": 0.5294
+            },
+            {
+              "date": "2026-02-06",
+              "matches": 36,
+              "wins": 16,
+              "winrate": 0.4444
+            },
+            {
+              "date": "2026-02-07",
               "matches": 0,
               "wins": 0,
               "winrate": null
@@ -2888,6 +3164,783 @@
           "opp_mr": 1647.0,
           "win": 1,
           "opponent": "Jamie"
+        },
+        {
+          "ts": "2026-02-01T22:23:00+00:00",
+          "mr": 1560.0,
+          "opp_mr": 1494.0,
+          "win": 1,
+          "opponent": "Zangief"
+        },
+        {
+          "ts": "2026-02-01T22:25:00+00:00",
+          "mr": 1566.0,
+          "opp_mr": 1536.0,
+          "win": 1,
+          "opponent": "Ken"
+        },
+        {
+          "ts": "2026-02-01T22:27:00+00:00",
+          "mr": 1573.0,
+          "opp_mr": 1529.0,
+          "win": 1,
+          "opponent": "Ken"
+        },
+        {
+          "ts": "2026-02-01T23:37:00+00:00",
+          "mr": 1580.0,
+          "opp_mr": 1611.0,
+          "win": 0,
+          "opponent": "C. Viper"
+        },
+        {
+          "ts": "2026-02-01T23:38:00+00:00",
+          "mr": 1573.0,
+          "opp_mr": 1618.0,
+          "win": 0,
+          "opponent": "C. Viper"
+        },
+        {
+          "ts": "2026-02-02T00:34:00+00:00",
+          "mr": 1500.0,
+          "opp_mr": 1501.0,
+          "win": 1,
+          "opponent": "Zangief"
+        },
+        {
+          "ts": "2026-02-02T00:36:00+00:00",
+          "mr": 1566.0,
+          "opp_mr": 1594.0,
+          "win": 0,
+          "opponent": "Elena"
+        },
+        {
+          "ts": "2026-02-02T00:38:00+00:00",
+          "mr": 1559.0,
+          "opp_mr": 1601.0,
+          "win": 1,
+          "opponent": "Elena"
+        },
+        {
+          "ts": "2026-02-02T00:39:00+00:00",
+          "mr": 1568.0,
+          "opp_mr": 1592.0,
+          "win": 0,
+          "opponent": "Elena"
+        },
+        {
+          "ts": "2026-02-02T00:42:00+00:00",
+          "mr": 1561.0,
+          "opp_mr": 1541.0,
+          "win": 0,
+          "opponent": "Luke"
+        },
+        {
+          "ts": "2026-02-02T00:44:00+00:00",
+          "mr": 1553.0,
+          "opp_mr": 1549.0,
+          "win": 1,
+          "opponent": "Luke"
+        },
+        {
+          "ts": "2026-02-03T02:42:00+00:00",
+          "mr": 1493.0,
+          "opp_mr": 1528.0,
+          "win": 1,
+          "opponent": "Ed"
+        },
+        {
+          "ts": "2026-02-03T02:45:00+00:00",
+          "mr": 1502.0,
+          "opp_mr": 1519.0,
+          "win": 0,
+          "opponent": "Ed"
+        },
+        {
+          "ts": "2026-02-03T15:20:00+00:00",
+          "mr": 1539.0,
+          "opp_mr": 1537.0,
+          "win": 1,
+          "opponent": "C. Viper"
+        },
+        {
+          "ts": "2026-02-03T15:22:00+00:00",
+          "mr": 1547.0,
+          "opp_mr": 1529.0,
+          "win": 1,
+          "opponent": "C. Viper"
+        },
+        {
+          "ts": "2026-02-03T15:24:00+00:00",
+          "mr": 1555.0,
+          "opp_mr": 1630.0,
+          "win": 0,
+          "opponent": "Jp"
+        },
+        {
+          "ts": "2026-02-03T15:26:00+00:00",
+          "mr": 1549.0,
+          "opp_mr": 1636.0,
+          "win": 0,
+          "opponent": "Jp"
+        },
+        {
+          "ts": "2026-02-03T15:28:00+00:00",
+          "mr": 1543.0,
+          "opp_mr": 1539.0,
+          "win": 0,
+          "opponent": "Zangief"
+        },
+        {
+          "ts": "2026-02-03T15:30:00+00:00",
+          "mr": 1535.0,
+          "opp_mr": 1547.0,
+          "win": 1,
+          "opponent": "Zangief"
+        },
+        {
+          "ts": "2026-02-03T15:32:00+00:00",
+          "mr": 1543.0,
+          "opp_mr": 1539.0,
+          "win": 1,
+          "opponent": "Zangief"
+        },
+        {
+          "ts": "2026-02-03T15:34:00+00:00",
+          "mr": 1551.0,
+          "opp_mr": 1631.0,
+          "win": 0,
+          "opponent": "Chun-Li"
+        },
+        {
+          "ts": "2026-02-03T15:37:00+00:00",
+          "mr": 1545.0,
+          "opp_mr": 1637.0,
+          "win": 1,
+          "opponent": "Chun-Li"
+        },
+        {
+          "ts": "2026-02-03T15:39:00+00:00",
+          "mr": 1555.0,
+          "opp_mr": 1627.0,
+          "win": 1,
+          "opponent": "Chun-Li"
+        },
+        {
+          "ts": "2026-02-03T15:50:00+00:00",
+          "mr": 1565.0,
+          "opp_mr": 1537.0,
+          "win": 1,
+          "opponent": "Akuma"
+        },
+        {
+          "ts": "2026-02-03T15:53:00+00:00",
+          "mr": 1494.0,
+          "opp_mr": 1444.0,
+          "win": 1,
+          "opponent": "Luke"
+        },
+        {
+          "ts": "2026-02-03T15:54:00+00:00",
+          "mr": 1501.0,
+          "opp_mr": 1437.0,
+          "win": 1,
+          "opponent": "Luke"
+        },
+        {
+          "ts": "2026-02-03T15:58:00+00:00",
+          "mr": 1508.0,
+          "opp_mr": 1500.0,
+          "win": 1,
+          "opponent": "Zangief"
+        },
+        {
+          "ts": "2026-02-03T16:00:00+00:00",
+          "mr": 1516.0,
+          "opp_mr": 1507.0,
+          "win": 1,
+          "opponent": "Ryu"
+        },
+        {
+          "ts": "2026-02-03T16:03:00+00:00",
+          "mr": 1524.0,
+          "opp_mr": 1499.0,
+          "win": 1,
+          "opponent": "Ryu"
+        },
+        {
+          "ts": "2026-02-05T04:28:00+00:00",
+          "mr": 1572.0,
+          "opp_mr": 1674.0,
+          "win": 0,
+          "opponent": "C. Viper"
+        },
+        {
+          "ts": "2026-02-05T04:30:00+00:00",
+          "mr": 1566.0,
+          "opp_mr": 1680.0,
+          "win": 0,
+          "opponent": "C. Viper"
+        },
+        {
+          "ts": "2026-02-05T04:32:00+00:00",
+          "mr": 1561.0,
+          "opp_mr": 1596.0,
+          "win": 1,
+          "opponent": "C. Viper"
+        },
+        {
+          "ts": "2026-02-05T04:34:00+00:00",
+          "mr": 1570.0,
+          "opp_mr": 1587.0,
+          "win": 0,
+          "opponent": "C. Viper"
+        },
+        {
+          "ts": "2026-02-05T04:37:00+00:00",
+          "mr": 1562.0,
+          "opp_mr": 1595.0,
+          "win": 0,
+          "opponent": "C. Viper"
+        },
+        {
+          "ts": "2026-02-05T04:39:00+00:00",
+          "mr": 1555.0,
+          "opp_mr": 1543.0,
+          "win": 1,
+          "opponent": "C. Viper"
+        },
+        {
+          "ts": "2026-02-05T04:41:00+00:00",
+          "mr": 1563.0,
+          "opp_mr": 1535.0,
+          "win": 1,
+          "opponent": "C. Viper"
+        },
+        {
+          "ts": "2026-02-05T04:43:00+00:00",
+          "mr": 1570.0,
+          "opp_mr": 1418.0,
+          "win": 0,
+          "opponent": "Sagat"
+        },
+        {
+          "ts": "2026-02-05T04:45:00+00:00",
+          "mr": 1559.0,
+          "opp_mr": 1429.0,
+          "win": 0,
+          "opponent": "Sagat"
+        },
+        {
+          "ts": "2026-02-05T04:48:00+00:00",
+          "mr": 1548.0,
+          "opp_mr": 1586.0,
+          "win": 1,
+          "opponent": "Elena"
+        },
+        {
+          "ts": "2026-02-05T04:50:00+00:00",
+          "mr": 1557.0,
+          "opp_mr": 1577.0,
+          "win": 1,
+          "opponent": "Elena"
+        },
+        {
+          "ts": "2026-02-05T04:59:00+00:00",
+          "mr": 1565.0,
+          "opp_mr": 1600.0,
+          "win": 1,
+          "opponent": "Dee Jay"
+        },
+        {
+          "ts": "2026-02-05T05:01:00+00:00",
+          "mr": 1574.0,
+          "opp_mr": 1591.0,
+          "win": 1,
+          "opponent": "Dee Jay"
+        },
+        {
+          "ts": "2026-02-05T05:03:00+00:00",
+          "mr": 1582.0,
+          "opp_mr": 1604.0,
+          "win": 0,
+          "opponent": "M. Bison"
+        },
+        {
+          "ts": "2026-02-05T05:07:00+00:00",
+          "mr": 1575.0,
+          "opp_mr": 1605.0,
+          "win": 0,
+          "opponent": "Ryu"
+        },
+        {
+          "ts": "2026-02-05T05:08:00+00:00",
+          "mr": 1568.0,
+          "opp_mr": 1612.0,
+          "win": 1,
+          "opponent": "Ryu"
+        },
+        {
+          "ts": "2026-02-05T05:11:00+00:00",
+          "mr": 1577.0,
+          "opp_mr": 1603.0,
+          "win": 1,
+          "opponent": "Ryu"
+        },
+        {
+          "ts": "2026-02-05T17:35:00+00:00",
+          "mr": 1586.0,
+          "opp_mr": 1552.0,
+          "win": 1,
+          "opponent": "Akuma"
+        },
+        {
+          "ts": "2026-02-05T17:36:00+00:00",
+          "mr": 1593.0,
+          "opp_mr": 1545.0,
+          "win": 0,
+          "opponent": "Akuma"
+        },
+        {
+          "ts": "2026-02-05T17:39:00+00:00",
+          "mr": 1584.0,
+          "opp_mr": 1554.0,
+          "win": 1,
+          "opponent": "Akuma"
+        },
+        {
+          "ts": "2026-02-05T17:41:00+00:00",
+          "mr": 1591.0,
+          "opp_mr": 1560.0,
+          "win": 1,
+          "opponent": "Sagat"
+        },
+        {
+          "ts": "2026-02-05T17:43:00+00:00",
+          "mr": 1598.0,
+          "opp_mr": 1553.0,
+          "win": 1,
+          "opponent": "Sagat"
+        },
+        {
+          "ts": "2026-02-05T17:46:00+00:00",
+          "mr": 1605.0,
+          "opp_mr": 1572.0,
+          "win": 0,
+          "opponent": "Manon"
+        },
+        {
+          "ts": "2026-02-05T17:48:00+00:00",
+          "mr": 1596.0,
+          "opp_mr": 1581.0,
+          "win": 0,
+          "opponent": "Manon"
+        },
+        {
+          "ts": "2026-02-05T17:51:00+00:00",
+          "mr": 1588.0,
+          "opp_mr": 1631.0,
+          "win": 1,
+          "opponent": "Blanka"
+        },
+        {
+          "ts": "2026-02-05T17:53:00+00:00",
+          "mr": 1597.0,
+          "opp_mr": 1622.0,
+          "win": 1,
+          "opponent": "Blanka"
+        },
+        {
+          "ts": "2026-02-05T18:47:00+00:00",
+          "mr": 1606.0,
+          "opp_mr": 1589.0,
+          "win": 0,
+          "opponent": "Ryu"
+        },
+        {
+          "ts": "2026-02-05T18:51:00+00:00",
+          "mr": 1598.0,
+          "opp_mr": 1597.0,
+          "win": 0,
+          "opponent": "Ryu"
+        },
+        {
+          "ts": "2026-02-05T18:53:00+00:00",
+          "mr": 1590.0,
+          "opp_mr": 1914.0,
+          "win": 0,
+          "opponent": "Akuma"
+        },
+        {
+          "ts": "2026-02-05T18:55:00+00:00",
+          "mr": 1588.0,
+          "opp_mr": 1916.0,
+          "win": 0,
+          "opponent": "Akuma"
+        },
+        {
+          "ts": "2026-02-05T18:59:00+00:00",
+          "mr": 1586.0,
+          "opp_mr": 1518.0,
+          "win": 0,
+          "opponent": "M. Bison"
+        },
+        {
+          "ts": "2026-02-05T19:31:00+00:00",
+          "mr": 1576.0,
+          "opp_mr": 1547.0,
+          "win": 1,
+          "opponent": "Jamie"
+        },
+        {
+          "ts": "2026-02-05T19:33:00+00:00",
+          "mr": 1583.0,
+          "opp_mr": 1540.0,
+          "win": 0,
+          "opponent": "Jamie"
+        },
+        {
+          "ts": "2026-02-05T19:35:00+00:00",
+          "mr": 1574.0,
+          "opp_mr": 1549.0,
+          "win": 1,
+          "opponent": "Jamie"
+        },
+        {
+          "ts": "2026-02-05T19:38:00+00:00",
+          "mr": 1581.0,
+          "opp_mr": 1547.0,
+          "win": 1,
+          "opponent": "Luke"
+        },
+        {
+          "ts": "2026-02-05T19:40:00+00:00",
+          "mr": 1588.0,
+          "opp_mr": 1540.0,
+          "win": 1,
+          "opponent": "Luke"
+        },
+        {
+          "ts": "2026-02-05T19:44:00+00:00",
+          "mr": 1531.0,
+          "opp_mr": 1537.0,
+          "win": 0,
+          "opponent": "A.K.I."
+        },
+        {
+          "ts": "2026-02-05T19:45:00+00:00",
+          "mr": 1523.0,
+          "opp_mr": 1545.0,
+          "win": 1,
+          "opponent": "A.K.I."
+        },
+        {
+          "ts": "2026-02-05T19:46:00+00:00",
+          "mr": 1532.0,
+          "opp_mr": 1536.0,
+          "win": 0,
+          "opponent": "A.K.I."
+        },
+        {
+          "ts": "2026-02-05T19:49:00+00:00",
+          "mr": 1524.0,
+          "opp_mr": 1516.0,
+          "win": 0,
+          "opponent": "Cammy"
+        },
+        {
+          "ts": "2026-02-05T19:52:00+00:00",
+          "mr": 1516.0,
+          "opp_mr": 1524.0,
+          "win": 0,
+          "opponent": "Cammy"
+        },
+        {
+          "ts": "2026-02-05T19:54:00+00:00",
+          "mr": 1508.0,
+          "opp_mr": 1395.0,
+          "win": 1,
+          "opponent": "Blanka"
+        },
+        {
+          "ts": "2026-02-05T19:56:00+00:00",
+          "mr": 1513.0,
+          "opp_mr": 1390.0,
+          "win": 0,
+          "opponent": "Blanka"
+        },
+        {
+          "ts": "2026-02-05T19:59:00+00:00",
+          "mr": 1502.0,
+          "opp_mr": 1401.0,
+          "win": 1,
+          "opponent": "Blanka"
+        },
+        {
+          "ts": "2026-02-05T20:02:00+00:00",
+          "mr": 1508.0,
+          "opp_mr": 1544.0,
+          "win": 1,
+          "opponent": "Zangief"
+        },
+        {
+          "ts": "2026-02-05T20:04:00+00:00",
+          "mr": 1517.0,
+          "opp_mr": 1535.0,
+          "win": 1,
+          "opponent": "Zangief"
+        },
+        {
+          "ts": "2026-02-06T19:46:00+00:00",
+          "mr": 1595.0,
+          "opp_mr": 1608.0,
+          "win": 1,
+          "opponent": "Ed"
+        },
+        {
+          "ts": "2026-02-06T19:48:00+00:00",
+          "mr": 1603.0,
+          "opp_mr": 1600.0,
+          "win": 0,
+          "opponent": "Ed"
+        },
+        {
+          "ts": "2026-02-06T19:51:00+00:00",
+          "mr": 1595.0,
+          "opp_mr": 1608.0,
+          "win": 1,
+          "opponent": "Ed"
+        },
+        {
+          "ts": "2026-02-06T19:54:00+00:00",
+          "mr": 1603.0,
+          "opp_mr": 1582.0,
+          "win": 0,
+          "opponent": "Manon"
+        },
+        {
+          "ts": "2026-02-06T19:56:00+00:00",
+          "mr": 1595.0,
+          "opp_mr": 1590.0,
+          "win": 1,
+          "opponent": "Manon"
+        },
+        {
+          "ts": "2026-02-06T19:58:00+00:00",
+          "mr": 1603.0,
+          "opp_mr": 1582.0,
+          "win": 1,
+          "opponent": "Manon"
+        },
+        {
+          "ts": "2026-02-06T20:09:00+00:00",
+          "mr": 1611.0,
+          "opp_mr": 1681.0,
+          "win": 0,
+          "opponent": "Cammy"
+        },
+        {
+          "ts": "2026-02-06T20:11:00+00:00",
+          "mr": 1605.0,
+          "opp_mr": 1687.0,
+          "win": 1,
+          "opponent": "Cammy"
+        },
+        {
+          "ts": "2026-02-06T20:12:00+00:00",
+          "mr": 1615.0,
+          "opp_mr": 1677.0,
+          "win": 1,
+          "opponent": "Cammy"
+        },
+        {
+          "ts": "2026-02-06T20:40:00+00:00",
+          "mr": 1624.0,
+          "opp_mr": 1634.0,
+          "win": 0,
+          "opponent": "C. Viper"
+        },
+        {
+          "ts": "2026-02-06T20:41:00+00:00",
+          "mr": 1616.0,
+          "opp_mr": 1642.0,
+          "win": 1,
+          "opponent": "C. Viper"
+        },
+        {
+          "ts": "2026-02-06T20:42:00+00:00",
+          "mr": 1625.0,
+          "opp_mr": 1633.0,
+          "win": 0,
+          "opponent": "C. Viper"
+        },
+        {
+          "ts": "2026-02-06T20:45:00+00:00",
+          "mr": 1617.0,
+          "opp_mr": 1683.0,
+          "win": 1,
+          "opponent": "Manon"
+        },
+        {
+          "ts": "2026-02-06T20:47:00+00:00",
+          "mr": 1627.0,
+          "opp_mr": 1673.0,
+          "win": 1,
+          "opponent": "Manon"
+        },
+        {
+          "ts": "2026-02-06T21:03:00+00:00",
+          "mr": 1636.0,
+          "opp_mr": 1612.0,
+          "win": 0,
+          "opponent": "Marisa"
+        },
+        {
+          "ts": "2026-02-06T21:04:00+00:00",
+          "mr": 1627.0,
+          "opp_mr": 1621.0,
+          "win": 0,
+          "opponent": "Marisa"
+        },
+        {
+          "ts": "2026-02-06T21:07:00+00:00",
+          "mr": 1619.0,
+          "opp_mr": 1654.0,
+          "win": 0,
+          "opponent": "A.K.I."
+        },
+        {
+          "ts": "2026-02-06T21:08:00+00:00",
+          "mr": 1612.0,
+          "opp_mr": 1661.0,
+          "win": 0,
+          "opponent": "A.K.I."
+        },
+        {
+          "ts": "2026-02-06T21:11:00+00:00",
+          "mr": 1605.0,
+          "opp_mr": 1600.0,
+          "win": 1,
+          "opponent": "Cammy"
+        },
+        {
+          "ts": "2026-02-06T21:12:00+00:00",
+          "mr": 1613.0,
+          "opp_mr": 1592.0,
+          "win": 1,
+          "opponent": "Cammy"
+        },
+        {
+          "ts": "2026-02-06T21:15:00+00:00",
+          "mr": 1621.0,
+          "opp_mr": 1587.0,
+          "win": 0,
+          "opponent": "C. Viper"
+        },
+        {
+          "ts": "2026-02-06T21:17:00+00:00",
+          "mr": 1612.0,
+          "opp_mr": 1596.0,
+          "win": 1,
+          "opponent": "C. Viper"
+        },
+        {
+          "ts": "2026-02-06T21:19:00+00:00",
+          "mr": 1620.0,
+          "opp_mr": 1588.0,
+          "win": 0,
+          "opponent": "C. Viper"
+        },
+        {
+          "ts": "2026-02-06T21:22:00+00:00",
+          "mr": 1611.0,
+          "opp_mr": 1605.0,
+          "win": 0,
+          "opponent": "M. Bison"
+        },
+        {
+          "ts": "2026-02-06T21:25:00+00:00",
+          "mr": 1603.0,
+          "opp_mr": 1613.0,
+          "win": 1,
+          "opponent": "M. Bison"
+        },
+        {
+          "ts": "2026-02-06T21:27:00+00:00",
+          "mr": 1611.0,
+          "opp_mr": 1605.0,
+          "win": 0,
+          "opponent": "M. Bison"
+        },
+        {
+          "ts": "2026-02-06T21:29:00+00:00",
+          "mr": 1603.0,
+          "opp_mr": 1612.0,
+          "win": 0,
+          "opponent": "M. Bison"
+        },
+        {
+          "ts": "2026-02-06T21:30:00+00:00",
+          "mr": 1595.0,
+          "opp_mr": 1620.0,
+          "win": 0,
+          "opponent": "M. Bison"
+        },
+        {
+          "ts": "2026-02-06T21:32:00+00:00",
+          "mr": 1588.0,
+          "opp_mr": 1564.0,
+          "win": 1,
+          "opponent": "Zangief"
+        },
+        {
+          "ts": "2026-02-06T21:35:00+00:00",
+          "mr": 1595.0,
+          "opp_mr": 1557.0,
+          "win": 0,
+          "opponent": "Zangief"
+        },
+        {
+          "ts": "2026-02-06T21:37:00+00:00",
+          "mr": 1586.0,
+          "opp_mr": 1566.0,
+          "win": 1,
+          "opponent": "Zangief"
+        },
+        {
+          "ts": "2026-02-06T21:39:00+00:00",
+          "mr": 1594.0,
+          "opp_mr": 1573.0,
+          "win": 0,
+          "opponent": "Dee Jay"
+        },
+        {
+          "ts": "2026-02-06T21:41:00+00:00",
+          "mr": 1586.0,
+          "opp_mr": 1581.0,
+          "win": 0,
+          "opponent": "Dee Jay"
+        },
+        {
+          "ts": "2026-02-06T21:43:00+00:00",
+          "mr": 1578.0,
+          "opp_mr": 1595.0,
+          "win": 1,
+          "opponent": "Kimberly"
+        },
+        {
+          "ts": "2026-02-06T21:44:00+00:00",
+          "mr": 1586.0,
+          "opp_mr": 1587.0,
+          "win": 0,
+          "opponent": "Kimberly"
+        },
+        {
+          "ts": "2026-02-06T21:46:00+00:00",
+          "mr": 1578.0,
+          "opp_mr": 1595.0,
+          "win": 0,
+          "opponent": "Kimberly"
         }
       ],
       "character_mr_timeseries": {
@@ -4592,6 +5645,785 @@
             "opp_mr": 1647.0,
             "win": 1,
             "opponent": "Jamie"
+          },
+          {
+            "ts": "2026-02-01T22:23:00+00:00",
+            "mr": 1560.0,
+            "opp_mr": 1494.0,
+            "win": 1,
+            "opponent": "Zangief"
+          },
+          {
+            "ts": "2026-02-01T22:25:00+00:00",
+            "mr": 1566.0,
+            "opp_mr": 1536.0,
+            "win": 1,
+            "opponent": "Ken"
+          },
+          {
+            "ts": "2026-02-01T22:27:00+00:00",
+            "mr": 1573.0,
+            "opp_mr": 1529.0,
+            "win": 1,
+            "opponent": "Ken"
+          },
+          {
+            "ts": "2026-02-01T23:37:00+00:00",
+            "mr": 1580.0,
+            "opp_mr": 1611.0,
+            "win": 0,
+            "opponent": "C. Viper"
+          },
+          {
+            "ts": "2026-02-01T23:38:00+00:00",
+            "mr": 1573.0,
+            "opp_mr": 1618.0,
+            "win": 0,
+            "opponent": "C. Viper"
+          },
+          {
+            "ts": "2026-02-02T00:36:00+00:00",
+            "mr": 1566.0,
+            "opp_mr": 1594.0,
+            "win": 0,
+            "opponent": "Elena"
+          },
+          {
+            "ts": "2026-02-02T00:38:00+00:00",
+            "mr": 1559.0,
+            "opp_mr": 1601.0,
+            "win": 1,
+            "opponent": "Elena"
+          },
+          {
+            "ts": "2026-02-02T00:39:00+00:00",
+            "mr": 1568.0,
+            "opp_mr": 1592.0,
+            "win": 0,
+            "opponent": "Elena"
+          },
+          {
+            "ts": "2026-02-02T00:42:00+00:00",
+            "mr": 1561.0,
+            "opp_mr": 1541.0,
+            "win": 0,
+            "opponent": "Luke"
+          },
+          {
+            "ts": "2026-02-02T00:44:00+00:00",
+            "mr": 1553.0,
+            "opp_mr": 1549.0,
+            "win": 1,
+            "opponent": "Luke"
+          },
+          {
+            "ts": "2026-02-03T15:20:00+00:00",
+            "mr": 1539.0,
+            "opp_mr": 1537.0,
+            "win": 1,
+            "opponent": "C. Viper"
+          },
+          {
+            "ts": "2026-02-03T15:22:00+00:00",
+            "mr": 1547.0,
+            "opp_mr": 1529.0,
+            "win": 1,
+            "opponent": "C. Viper"
+          },
+          {
+            "ts": "2026-02-03T15:24:00+00:00",
+            "mr": 1555.0,
+            "opp_mr": 1630.0,
+            "win": 0,
+            "opponent": "Jp"
+          },
+          {
+            "ts": "2026-02-03T15:26:00+00:00",
+            "mr": 1549.0,
+            "opp_mr": 1636.0,
+            "win": 0,
+            "opponent": "Jp"
+          },
+          {
+            "ts": "2026-02-03T15:28:00+00:00",
+            "mr": 1543.0,
+            "opp_mr": 1539.0,
+            "win": 0,
+            "opponent": "Zangief"
+          },
+          {
+            "ts": "2026-02-03T15:30:00+00:00",
+            "mr": 1535.0,
+            "opp_mr": 1547.0,
+            "win": 1,
+            "opponent": "Zangief"
+          },
+          {
+            "ts": "2026-02-03T15:32:00+00:00",
+            "mr": 1543.0,
+            "opp_mr": 1539.0,
+            "win": 1,
+            "opponent": "Zangief"
+          },
+          {
+            "ts": "2026-02-03T15:34:00+00:00",
+            "mr": 1551.0,
+            "opp_mr": 1631.0,
+            "win": 0,
+            "opponent": "Chun-Li"
+          },
+          {
+            "ts": "2026-02-03T15:37:00+00:00",
+            "mr": 1545.0,
+            "opp_mr": 1637.0,
+            "win": 1,
+            "opponent": "Chun-Li"
+          },
+          {
+            "ts": "2026-02-03T15:39:00+00:00",
+            "mr": 1555.0,
+            "opp_mr": 1627.0,
+            "win": 1,
+            "opponent": "Chun-Li"
+          },
+          {
+            "ts": "2026-02-03T15:50:00+00:00",
+            "mr": 1565.0,
+            "opp_mr": 1537.0,
+            "win": 1,
+            "opponent": "Akuma"
+          },
+          {
+            "ts": "2026-02-05T04:28:00+00:00",
+            "mr": 1572.0,
+            "opp_mr": 1674.0,
+            "win": 0,
+            "opponent": "C. Viper"
+          },
+          {
+            "ts": "2026-02-05T04:30:00+00:00",
+            "mr": 1566.0,
+            "opp_mr": 1680.0,
+            "win": 0,
+            "opponent": "C. Viper"
+          },
+          {
+            "ts": "2026-02-05T04:32:00+00:00",
+            "mr": 1561.0,
+            "opp_mr": 1596.0,
+            "win": 1,
+            "opponent": "C. Viper"
+          },
+          {
+            "ts": "2026-02-05T04:34:00+00:00",
+            "mr": 1570.0,
+            "opp_mr": 1587.0,
+            "win": 0,
+            "opponent": "C. Viper"
+          },
+          {
+            "ts": "2026-02-05T04:37:00+00:00",
+            "mr": 1562.0,
+            "opp_mr": 1595.0,
+            "win": 0,
+            "opponent": "C. Viper"
+          },
+          {
+            "ts": "2026-02-05T04:39:00+00:00",
+            "mr": 1555.0,
+            "opp_mr": 1543.0,
+            "win": 1,
+            "opponent": "C. Viper"
+          },
+          {
+            "ts": "2026-02-05T04:41:00+00:00",
+            "mr": 1563.0,
+            "opp_mr": 1535.0,
+            "win": 1,
+            "opponent": "C. Viper"
+          },
+          {
+            "ts": "2026-02-05T04:43:00+00:00",
+            "mr": 1570.0,
+            "opp_mr": 1418.0,
+            "win": 0,
+            "opponent": "Sagat"
+          },
+          {
+            "ts": "2026-02-05T04:45:00+00:00",
+            "mr": 1559.0,
+            "opp_mr": 1429.0,
+            "win": 0,
+            "opponent": "Sagat"
+          },
+          {
+            "ts": "2026-02-05T04:48:00+00:00",
+            "mr": 1548.0,
+            "opp_mr": 1586.0,
+            "win": 1,
+            "opponent": "Elena"
+          },
+          {
+            "ts": "2026-02-05T04:50:00+00:00",
+            "mr": 1557.0,
+            "opp_mr": 1577.0,
+            "win": 1,
+            "opponent": "Elena"
+          },
+          {
+            "ts": "2026-02-05T04:59:00+00:00",
+            "mr": 1565.0,
+            "opp_mr": 1600.0,
+            "win": 1,
+            "opponent": "Dee Jay"
+          },
+          {
+            "ts": "2026-02-05T05:01:00+00:00",
+            "mr": 1574.0,
+            "opp_mr": 1591.0,
+            "win": 1,
+            "opponent": "Dee Jay"
+          },
+          {
+            "ts": "2026-02-05T05:03:00+00:00",
+            "mr": 1582.0,
+            "opp_mr": 1604.0,
+            "win": 0,
+            "opponent": "M. Bison"
+          },
+          {
+            "ts": "2026-02-05T05:07:00+00:00",
+            "mr": 1575.0,
+            "opp_mr": 1605.0,
+            "win": 0,
+            "opponent": "Ryu"
+          },
+          {
+            "ts": "2026-02-05T05:08:00+00:00",
+            "mr": 1568.0,
+            "opp_mr": 1612.0,
+            "win": 1,
+            "opponent": "Ryu"
+          },
+          {
+            "ts": "2026-02-05T05:11:00+00:00",
+            "mr": 1577.0,
+            "opp_mr": 1603.0,
+            "win": 1,
+            "opponent": "Ryu"
+          },
+          {
+            "ts": "2026-02-05T17:35:00+00:00",
+            "mr": 1586.0,
+            "opp_mr": 1552.0,
+            "win": 1,
+            "opponent": "Akuma"
+          },
+          {
+            "ts": "2026-02-05T17:36:00+00:00",
+            "mr": 1593.0,
+            "opp_mr": 1545.0,
+            "win": 0,
+            "opponent": "Akuma"
+          },
+          {
+            "ts": "2026-02-05T17:39:00+00:00",
+            "mr": 1584.0,
+            "opp_mr": 1554.0,
+            "win": 1,
+            "opponent": "Akuma"
+          },
+          {
+            "ts": "2026-02-05T17:41:00+00:00",
+            "mr": 1591.0,
+            "opp_mr": 1560.0,
+            "win": 1,
+            "opponent": "Sagat"
+          },
+          {
+            "ts": "2026-02-05T17:43:00+00:00",
+            "mr": 1598.0,
+            "opp_mr": 1553.0,
+            "win": 1,
+            "opponent": "Sagat"
+          },
+          {
+            "ts": "2026-02-05T17:46:00+00:00",
+            "mr": 1605.0,
+            "opp_mr": 1572.0,
+            "win": 0,
+            "opponent": "Manon"
+          },
+          {
+            "ts": "2026-02-05T17:48:00+00:00",
+            "mr": 1596.0,
+            "opp_mr": 1581.0,
+            "win": 0,
+            "opponent": "Manon"
+          },
+          {
+            "ts": "2026-02-05T17:51:00+00:00",
+            "mr": 1588.0,
+            "opp_mr": 1631.0,
+            "win": 1,
+            "opponent": "Blanka"
+          },
+          {
+            "ts": "2026-02-05T17:53:00+00:00",
+            "mr": 1597.0,
+            "opp_mr": 1622.0,
+            "win": 1,
+            "opponent": "Blanka"
+          },
+          {
+            "ts": "2026-02-05T18:47:00+00:00",
+            "mr": 1606.0,
+            "opp_mr": 1589.0,
+            "win": 0,
+            "opponent": "Ryu"
+          },
+          {
+            "ts": "2026-02-05T18:51:00+00:00",
+            "mr": 1598.0,
+            "opp_mr": 1597.0,
+            "win": 0,
+            "opponent": "Ryu"
+          },
+          {
+            "ts": "2026-02-05T18:53:00+00:00",
+            "mr": 1590.0,
+            "opp_mr": 1914.0,
+            "win": 0,
+            "opponent": "Akuma"
+          },
+          {
+            "ts": "2026-02-05T18:55:00+00:00",
+            "mr": 1588.0,
+            "opp_mr": 1916.0,
+            "win": 0,
+            "opponent": "Akuma"
+          },
+          {
+            "ts": "2026-02-05T18:59:00+00:00",
+            "mr": 1586.0,
+            "opp_mr": 1518.0,
+            "win": 0,
+            "opponent": "M. Bison"
+          },
+          {
+            "ts": "2026-02-05T19:31:00+00:00",
+            "mr": 1576.0,
+            "opp_mr": 1547.0,
+            "win": 1,
+            "opponent": "Jamie"
+          },
+          {
+            "ts": "2026-02-05T19:33:00+00:00",
+            "mr": 1583.0,
+            "opp_mr": 1540.0,
+            "win": 0,
+            "opponent": "Jamie"
+          },
+          {
+            "ts": "2026-02-05T19:35:00+00:00",
+            "mr": 1574.0,
+            "opp_mr": 1549.0,
+            "win": 1,
+            "opponent": "Jamie"
+          },
+          {
+            "ts": "2026-02-05T19:38:00+00:00",
+            "mr": 1581.0,
+            "opp_mr": 1547.0,
+            "win": 1,
+            "opponent": "Luke"
+          },
+          {
+            "ts": "2026-02-05T19:40:00+00:00",
+            "mr": 1588.0,
+            "opp_mr": 1540.0,
+            "win": 1,
+            "opponent": "Luke"
+          },
+          {
+            "ts": "2026-02-06T19:46:00+00:00",
+            "mr": 1595.0,
+            "opp_mr": 1608.0,
+            "win": 1,
+            "opponent": "Ed"
+          },
+          {
+            "ts": "2026-02-06T19:48:00+00:00",
+            "mr": 1603.0,
+            "opp_mr": 1600.0,
+            "win": 0,
+            "opponent": "Ed"
+          },
+          {
+            "ts": "2026-02-06T19:51:00+00:00",
+            "mr": 1595.0,
+            "opp_mr": 1608.0,
+            "win": 1,
+            "opponent": "Ed"
+          },
+          {
+            "ts": "2026-02-06T19:54:00+00:00",
+            "mr": 1603.0,
+            "opp_mr": 1582.0,
+            "win": 0,
+            "opponent": "Manon"
+          },
+          {
+            "ts": "2026-02-06T19:56:00+00:00",
+            "mr": 1595.0,
+            "opp_mr": 1590.0,
+            "win": 1,
+            "opponent": "Manon"
+          },
+          {
+            "ts": "2026-02-06T19:58:00+00:00",
+            "mr": 1603.0,
+            "opp_mr": 1582.0,
+            "win": 1,
+            "opponent": "Manon"
+          },
+          {
+            "ts": "2026-02-06T20:09:00+00:00",
+            "mr": 1611.0,
+            "opp_mr": 1681.0,
+            "win": 0,
+            "opponent": "Cammy"
+          },
+          {
+            "ts": "2026-02-06T20:11:00+00:00",
+            "mr": 1605.0,
+            "opp_mr": 1687.0,
+            "win": 1,
+            "opponent": "Cammy"
+          },
+          {
+            "ts": "2026-02-06T20:12:00+00:00",
+            "mr": 1615.0,
+            "opp_mr": 1677.0,
+            "win": 1,
+            "opponent": "Cammy"
+          },
+          {
+            "ts": "2026-02-06T20:40:00+00:00",
+            "mr": 1624.0,
+            "opp_mr": 1634.0,
+            "win": 0,
+            "opponent": "C. Viper"
+          },
+          {
+            "ts": "2026-02-06T20:41:00+00:00",
+            "mr": 1616.0,
+            "opp_mr": 1642.0,
+            "win": 1,
+            "opponent": "C. Viper"
+          },
+          {
+            "ts": "2026-02-06T20:42:00+00:00",
+            "mr": 1625.0,
+            "opp_mr": 1633.0,
+            "win": 0,
+            "opponent": "C. Viper"
+          },
+          {
+            "ts": "2026-02-06T20:45:00+00:00",
+            "mr": 1617.0,
+            "opp_mr": 1683.0,
+            "win": 1,
+            "opponent": "Manon"
+          },
+          {
+            "ts": "2026-02-06T20:47:00+00:00",
+            "mr": 1627.0,
+            "opp_mr": 1673.0,
+            "win": 1,
+            "opponent": "Manon"
+          },
+          {
+            "ts": "2026-02-06T21:03:00+00:00",
+            "mr": 1636.0,
+            "opp_mr": 1612.0,
+            "win": 0,
+            "opponent": "Marisa"
+          },
+          {
+            "ts": "2026-02-06T21:04:00+00:00",
+            "mr": 1627.0,
+            "opp_mr": 1621.0,
+            "win": 0,
+            "opponent": "Marisa"
+          },
+          {
+            "ts": "2026-02-06T21:07:00+00:00",
+            "mr": 1619.0,
+            "opp_mr": 1654.0,
+            "win": 0,
+            "opponent": "A.K.I."
+          },
+          {
+            "ts": "2026-02-06T21:08:00+00:00",
+            "mr": 1612.0,
+            "opp_mr": 1661.0,
+            "win": 0,
+            "opponent": "A.K.I."
+          },
+          {
+            "ts": "2026-02-06T21:11:00+00:00",
+            "mr": 1605.0,
+            "opp_mr": 1600.0,
+            "win": 1,
+            "opponent": "Cammy"
+          },
+          {
+            "ts": "2026-02-06T21:12:00+00:00",
+            "mr": 1613.0,
+            "opp_mr": 1592.0,
+            "win": 1,
+            "opponent": "Cammy"
+          },
+          {
+            "ts": "2026-02-06T21:15:00+00:00",
+            "mr": 1621.0,
+            "opp_mr": 1587.0,
+            "win": 0,
+            "opponent": "C. Viper"
+          },
+          {
+            "ts": "2026-02-06T21:17:00+00:00",
+            "mr": 1612.0,
+            "opp_mr": 1596.0,
+            "win": 1,
+            "opponent": "C. Viper"
+          },
+          {
+            "ts": "2026-02-06T21:19:00+00:00",
+            "mr": 1620.0,
+            "opp_mr": 1588.0,
+            "win": 0,
+            "opponent": "C. Viper"
+          },
+          {
+            "ts": "2026-02-06T21:22:00+00:00",
+            "mr": 1611.0,
+            "opp_mr": 1605.0,
+            "win": 0,
+            "opponent": "M. Bison"
+          },
+          {
+            "ts": "2026-02-06T21:25:00+00:00",
+            "mr": 1603.0,
+            "opp_mr": 1613.0,
+            "win": 1,
+            "opponent": "M. Bison"
+          },
+          {
+            "ts": "2026-02-06T21:27:00+00:00",
+            "mr": 1611.0,
+            "opp_mr": 1605.0,
+            "win": 0,
+            "opponent": "M. Bison"
+          },
+          {
+            "ts": "2026-02-06T21:29:00+00:00",
+            "mr": 1603.0,
+            "opp_mr": 1612.0,
+            "win": 0,
+            "opponent": "M. Bison"
+          },
+          {
+            "ts": "2026-02-06T21:30:00+00:00",
+            "mr": 1595.0,
+            "opp_mr": 1620.0,
+            "win": 0,
+            "opponent": "M. Bison"
+          },
+          {
+            "ts": "2026-02-06T21:32:00+00:00",
+            "mr": 1588.0,
+            "opp_mr": 1564.0,
+            "win": 1,
+            "opponent": "Zangief"
+          },
+          {
+            "ts": "2026-02-06T21:35:00+00:00",
+            "mr": 1595.0,
+            "opp_mr": 1557.0,
+            "win": 0,
+            "opponent": "Zangief"
+          },
+          {
+            "ts": "2026-02-06T21:37:00+00:00",
+            "mr": 1586.0,
+            "opp_mr": 1566.0,
+            "win": 1,
+            "opponent": "Zangief"
+          },
+          {
+            "ts": "2026-02-06T21:39:00+00:00",
+            "mr": 1594.0,
+            "opp_mr": 1573.0,
+            "win": 0,
+            "opponent": "Dee Jay"
+          },
+          {
+            "ts": "2026-02-06T21:41:00+00:00",
+            "mr": 1586.0,
+            "opp_mr": 1581.0,
+            "win": 0,
+            "opponent": "Dee Jay"
+          },
+          {
+            "ts": "2026-02-06T21:43:00+00:00",
+            "mr": 1578.0,
+            "opp_mr": 1595.0,
+            "win": 1,
+            "opponent": "Kimberly"
+          },
+          {
+            "ts": "2026-02-06T21:44:00+00:00",
+            "mr": 1586.0,
+            "opp_mr": 1587.0,
+            "win": 0,
+            "opponent": "Kimberly"
+          },
+          {
+            "ts": "2026-02-06T21:46:00+00:00",
+            "mr": 1578.0,
+            "opp_mr": 1595.0,
+            "win": 0,
+            "opponent": "Kimberly"
+          }
+        ],
+        "Sagat": [
+          {
+            "ts": "2026-02-02T00:34:00+00:00",
+            "mr": 1500.0,
+            "opp_mr": 1501.0,
+            "win": 1,
+            "opponent": "Zangief"
+          },
+          {
+            "ts": "2026-02-03T02:42:00+00:00",
+            "mr": 1493.0,
+            "opp_mr": 1528.0,
+            "win": 1,
+            "opponent": "Ed"
+          },
+          {
+            "ts": "2026-02-03T02:45:00+00:00",
+            "mr": 1502.0,
+            "opp_mr": 1519.0,
+            "win": 0,
+            "opponent": "Ed"
+          },
+          {
+            "ts": "2026-02-03T15:53:00+00:00",
+            "mr": 1494.0,
+            "opp_mr": 1444.0,
+            "win": 1,
+            "opponent": "Luke"
+          },
+          {
+            "ts": "2026-02-03T15:54:00+00:00",
+            "mr": 1501.0,
+            "opp_mr": 1437.0,
+            "win": 1,
+            "opponent": "Luke"
+          },
+          {
+            "ts": "2026-02-03T15:58:00+00:00",
+            "mr": 1508.0,
+            "opp_mr": 1500.0,
+            "win": 1,
+            "opponent": "Zangief"
+          },
+          {
+            "ts": "2026-02-03T16:00:00+00:00",
+            "mr": 1516.0,
+            "opp_mr": 1507.0,
+            "win": 1,
+            "opponent": "Ryu"
+          },
+          {
+            "ts": "2026-02-03T16:03:00+00:00",
+            "mr": 1524.0,
+            "opp_mr": 1499.0,
+            "win": 1,
+            "opponent": "Ryu"
+          },
+          {
+            "ts": "2026-02-05T19:44:00+00:00",
+            "mr": 1531.0,
+            "opp_mr": 1537.0,
+            "win": 0,
+            "opponent": "A.K.I."
+          },
+          {
+            "ts": "2026-02-05T19:45:00+00:00",
+            "mr": 1523.0,
+            "opp_mr": 1545.0,
+            "win": 1,
+            "opponent": "A.K.I."
+          },
+          {
+            "ts": "2026-02-05T19:46:00+00:00",
+            "mr": 1532.0,
+            "opp_mr": 1536.0,
+            "win": 0,
+            "opponent": "A.K.I."
+          },
+          {
+            "ts": "2026-02-05T19:49:00+00:00",
+            "mr": 1524.0,
+            "opp_mr": 1516.0,
+            "win": 0,
+            "opponent": "Cammy"
+          },
+          {
+            "ts": "2026-02-05T19:52:00+00:00",
+            "mr": 1516.0,
+            "opp_mr": 1524.0,
+            "win": 0,
+            "opponent": "Cammy"
+          },
+          {
+            "ts": "2026-02-05T19:54:00+00:00",
+            "mr": 1508.0,
+            "opp_mr": 1395.0,
+            "win": 1,
+            "opponent": "Blanka"
+          },
+          {
+            "ts": "2026-02-05T19:56:00+00:00",
+            "mr": 1513.0,
+            "opp_mr": 1390.0,
+            "win": 0,
+            "opponent": "Blanka"
+          },
+          {
+            "ts": "2026-02-05T19:59:00+00:00",
+            "mr": 1502.0,
+            "opp_mr": 1401.0,
+            "win": 1,
+            "opponent": "Blanka"
+          },
+          {
+            "ts": "2026-02-05T20:02:00+00:00",
+            "mr": 1508.0,
+            "opp_mr": 1544.0,
+            "win": 1,
+            "opponent": "Zangief"
+          },
+          {
+            "ts": "2026-02-05T20:04:00+00:00",
+            "mr": 1517.0,
+            "opp_mr": 1535.0,
+            "win": 1,
+            "opponent": "Zangief"
           }
         ]
       },
@@ -4640,9 +6472,15 @@
         },
         {
           "week_start": "2026-01-26",
-          "mr_delta": 50.0,
+          "mr_delta": -64.0,
           "mr_start": 1617.0,
-          "mr_end": 1667.0
+          "mr_end": 1553.0
+        },
+        {
+          "week_start": "2026-02-02",
+          "mr_delta": 85.0,
+          "mr_start": 1493.0,
+          "mr_end": 1578.0
         }
       ]
     },
@@ -5157,6 +6995,57 @@
               "winrate": 1.0
             }
           ]
+        },
+        {
+          "week_start": "2026-02-01",
+          "week_end": "2026-02-07",
+          "matches": 209,
+          "wins": 125,
+          "winrate": 0.5981,
+          "days": [
+            {
+              "date": "2026-02-01",
+              "matches": 33,
+              "wins": 25,
+              "winrate": 0.7576
+            },
+            {
+              "date": "2026-02-02",
+              "matches": 38,
+              "wins": 33,
+              "winrate": 0.8684
+            },
+            {
+              "date": "2026-02-03",
+              "matches": 34,
+              "wins": 21,
+              "winrate": 0.6176
+            },
+            {
+              "date": "2026-02-04",
+              "matches": 12,
+              "wins": 6,
+              "winrate": 0.5
+            },
+            {
+              "date": "2026-02-05",
+              "matches": 34,
+              "wins": 18,
+              "winrate": 0.5294
+            },
+            {
+              "date": "2026-02-06",
+              "matches": 58,
+              "wins": 22,
+              "winrate": 0.3793
+            },
+            {
+              "date": "2026-02-07",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            }
+          ]
         }
       ],
       "modes": {
@@ -5614,6 +7503,57 @@
               },
               {
                 "date": "2026-01-31",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              }
+            ]
+          },
+          {
+            "week_start": "2026-02-01",
+            "week_end": "2026-02-07",
+            "matches": 76,
+            "wins": 47,
+            "winrate": 0.6184,
+            "days": [
+              {
+                "date": "2026-02-01",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2026-02-02",
+                "matches": 36,
+                "wins": 32,
+                "winrate": 0.8889
+              },
+              {
+                "date": "2026-02-03",
+                "matches": 18,
+                "wins": 9,
+                "winrate": 0.5
+              },
+              {
+                "date": "2026-02-04",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2026-02-05",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2026-02-06",
+                "matches": 22,
+                "wins": 6,
+                "winrate": 0.2727
+              },
+              {
+                "date": "2026-02-07",
                 "matches": 0,
                 "wins": 0,
                 "winrate": null
@@ -6133,12 +8073,76 @@
                 "winrate": null
               }
             ]
+          },
+          {
+            "week_start": "2026-02-01",
+            "week_end": "2026-02-07",
+            "matches": 133,
+            "wins": 78,
+            "winrate": 0.5865,
+            "days": [
+              {
+                "date": "2026-02-01",
+                "matches": 33,
+                "wins": 25,
+                "winrate": 0.7576
+              },
+              {
+                "date": "2026-02-02",
+                "matches": 2,
+                "wins": 1,
+                "winrate": 0.5
+              },
+              {
+                "date": "2026-02-03",
+                "matches": 16,
+                "wins": 12,
+                "winrate": 0.75
+              },
+              {
+                "date": "2026-02-04",
+                "matches": 12,
+                "wins": 6,
+                "winrate": 0.5
+              },
+              {
+                "date": "2026-02-05",
+                "matches": 34,
+                "wins": 18,
+                "winrate": 0.5294
+              },
+              {
+                "date": "2026-02-06",
+                "matches": 36,
+                "wins": 16,
+                "winrate": 0.4444
+              },
+              {
+                "date": "2026-02-07",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              }
+            ]
           }
         ]
       }
     }
   },
   "matchups": [
+    {
+      "opponent": "A.K.I.",
+      "games": [
+        5,
+        6,
+        7
+      ],
+      "cum_winrate": [
+        0.2,
+        0.1667,
+        0.1429
+      ]
+    },
     {
       "opponent": "Akuma",
       "games": [
@@ -6162,7 +8166,13 @@
         22,
         23,
         24,
-        25
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31
       ],
       "cum_winrate": [
         0.8,
@@ -6185,7 +8195,26 @@
         0.5455,
         0.5217,
         0.5417,
-        0.52
+        0.52,
+        0.5385,
+        0.5556,
+        0.5357,
+        0.5517,
+        0.5333,
+        0.5161
+      ]
+    },
+    {
+      "opponent": "Blanka",
+      "games": [
+        5,
+        6,
+        7
+      ],
+      "cum_winrate": [
+        1.0,
+        0.8333,
+        0.8571
       ]
     },
     {
@@ -6203,7 +8232,24 @@
         14,
         15,
         16,
-        17
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34
       ],
       "cum_winrate": [
         0.2,
@@ -6218,7 +8264,24 @@
         0.5,
         0.5333,
         0.5625,
-        0.5882
+        0.5882,
+        0.5556,
+        0.5263,
+        0.55,
+        0.5714,
+        0.5455,
+        0.5217,
+        0.5417,
+        0.52,
+        0.5,
+        0.5185,
+        0.5357,
+        0.5172,
+        0.5333,
+        0.5161,
+        0.5,
+        0.5152,
+        0.5
       ]
     },
     {
@@ -6233,7 +8296,14 @@
         11,
         12,
         13,
-        14
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
       ],
       "cum_winrate": [
         0.8,
@@ -6245,16 +8315,42 @@
         0.7273,
         0.75,
         0.6923,
-        0.7143
+        0.7143,
+        0.6667,
+        0.625,
+        0.5882,
+        0.6111,
+        0.6316,
+        0.65,
+        0.6667
+      ]
+    },
+    {
+      "opponent": "Chun-Li",
+      "games": [
+        5,
+        6
+      ],
+      "cum_winrate": [
+        0.4,
+        0.5
       ]
     },
     {
       "opponent": "Dee Jay",
       "games": [
-        5
+        5,
+        6,
+        7,
+        8,
+        9
       ],
       "cum_winrate": [
-        0.6
+        0.6,
+        0.6667,
+        0.7143,
+        0.625,
+        0.5556
       ]
     },
     {
@@ -6282,7 +8378,12 @@
         11,
         12,
         13,
-        14
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
       ],
       "cum_winrate": [
         0.4,
@@ -6294,7 +8395,12 @@
         0.6364,
         0.6667,
         0.6154,
-        0.5714
+        0.5714,
+        0.6,
+        0.5625,
+        0.5882,
+        0.5556,
+        0.5789
       ]
     },
     {
@@ -6315,7 +8421,12 @@
         8,
         9,
         10,
-        11
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
       ],
       "cum_winrate": [
         0.4,
@@ -6324,7 +8435,12 @@
         0.375,
         0.4444,
         0.4,
-        0.3636
+        0.3636,
+        0.3333,
+        0.3846,
+        0.3571,
+        0.4,
+        0.4375
       ]
     },
     {
@@ -6348,7 +8464,10 @@
         11,
         12,
         13,
-        14
+        14,
+        15,
+        16,
+        17
       ],
       "cum_winrate": [
         0.4,
@@ -6360,7 +8479,10 @@
         0.3636,
         0.4167,
         0.4615,
-        0.5
+        0.5,
+        0.5333,
+        0.5,
+        0.5294
       ]
     },
     {
@@ -6369,13 +8491,17 @@
         5,
         6,
         7,
-        8
+        8,
+        9,
+        10
       ],
       "cum_winrate": [
         0.4,
         0.3333,
         0.2857,
-        0.25
+        0.25,
+        0.2222,
+        0.2
       ]
     },
     {
@@ -6404,7 +8530,9 @@
         10,
         11,
         12,
-        13
+        13,
+        14,
+        15
       ],
       "cum_winrate": [
         0.4,
@@ -6415,18 +8543,26 @@
         0.3,
         0.2727,
         0.3333,
-        0.3077
+        0.3077,
+        0.3571,
+        0.4
       ]
     },
     {
       "opponent": "Kimberly",
       "games": [
         5,
-        6
+        6,
+        7,
+        8,
+        9
       ],
       "cum_winrate": [
         0.4,
-        0.5
+        0.5,
+        0.5714,
+        0.5,
+        0.4444
       ]
     },
     {
@@ -6435,13 +8571,25 @@
         5,
         6,
         7,
-        8
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
       ],
       "cum_winrate": [
         0.8,
         0.6667,
         0.7143,
-        0.75
+        0.75,
+        0.6667,
+        0.7,
+        0.7273,
+        0.75,
+        0.7692,
+        0.7857
       ]
     },
     {
@@ -6453,7 +8601,14 @@
         8,
         9,
         10,
-        11
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
       ],
       "cum_winrate": [
         0.6,
@@ -6462,7 +8617,14 @@
         0.5,
         0.4444,
         0.5,
-        0.5455
+        0.5455,
+        0.5,
+        0.4615,
+        0.4286,
+        0.4667,
+        0.4375,
+        0.4118,
+        0.3889
       ]
     },
     {
@@ -6480,7 +8642,14 @@
         14,
         15,
         16,
-        17
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
       ],
       "cum_winrate": [
         0.4,
@@ -6495,7 +8664,14 @@
         0.4286,
         0.4667,
         0.4375,
-        0.4706
+        0.4706,
+        0.4444,
+        0.4211,
+        0.4,
+        0.4286,
+        0.4545,
+        0.4783,
+        0.5
       ]
     },
     {
@@ -6504,13 +8680,17 @@
         5,
         6,
         7,
-        8
+        8,
+        9,
+        10
       ],
       "cum_winrate": [
         0.8,
         0.6667,
         0.7143,
-        0.75
+        0.75,
+        0.6667,
+        0.6
       ]
     },
     {
@@ -6524,7 +8704,14 @@
         10,
         11,
         12,
-        13
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
       ],
       "cum_winrate": [
         0.4,
@@ -6535,7 +8722,14 @@
         0.4,
         0.3636,
         0.4167,
-        0.4615
+        0.4615,
+        0.5,
+        0.5333,
+        0.5,
+        0.5294,
+        0.5556,
+        0.5263,
+        0.5
       ]
     },
     {
@@ -6545,14 +8739,22 @@
         6,
         7,
         8,
-        9
+        9,
+        10,
+        11,
+        12,
+        13
       ],
       "cum_winrate": [
         0.6,
         0.5,
         0.4286,
         0.5,
-        0.5556
+        0.5556,
+        0.5,
+        0.4545,
+        0.5,
+        0.5385
       ]
     },
     {
@@ -6573,12 +8775,34 @@
       "games": [
         5,
         6,
-        7
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
       ],
       "cum_winrate": [
         0.6,
         0.5,
-        0.5714
+        0.5714,
+        0.625,
+        0.6667,
+        0.6,
+        0.6364,
+        0.6667,
+        0.6923,
+        0.7143,
+        0.7333,
+        0.75,
+        0.7059,
+        0.7222
       ]
     }
   ]

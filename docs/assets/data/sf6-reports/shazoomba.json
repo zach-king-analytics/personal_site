@@ -1,39 +1,39 @@
 {
   "player_cfn": "shazoomba",
-  "generated_at": "2026-01-31T19:36:53.164546+00:00",
+  "generated_at": "2026-02-07T19:45:14.587545+00:00",
   "baseline_n": 5,
   "summary": {
     "overall": {
-      "matches_analyzed": 977,
+      "matches_analyzed": 993,
       "dataset_start": "2025-11-13",
-      "dataset_end": "2026-01-29",
+      "dataset_end": "2026-02-03",
       "mode_breakdown": [
         {
-          "mode": "rank",
-          "matches": 419,
-          "share_pct": 42.9
+          "mode": "custom",
+          "matches": 425,
+          "share_pct": 42.8
         },
         {
-          "mode": "custom",
-          "matches": 411,
-          "share_pct": 42.1
+          "mode": "rank",
+          "matches": 421,
+          "share_pct": 42.4
         },
         {
           "mode": "hub",
           "matches": 147,
-          "share_pct": 15.0
+          "share_pct": 14.8
         }
       ],
       "character_breakdown": [
         {
           "character": "Sagat",
-          "games": 690,
-          "share_pct": 70.6
+          "games": 699,
+          "share_pct": 70.4
         },
         {
           "character": "Ryu",
-          "games": 270,
-          "share_pct": 27.6
+          "games": 277,
+          "share_pct": 27.9
         },
         {
           "character": "Zangief",
@@ -277,13 +277,13 @@
       "character_breakdown": [
         {
           "character": "Sagat",
-          "games": 690,
-          "share_pct": 70.6
+          "games": 699,
+          "share_pct": 70.4
         },
         {
           "character": "Ryu",
-          "games": 270,
-          "share_pct": 27.6
+          "games": 277,
+          "share_pct": 27.9
         },
         {
           "character": "Zangief",
@@ -7856,6 +7856,57 @@
               "winrate": null
             }
           ]
+        },
+        {
+          "week_start": "2026-02-01",
+          "week_end": "2026-02-07",
+          "matches": 16,
+          "wins": 4,
+          "winrate": 0.25,
+          "days": [
+            {
+              "date": "2026-02-01",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2026-02-02",
+              "matches": 16,
+              "wins": 4,
+              "winrate": 0.25
+            },
+            {
+              "date": "2026-02-03",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2026-02-04",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2026-02-05",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2026-02-06",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            },
+            {
+              "date": "2026-02-07",
+              "matches": 0,
+              "wins": 0,
+              "winrate": null
+            }
+          ]
         }
       ],
       "modes": {
@@ -8313,6 +8364,57 @@
               },
               {
                 "date": "2026-01-31",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              }
+            ]
+          },
+          {
+            "week_start": "2026-02-01",
+            "week_end": "2026-02-07",
+            "matches": 14,
+            "wins": 2,
+            "winrate": 0.1429,
+            "days": [
+              {
+                "date": "2026-02-01",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2026-02-02",
+                "matches": 14,
+                "wins": 2,
+                "winrate": 0.1429
+              },
+              {
+                "date": "2026-02-03",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2026-02-04",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2026-02-05",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2026-02-06",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2026-02-07",
                 "matches": 0,
                 "wins": 0,
                 "winrate": null
@@ -9133,6 +9235,57 @@
               },
               {
                 "date": "2026-01-31",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              }
+            ]
+          },
+          {
+            "week_start": "2026-02-01",
+            "week_end": "2026-02-07",
+            "matches": 2,
+            "wins": 2,
+            "winrate": 1.0,
+            "days": [
+              {
+                "date": "2026-02-01",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2026-02-02",
+                "matches": 2,
+                "wins": 2,
+                "winrate": 1.0
+              },
+              {
+                "date": "2026-02-03",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2026-02-04",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2026-02-05",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2026-02-06",
+                "matches": 0,
+                "wins": 0,
+                "winrate": null
+              },
+              {
+                "date": "2026-02-07",
                 "matches": 0,
                 "wins": 0,
                 "winrate": null

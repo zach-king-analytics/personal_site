@@ -49,6 +49,52 @@
     return `${startIso} \u2192 ${endIso}`;
   }
 
+  const MR_RESET_ISO = new Date(Date.UTC(2026, 1, 1)).toISOString();
+
+  function buildMrResetMarkers(xRange) {
+    if (!xRange || xRange.length < 2) return { shapes: [], annotations: [] };
+    const startMs = new Date(xRange[0]).getTime();
+    const endMs = new Date(xRange[1]).getTime();
+    const resetMs = new Date(MR_RESET_ISO).getTime();
+
+    if (!Number.isFinite(resetMs) || resetMs < startMs || resetMs > endMs) {
+      return { shapes: [], annotations: [] };
+    }
+
+    return {
+      shapes: [
+        {
+          type: "line",
+          xref: "x",
+          yref: "paper",
+          x0: MR_RESET_ISO,
+          x1: MR_RESET_ISO,
+          y0: 0,
+          y1: 1,
+          line: { color: "rgba(248,113,113,0.7)", width: 1, dash: "dot" },
+        },
+      ],
+      annotations: [
+        {
+          xref: "x",
+          yref: "paper",
+          x: MR_RESET_ISO,
+          y: 0.98,
+          yanchor: "top",
+          xanchor: "left",
+          xshift: 6,
+          text: "MR reset",
+          showarrow: false,
+          font: { size: 9, color: "#f87171" },
+          bgcolor: "rgba(5,8,22,0.6)",
+          bordercolor: "rgba(248,113,113,0.4)",
+          borderwidth: 1,
+          borderpad: 2,
+        },
+      ],
+    };
+  }
+
   function median(arr) {
     const xs = (arr || []).filter((x) => Number.isFinite(x)).slice().sort((a, b) => a - b);
     if (!xs.length) return null;
@@ -1126,6 +1172,7 @@
       const lastSundayIso = weekMarkers.dates.length > 0 ? weekMarkers.dates[weekMarkers.dates.length - 1] : null;
       const firstSundayMs = firstSundayIso ? new Date(firstSundayIso).getTime() : 0;
       const xRange = firstSundayIso && lastSundayIso ? [firstSundayIso, new Date(new Date(lastSundayIso).getTime() + weekMs).toISOString()] : undefined;
+      const mrResetMarkers = buildMrResetMarkers(xRange);
       
       const layout = {
         margin: { l: 30, r: 10, t: 5, b: 30 },
@@ -1161,6 +1208,8 @@
           xanchor: "center",
           font: { size: 7 },
         },
+        shapes: mrResetMarkers.shapes,
+        annotations: mrResetMarkers.annotations,
       };
 
       const config = { displayModeBar: false, responsive: true };
@@ -1439,6 +1488,7 @@
       const xRange = firstSundayIso && lastSundayIso ? [firstSundayIso, new Date(new Date(lastSundayIso).getTime() + weekMs).toISOString()] : undefined;
       const isMobile = window.innerWidth < 640;
       const isTablet = window.innerWidth < 1024;
+      const mrResetMarkers = buildMrResetMarkers(xRange);
       
       const layout = {
         margin: { l: 30, r: 10, t: 5, b: 30 },
@@ -1474,6 +1524,8 @@
           xanchor: "center",
           font: { size: 7 },
         },
+        shapes: mrResetMarkers.shapes,
+        annotations: mrResetMarkers.annotations,
       };
 
       const config = { displayModeBar: false, responsive: true };
